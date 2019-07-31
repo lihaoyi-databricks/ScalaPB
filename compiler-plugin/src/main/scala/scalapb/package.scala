@@ -1,3 +1,4 @@
+package shaded
 import protocbridge.JvmGenerator
 import scalapb.GeneratorOption._
 

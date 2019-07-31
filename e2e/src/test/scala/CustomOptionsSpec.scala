@@ -1,3 +1,4 @@
+package shaded
 import scala.reflect.runtime.universe._
 import scalapb.{GeneratedExtension, JavaProtoSupport}
 import com.thesamet.proto.e2e.custom_options.GoodOrBad._

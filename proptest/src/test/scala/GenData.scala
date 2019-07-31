@@ -1,3 +1,4 @@
+package shaded
 import scalapb.compiler.FunctionalPrinter
 import org.scalacheck.Gen
 import scala.collection.JavaConverters._

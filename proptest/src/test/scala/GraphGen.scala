@@ -1,3 +1,4 @@
+package shaded
 import GenUtils._
 import GenTypes.{FieldOptions, ProtoType}
 import scalapb.options.Scalapb.ScalaPbOptions

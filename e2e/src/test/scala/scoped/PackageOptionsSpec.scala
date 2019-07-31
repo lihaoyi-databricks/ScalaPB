@@ -1,3 +1,4 @@
+package shaded
 package scalapb.scoped
 
 import org.scalatest._

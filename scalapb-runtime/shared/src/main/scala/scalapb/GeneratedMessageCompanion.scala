@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 
 import java.io.{InputStream, OutputStream}
@@ -6,7 +7,7 @@ import com.google.protobuf.{ByteString, CodedInputStream, CodedOutputStream}
 import com.google.protobuf.{Descriptors => JavaDescriptors}
 import scalapb.lenses.{Lens, Updatable}
 
-import _root_.scalapb.descriptors.{PMessage, PValue}
+import _root_.shaded.scalapb.descriptors.{PMessage, PValue}
 import scala.util.Try
 
 trait GeneratedEnum extends Any with Product with Serializable {
@@ -30,7 +31,7 @@ trait GeneratedEnum extends Any with Product with Serializable {
   def javaValueDescriptor: JavaDescriptors.EnumValueDescriptor =
     companion.javaDescriptor.getValues.get(index)
 
-  def scalaValueDescriptor: _root_.scalapb.descriptors.EnumValueDescriptor =
+  def scalaValueDescriptor: _root_.shaded.scalapb.descriptors.EnumValueDescriptor =
     companion.scalaDescriptor.values(index)
 }
 
@@ -43,7 +44,7 @@ trait UnrecognizedEnum extends GeneratedEnum {
 
   override def isUnrecognized: Boolean = true
 
-  override def scalaValueDescriptor: _root_.scalapb.descriptors.EnumValueDescriptor =
+  override def scalaValueDescriptor: _root_.shaded.scalapb.descriptors.EnumValueDescriptor =
     companion.scalaDescriptor.findValueByNumberCreatingIfUnknown(value)
 }
 
@@ -59,7 +60,7 @@ trait GeneratedEnumCompanion[A <: GeneratedEnum] {
   )
   def descriptor: com.google.protobuf.Descriptors.EnumDescriptor = javaDescriptor
   def javaDescriptor: com.google.protobuf.Descriptors.EnumDescriptor
-  def scalaDescriptor: _root_.scalapb.descriptors.EnumDescriptor
+  def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor
 }
 
 trait GeneratedOneof extends Any with Product with Serializable {
@@ -107,7 +108,7 @@ trait GeneratedMessage extends Any with Serializable {
   }
 
   // Using a Scala field descriptor.
-  def getField(field: _root_.scalapb.descriptors.FieldDescriptor): PValue
+  def getField(field: _root_.shaded.scalapb.descriptors.FieldDescriptor): PValue
 
   def toPMessage: PMessage =
     PMessage(companion.scalaDescriptor.fields.map {
@@ -168,19 +169,19 @@ trait Message[A] extends Any {
 
 trait ExtendableMessage[A <: ExtendableMessage[A]] extends Updatable[A] {
   self: A =>
-  def unknownFields: _root_.scalapb.UnknownFieldSet
+  def unknownFields: _root_.shaded.scalapb.UnknownFieldSet
 
   def extension[T](generatedExtension: GeneratedExtension[A, T]): T = generatedExtension.get(this)
 
-  def withUnknownFields(unknownFields: _root_.scalapb.UnknownFieldSet): A
+  def withUnknownFields(unknownFields: _root_.shaded.scalapb.UnknownFieldSet): A
 
   def withExtension[T](generatedExtension: GeneratedExtension[A, T])(value: T): A =
     generatedExtension.set(value)(this)
 }
 
 object ExtendableMessage {
-  def unknownFieldsLen[A <: ExtendableMessage[A]]: Lens[A, _root_.scalapb.UnknownFieldSet] =
-    Lens[A, _root_.scalapb.UnknownFieldSet](_.unknownFields)((c, t) => c.withUnknownFields(t))
+  def unknownFieldsLen[A <: ExtendableMessage[A]]: Lens[A, _root_.shaded.scalapb.UnknownFieldSet] =
+    Lens[A, _root_.shaded.scalapb.UnknownFieldSet](_.unknownFields)((c, t) => c.withUnknownFields(t))
 }
 
 trait JavaProtoSupport[ScalaPB, JavaPB] extends Any {
@@ -225,13 +226,13 @@ trait GeneratedMessageCompanion[A <: GeneratedMessage with Message[A]] {
 
   def javaDescriptor: com.google.protobuf.Descriptors.Descriptor
 
-  def scalaDescriptor: _root_.scalapb.descriptors.Descriptor
+  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor
 
   // Companion object of all nested messages. That is, all messages that are defined directly inside this
   // message.
   def nestedMessagesCompanions: Seq[GeneratedMessageCompanion[_ <: GeneratedMessage]]
 
-  def messageReads: _root_.scalapb.descriptors.Reads[A]
+  def messageReads: _root_.shaded.scalapb.descriptors.Reads[A]
 
   def messageCompanionForFieldNumber(field: Int): GeneratedMessageCompanion[_]
 
@@ -270,7 +271,7 @@ trait GeneratedMessageCompanion[A <: GeneratedMessage with Message[A]] {
 case class KeyValue[K, V](key: K, value: V)
 
 abstract class GeneratedFileObject {
-  def scalaDescriptor: _root_.scalapb.descriptors.FileDescriptor
+  def scalaDescriptor: _root_.shaded.scalapb.descriptors.FileDescriptor
   def javaDescriptor: com.google.protobuf.Descriptors.FileDescriptor
   // Other file objects that this file depends on.
   def dependencies: Seq[GeneratedFileObject]

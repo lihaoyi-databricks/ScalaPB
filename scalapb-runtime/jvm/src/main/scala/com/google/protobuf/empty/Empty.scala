@@ -17,7 +17,7 @@ package com.google.protobuf.empty
   */
 @SerialVersionUID(0L)
 final case class Empty(
-    ) extends scalapb.GeneratedMessage with scalapb.Message[Empty] with scalapb.lenses.Updatable[Empty] {
+    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Empty] with shaded.scalapb.lenses.Updatable[Empty] {
     final override def serializedSize: _root_.scala.Int = 0
     def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
     }
@@ -34,13 +34,13 @@ final case class Empty(
       )
     }
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = throw new MatchError(__fieldNumber)
-    def getField(__field: _root_.scalapb.descriptors.FieldDescriptor): _root_.scalapb.descriptors.PValue = throw new MatchError(__field)
-    def toProtoString: _root_.scala.Predef.String = _root_.scalapb.TextFormat.printToUnicodeString(this)
+    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = throw new MatchError(__field)
+    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
     def companion = com.google.protobuf.empty.Empty
 }
 
-object Empty extends scalapb.GeneratedMessageCompanion[com.google.protobuf.empty.Empty] with scalapb.JavaProtoSupport[com.google.protobuf.empty.Empty, com.google.protobuf.Empty] {
-  implicit def messageCompanion: scalapb.GeneratedMessageCompanion[com.google.protobuf.empty.Empty] with scalapb.JavaProtoSupport[com.google.protobuf.empty.Empty, com.google.protobuf.Empty] = this
+object Empty extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.empty.Empty] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.empty.Empty, com.google.protobuf.Empty] {
+  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.empty.Empty] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.empty.Empty, com.google.protobuf.Empty] = this
   def toJavaProto(scalaPbSource: com.google.protobuf.empty.Empty): com.google.protobuf.Empty = {
     val javaPbOut = com.google.protobuf.Empty.newBuilder
     javaPbOut.build
@@ -52,21 +52,21 @@ object Empty extends scalapb.GeneratedMessageCompanion[com.google.protobuf.empty
     com.google.protobuf.empty.Empty(
     )
   }
-  implicit def messageReads: _root_.scalapb.descriptors.Reads[com.google.protobuf.empty.Empty] = _root_.scalapb.descriptors.Reads{
-    case _root_.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.empty.Empty] = _root_.shaded.scalapb.descriptors.Reads{
+    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
       com.google.protobuf.empty.Empty(
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
   def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = EmptyProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.scalapb.descriptors.Descriptor = EmptyProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.scalapb.GeneratedMessageCompanion[_ <: _root_.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = EmptyProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
   lazy val defaultInstance = com.google.protobuf.empty.Empty(
   )
-  implicit class EmptyLens[UpperPB](_l: _root_.scalapb.lenses.Lens[UpperPB, com.google.protobuf.empty.Empty]) extends _root_.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.empty.Empty](_l) {
+  implicit class EmptyLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.empty.Empty]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.empty.Empty](_l) {
   }
   def of(
   ): _root_.com.google.protobuf.empty.Empty = _root_.com.google.protobuf.empty.Empty(

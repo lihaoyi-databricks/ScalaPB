@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.any._
 import com.google.protobuf.any.Any
 import org.scalatest._

@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.e2e.NoBox
 import com.thesamet.proto.e2e.no_box.Car
 import com.thesamet.proto.e2e.no_box.Tyre

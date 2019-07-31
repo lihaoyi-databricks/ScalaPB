@@ -1,3 +1,4 @@
+package shaded
 package custom_options
 
 object Main extends App {

@@ -120,7 +120,7 @@ package com.google.protobuf.any
 final case class Any(
     typeUrl: _root_.scala.Predef.String = "",
     value: _root_.com.google.protobuf.ByteString = _root_.com.google.protobuf.ByteString.EMPTY
-    ) extends scalapb.GeneratedMessage with scalapb.Message[Any] with scalapb.lenses.Updatable[Any] with _root_.scalapb.AnyMethods {
+    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Any] with shaded.scalapb.lenses.Updatable[Any] with _root_.shaded.scalapb.AnyMethods {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -197,19 +197,19 @@ final case class Any(
         }
       }
     }
-    def getField(__field: _root_.scalapb.descriptors.FieldDescriptor): _root_.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.scalapb.descriptors.PString(typeUrl)
-        case 2 => _root_.scalapb.descriptors.PByteString(value)
+        case 1 => _root_.shaded.scalapb.descriptors.PString(typeUrl)
+        case 2 => _root_.shaded.scalapb.descriptors.PByteString(value)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.scalapb.TextFormat.printToUnicodeString(this)
+    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
     def companion = com.google.protobuf.any.Any
 }
 
-object Any extends scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any] with scalapb.AnyCompanionMethods {
-  implicit def messageCompanion: scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any] with scalapb.AnyCompanionMethods = this
+object Any extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any] with shaded.scalapb.AnyCompanionMethods {
+  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any] with shaded.scalapb.AnyCompanionMethods = this
   def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.any.Any = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
@@ -218,8 +218,8 @@ object Any extends scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any
       __fieldsMap.getOrElse(__fields.get(1), _root_.com.google.protobuf.ByteString.EMPTY).asInstanceOf[_root_.com.google.protobuf.ByteString]
     )
   }
-  implicit def messageReads: _root_.scalapb.descriptors.Reads[com.google.protobuf.any.Any] = _root_.scalapb.descriptors.Reads{
-    case _root_.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.any.Any] = _root_.shaded.scalapb.descriptors.Reads{
+    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
       com.google.protobuf.any.Any(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Predef.String]).getOrElse(""),
@@ -228,15 +228,15 @@ object Any extends scalapb.GeneratedMessageCompanion[com.google.protobuf.any.Any
     case _ => throw new RuntimeException("Expected PMessage")
   }
   def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = AnyProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.scalapb.descriptors.Descriptor = AnyProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.scalapb.GeneratedMessageCompanion[_ <: _root_.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = AnyProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
   lazy val defaultInstance = com.google.protobuf.any.Any(
   )
-  implicit class AnyLens[UpperPB](_l: _root_.scalapb.lenses.Lens[UpperPB, com.google.protobuf.any.Any]) extends _root_.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.any.Any](_l) {
-    def typeUrl: _root_.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.typeUrl)((c_, f_) => c_.copy(typeUrl = f_))
-    def value: _root_.scalapb.lenses.Lens[UpperPB, _root_.com.google.protobuf.ByteString] = field(_.value)((c_, f_) => c_.copy(value = f_))
+  implicit class AnyLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.any.Any]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.any.Any](_l) {
+    def typeUrl: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.typeUrl)((c_, f_) => c_.copy(typeUrl = f_))
+    def value: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.com.google.protobuf.ByteString] = field(_.value)((c_, f_) => c_.copy(value = f_))
   }
   final val TYPE_URL_FIELD_NUMBER = 1
   final val VALUE_FIELD_NUMBER = 2

@@ -1,3 +1,4 @@
+package shaded
 import java.net.ServerSocket
 
 import scala.util.Random

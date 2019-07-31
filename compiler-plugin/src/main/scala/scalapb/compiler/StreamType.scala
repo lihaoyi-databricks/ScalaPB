@@ -1,3 +1,4 @@
+package shaded
 package scalapb.compiler
 
 sealed abstract class StreamType extends Product with Serializable

@@ -1,3 +1,4 @@
+package shaded
 import com.google.protobuf.Descriptors.FieldDescriptor
 import com.google.protobuf.InvalidProtocolBufferException
 import com.thesamet.proto.e2e.reqs.OptionalFields

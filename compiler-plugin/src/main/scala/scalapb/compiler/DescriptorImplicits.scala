@@ -1,3 +1,4 @@
+package shaded
 package scalapb.compiler
 
 import com.google.protobuf.DescriptorProtos.{
@@ -446,7 +447,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
 
     def oneofOptions: OneofOptions = oneof.getOptions.getExtension[OneofOptions](Scalapb.oneof)
 
-    def baseClasses = "_root_.scalapb.GeneratedOneof" +: oneofOptions.getExtendsList.asScala.toSeq
+    def baseClasses = "_root_.shaded.scalapb.GeneratedOneof" +: oneofOptions.getExtendsList.asScala.toSeq
   }
 
   private val OneofMessageSuffix = "Message"
@@ -578,12 +579,12 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
 
     def baseClasses: Seq[String] = {
       val specialMixins = message.getFullName match {
-        case "google.protobuf.Any" => Seq("_root_.scalapb.AnyMethods")
+        case "google.protobuf.Any" => Seq("_root_.shaded.scalapb.AnyMethods")
         case _                     => Seq()
       }
 
       val extendable =
-        if (message.isExtendable) Seq(s"_root_.scalapb.ExtendableMessage[$nameSymbol]") else Nil
+        if (message.isExtendable) Seq(s"_root_.shaded.scalapb.ExtendableMessage[$nameSymbol]") else Nil
 
       val anyVal = if (isValueClass) Seq("AnyVal") else Nil
 
@@ -593,31 +594,31 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       }
 
       anyVal ++ sealedOneofTrait ++ Seq(
-        "scalapb.GeneratedMessage",
-        s"scalapb.Message[$nameSymbol]",
-        s"scalapb.lenses.Updatable[$nameSymbol]"
+        "shaded.scalapb.GeneratedMessage",
+        s"shaded.scalapb.Message[$nameSymbol]",
+        s"shaded.scalapb.lenses.Updatable[$nameSymbol]"
       ) ++ extendable ++ extendsOption ++ specialMixins
     }
 
     def companionBaseClasses: Seq[String] = {
       val mixins =
         if (javaConversions)
-          Seq(s"scalapb.JavaProtoSupport[$scalaTypeName, $javaTypeName]")
+          Seq(s"shaded.scalapb.JavaProtoSupport[$scalaTypeName, $javaTypeName]")
         else Nil
 
       val specialMixins = message.getFullName match {
-        case "google.protobuf.Any" => Seq("scalapb.AnyCompanionMethods")
+        case "google.protobuf.Any" => Seq("shaded.scalapb.AnyCompanionMethods")
         case _                     => Seq()
       }
 
-      Seq(s"scalapb.GeneratedMessageCompanion[$scalaTypeName]") ++
+      Seq(s"shaded.scalapb.GeneratedMessageCompanion[$scalaTypeName]") ++
         mixins ++
         companionExtendsOption ++
         specialMixins
     }
 
     def sealedOneofBaseClasses: Seq[String] =
-      s"scalapb.GeneratedSealedOneof" +: messageOptions.getSealedOneofExtendsList.asScala.toSeq
+      s"shaded.scalapb.GeneratedSealedOneof" +: messageOptions.getSealedOneofExtendsList.asScala.toSeq
 
     def nestedTypes: Seq[Descriptor] = message.getNestedTypes.asScala.toSeq
 
@@ -727,10 +728,10 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       else s"${enum.getContainingType.scalaTypeName}.scalaDescriptor.enums(${enum.getIndex})"
 
     def baseTraitExtends: Seq[String] =
-      "_root_.scalapb.GeneratedEnum" +: scalaOptions.getExtendsList.asScala.toSeq
+      "_root_.shaded.scalapb.GeneratedEnum" +: scalaOptions.getExtendsList.asScala.toSeq
 
     def companionExtends: Seq[String] =
-      s"_root_.scalapb.GeneratedEnumCompanion[${nameSymbol}]" +: scalaOptions.getCompanionExtendsList.asScala.toSeq
+      s"_root_.shaded.scalapb.GeneratedEnumCompanion[${nameSymbol}]" +: scalaOptions.getCompanionExtendsList.asScala.toSeq
 
     def sourcePath: Seq[Int] = {
       if (enum.isTopLevel) Seq(FileDescriptorProto.ENUM_TYPE_FIELD_NUMBER, enum.getIndex)
@@ -821,7 +822,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       }
 
     private def isNonFlatDependency =
-      (file.getPackage == "google.protobuf") || (file.getPackage == "scalapb")
+      (file.getPackage == "google.protobuf") || (file.getPackage == "shaded.scalapb")
 
     private def scalaPackageParts: Seq[String] = {
       val requestedPackageName: Seq[String] =

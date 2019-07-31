@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.pb.EnumOptions.{EnumBase, EnumCompanionBase, ValueMixin}
 import com.thesamet.proto.e2e.enum_options._
 import org.scalatest._

@@ -1,3 +1,4 @@
+package shaded
 package scalapb.grpc
 
 import com.google.protobuf.Descriptors.ServiceDescriptor

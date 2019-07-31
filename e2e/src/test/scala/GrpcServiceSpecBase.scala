@@ -1,3 +1,4 @@
+package shaded
 import java.util.concurrent.TimeUnit
 
 import com.thesamet.pb.Service1JavaImpl

@@ -1,3 +1,4 @@
+package shaded
 package scalapb.descriptors
 
 /** Javascript (and hence Scala.js) does not have WeakReferences and WeahHashMap, so we use

@@ -1,3 +1,4 @@
+package shaded
 package scalapb.descriptors
 
 import com.google.protobuf.ByteString

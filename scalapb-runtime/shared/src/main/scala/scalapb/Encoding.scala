@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 
 import scala.collection.mutable

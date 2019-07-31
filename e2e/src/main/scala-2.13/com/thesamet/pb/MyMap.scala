@@ -1,3 +1,4 @@
+package shaded
 package com.thesamet.pb
 
 import scala.collection.{MapFactory, mutable}

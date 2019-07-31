@@ -1,3 +1,4 @@
+package shaded
 package scalapb.compiler
 
 import scalapb.compiler.FunctionalPrinter.PrinterEndo

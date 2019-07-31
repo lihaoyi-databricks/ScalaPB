@@ -1,3 +1,4 @@
+package shaded
 import java.io.{File, PrintWriter}
 import java.net.{URL, URLClassLoader}
 import java.nio.file.Files
@@ -10,7 +11,7 @@ import scalapb._
 import protocbridge.ProtocBridge
 
 import scala.reflect.ClassTag
-import _root_.scalapb.ScalaPbCodeGenerator
+import _root_.shaded.scalapb.ScalaPbCodeGenerator
 
 object SchemaGenerators {
 
@@ -245,8 +246,9 @@ object SchemaGenerators {
         Seq("-Ybreak-cycles")
       else Seq.empty
 
+    println("XXXX " + maybeBreakCycles + " XXXX")
     s.processArgumentString(
-      s"""-cp "${classPath.mkString(":")}" ${maybeBreakCycles} -d "$rootDir""""
+      s"""-cp "${classPath.mkString(":")}" ${maybeBreakCycles.mkString(" ")} -d "$rootDir""""
     )
 
     val g   = new Global(s)

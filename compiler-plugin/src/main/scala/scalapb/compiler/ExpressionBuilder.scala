@@ -1,3 +1,4 @@
+package shaded
 package scalapb.compiler
 import scalapb.compiler.EnclosingType.Collection
 
@@ -57,7 +58,7 @@ object ExpressionBuilder {
       case Collection(DescriptorImplicits.ScalaSeq)      => MethodApplication("toSeq")
       case Collection(DescriptorImplicits.ScalaMap)      => MethodApplication("toMap")
       case Collection(DescriptorImplicits.ScalaIterable) => MethodApplication("toIterable")
-      case Collection(cc)                                => FunctionApplication("_root_.scalapb.internal.compat.convertTo")
+      case Collection(cc)                                => FunctionApplication("_root_.shaded.scalapb.internal.compat.convertTo")
       case _                                             => Identity
     })
     runSingleton(convert)(expr)

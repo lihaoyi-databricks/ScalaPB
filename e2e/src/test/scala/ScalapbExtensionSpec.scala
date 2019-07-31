@@ -1,3 +1,4 @@
+package shaded
 import foo.issue320.{Foo, Issue320Proto}
 import org.scalatest.{Matchers, WordSpec}
 

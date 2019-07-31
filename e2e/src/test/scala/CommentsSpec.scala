@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.e2e.comments.CommentedServiceGrpc.CommentedService
 import com.thesamet.proto.e2e.comments._
 import org.scalatest._

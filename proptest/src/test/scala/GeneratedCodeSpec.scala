@@ -1,3 +1,4 @@
+package shaded
 import java.io.{File, PrintWriter}
 import java.nio.charset.Charset
 import java.nio.file.{Files, Paths}

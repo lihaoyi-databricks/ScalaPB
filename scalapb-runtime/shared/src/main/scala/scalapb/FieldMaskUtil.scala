@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 
 import com.google.protobuf.field_mask.FieldMask

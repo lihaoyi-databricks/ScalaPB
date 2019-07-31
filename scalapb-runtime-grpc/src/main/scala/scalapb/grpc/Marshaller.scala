@@ -1,3 +1,4 @@
+package shaded
 package scalapb.grpc
 
 import java.io.{ByteArrayInputStream, InputStream}

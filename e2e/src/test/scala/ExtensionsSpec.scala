@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.e2e.extensions._
 import org.scalatest._
 

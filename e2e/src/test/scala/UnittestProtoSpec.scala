@@ -1,3 +1,4 @@
+package shaded
 import org.scalatest._
 import protobuf_unittest.unittest.TestExtremeDefaultValues
 

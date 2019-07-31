@@ -1,3 +1,4 @@
+package shaded
 package scalapb.lenses
 
 object CompatLensImplicits {

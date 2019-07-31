@@ -1,3 +1,4 @@
+package shaded
 import com.google.protobuf.ByteString
 import com.thesamet.proto.e2e.bytes._
 import com.thesamet.proto.e2e.bytes_proto2.ByteMessage2

@@ -5,18 +5,18 @@
 
 package com.google.protobuf.compiler.plugin
 
-object PluginProto extends _root_.scalapb.GeneratedFileObject {
-  lazy val dependencies: Seq[_root_.scalapb.GeneratedFileObject] = Seq(
+object PluginProto extends _root_.shaded.scalapb.GeneratedFileObject {
+  lazy val dependencies: Seq[_root_.shaded.scalapb.GeneratedFileObject] = Seq(
     com.google.protobuf.descriptor.DescriptorProtoCompanion
   )
-  lazy val messagesCompanions: Seq[_root_.scalapb.GeneratedMessageCompanion[_ <: _root_.scalapb.GeneratedMessage]] =
-    Seq[_root_.scalapb.GeneratedMessageCompanion[_ <: _root_.scalapb.GeneratedMessage]](
+  lazy val messagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
       com.google.protobuf.compiler.plugin.Version,
       com.google.protobuf.compiler.plugin.CodeGeneratorRequest,
       com.google.protobuf.compiler.plugin.CodeGeneratorResponse
     )
   private lazy val ProtoBytes: Array[Byte] =
-      scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
+      shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
   """CiVnb29nbGUvcHJvdG9idWYvY29tcGlsZXIvcGx1Z2luLnByb3RvEhhnb29nbGUucHJvdG9idWYuY29tcGlsZXIaIGdvb2dsZ
   S9wcm90b2J1Zi9kZXNjcmlwdG9yLnByb3RvIpQBCgdWZXJzaW9uEiAKBW1ham9yGAEgASgFQgriPwcSBW1ham9yUgVtYWpvchIgC
   gVtaW5vchgCIAEoBUIK4j8HEgVtaW5vclIFbWlub3ISIAoFcGF0Y2gYAyABKAVCCuI/BxIFcGF0Y2hSBXBhdGNoEiMKBnN1ZmZpe
@@ -31,9 +31,9 @@ object PluginProto extends _root_.scalapb.GeneratedFileObject {
   nRlbnQYDyABKAlCDOI/CRIHY29udGVudFIHY29udGVudEJnChxjb20uZ29vZ2xlLnByb3RvYnVmLmNvbXBpbGVyQgxQbHVnaW5Qc
   m90b3NaOWdpdGh1Yi5jb20vZ29sYW5nL3Byb3RvYnVmL3Byb3RvYy1nZW4tZ28vcGx1Z2luO3BsdWdpbl9nbw=="""
       ).mkString)
-  lazy val scalaDescriptor: _root_.scalapb.descriptors.FileDescriptor = {
+  lazy val scalaDescriptor: _root_.shaded.scalapb.descriptors.FileDescriptor = {
     val scalaProto = com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
-    _root_.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
+    _root_.shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
   }
   lazy val javaDescriptor: com.google.protobuf.Descriptors.FileDescriptor =
     com.google.protobuf.compiler.PluginProtos.getDescriptor()

@@ -1,3 +1,4 @@
+package shaded
 package scalapb.internal
 
 import scala.collection.Factory

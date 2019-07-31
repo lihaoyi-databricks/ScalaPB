@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 
 import com.google.protobuf.{
@@ -35,7 +36,7 @@ object UnknownFieldSet {
   val empty = UnknownFieldSet()
 
   implicit class UnknownFieldSetLens[UpperPB](
-      lens: _root_.scalapb.lenses.Lens[UpperPB, UnknownFieldSet]
+      lens: _root_.shaded.scalapb.lenses.Lens[UpperPB, UnknownFieldSet]
   ) {
     def apply(fieldNumber: Int): Lens[UpperPB, UnknownFieldSet.Field] =
       lens.compose(Lens[UnknownFieldSet, UnknownFieldSet.Field]({ t =>

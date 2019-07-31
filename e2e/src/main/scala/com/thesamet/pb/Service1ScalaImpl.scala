@@ -1,3 +1,4 @@
+package shaded
 package com.thesamet.pb
 
 import java.util.concurrent.atomic.AtomicInteger

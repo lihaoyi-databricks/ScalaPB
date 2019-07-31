@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.pb.{MyMap, MyVector}
 import com.thesamet.proto.e2e.collection_types._
 import org.scalatest._

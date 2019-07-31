@@ -1,3 +1,4 @@
+package shaded
 import foo.barbaz.issue356._
 import org.scalatest._
 

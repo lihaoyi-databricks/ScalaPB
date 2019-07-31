@@ -1,3 +1,4 @@
+package shaded
 package scalapb.compiler
 import com.google.protobuf.Descriptors.FileDescriptor
 import scalapb.options.compiler.Scalapb

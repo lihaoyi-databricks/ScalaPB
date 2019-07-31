@@ -1,3 +1,4 @@
+package shaded
 package scalapb.scripts
 import com.google.protobuf.CodedInputStream
 import scalapb.ScalaPbCodeGenerator

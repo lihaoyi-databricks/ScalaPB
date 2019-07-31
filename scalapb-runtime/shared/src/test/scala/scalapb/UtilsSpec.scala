@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 import scalapb.internal.compat
 import utest._

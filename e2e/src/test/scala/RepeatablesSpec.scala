@@ -1,3 +1,4 @@
+package shaded
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 
 import com.google.protobuf.CodedInputStream

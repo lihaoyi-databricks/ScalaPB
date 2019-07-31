@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.e2e.maps.{CustomMaps, MapsTest}
 import com.thesamet.proto.e2e.maps2.{MapsTest2, CustomMaps2}
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest.Nested

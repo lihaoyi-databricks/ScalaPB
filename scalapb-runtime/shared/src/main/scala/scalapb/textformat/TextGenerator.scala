@@ -1,3 +1,4 @@
+package shaded
 package scalapb.textformat
 
 import scala.collection.mutable

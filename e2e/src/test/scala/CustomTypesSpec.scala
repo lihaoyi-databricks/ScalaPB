@@ -1,3 +1,4 @@
+package shaded
 import com.thesamet.proto.e2e.custom_types._
 import com.thesamet.proto.e2e.custom_types.CustomMessage.Weather
 import com.thesamet.proto.e2e.CustomTypes.{CustomMessage => CustomMessageJava}

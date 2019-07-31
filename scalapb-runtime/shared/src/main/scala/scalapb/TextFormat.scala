@@ -1,3 +1,4 @@
+package shaded
 package scalapb
 
 import scalapb.textformat.{AstUtils, Printer, ProtoAsciiParser}

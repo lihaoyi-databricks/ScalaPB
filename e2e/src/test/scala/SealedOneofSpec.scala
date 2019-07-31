@@ -1,3 +1,4 @@
+package shaded
 
 import com.thesamet.proto.e2e.sealed_oneof._
 import com.thesamet.proto.e2e.sealed_oneof_in_oneof._

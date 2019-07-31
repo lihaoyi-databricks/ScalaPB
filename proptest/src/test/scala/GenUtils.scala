@@ -1,3 +1,4 @@
+package shaded
 import org.scalacheck.Gen
 
 /**

@@ -1,3 +1,4 @@
+package shaded
 
 import io.grpc.reflection.v1alpha.reflection._
 import io.grpc.reflection.v1alpha.reflection.ServerReflectionRequest.MessageRequest

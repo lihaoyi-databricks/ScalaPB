@@ -1,3 +1,4 @@
+package shaded
 package scalapb.scripts
 import scalapb.ScalaPBC
 

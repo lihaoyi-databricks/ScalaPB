@@ -1,3 +1,4 @@
+package shaded
 package scalapb.textformat
 
 import com.google.protobuf.descriptor.FieldDescriptorProto
