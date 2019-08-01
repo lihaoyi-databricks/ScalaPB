@@ -57,7 +57,11 @@ organization in ThisBuild := "com.thesamet.scalapb"
 resolvers in ThisBuild +=
   "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
-publishTo in ThisBuild := sonatypePublishTo.value
+//publishTo in ThisBuild := sonatypePublishTo.value
+
+publishTo in ThisBuild := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository")))
+
+publishMavenStyle in ThisBuild := true
 
 releaseCrossBuild := true
 
