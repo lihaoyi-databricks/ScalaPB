@@ -222,7 +222,8 @@ lazy val compilerPlugin = project.in(file("compiler-plugin"))
     }.taskValue,
     libraryDependencies ++= Seq(
       "com.thesamet.scalapb" %% "protoc-bridge" % "0.7.8",
-      "com.google.protobuf" % "protobuf-java" % protobufVersion,
+      "com.google.protobuf" % "protobuf-java" % protobufVersion from 
+      "file://Users/lihaoyi/work/universe/bazel-bin/third_party/grpc/com.google.protobuf__protobuf-java__3.7.1_shaded.jar",
       ScalaTest % "test",
       ProtocJar % "test",
     ),
