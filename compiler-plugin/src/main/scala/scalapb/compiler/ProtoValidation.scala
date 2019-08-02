@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
-import com.google.protobuf.Descriptors._
+import grpc_shaded.com.google.protobuf.Descriptors._
 import scala.collection.JavaConverters._
 
 class ProtoValidation(implicits: DescriptorImplicits) {

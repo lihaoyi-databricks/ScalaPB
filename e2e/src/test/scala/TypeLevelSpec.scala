@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import com.thesamet.proto.e2e.type_level.UsesMessageLevelType
 import org.scalatest.{FlatSpec, MustMatchers}
 import com.thesamet.pb.{Point2D, Dir2D}

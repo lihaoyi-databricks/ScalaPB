@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
 // https://developers.google.com/protocol-buffers/
@@ -31,7 +31,7 @@ package shaded
 
 package scalapb
 
-import com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.ByteString
 import scalapb.textformat._
 import org.scalatest.matchers.{MatchResult, Matcher}
 import org.scalatest.{TryValues, MustMatchers, FlatSpec}

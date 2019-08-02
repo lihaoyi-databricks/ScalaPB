@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.descriptors
 
-import com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.ByteString
 
 import scala.language.higherKinds
 

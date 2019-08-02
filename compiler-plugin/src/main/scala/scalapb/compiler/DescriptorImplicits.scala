@@ -1,15 +1,15 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
-import com.google.protobuf.DescriptorProtos.{
+import grpc_shaded.com.google.protobuf.DescriptorProtos.{
   DescriptorProto,
   EnumDescriptorProto,
   FileDescriptorProto,
   ServiceDescriptorProto,
   SourceCodeInfo
 }
-import com.google.protobuf.Descriptors._
-import com.google.protobuf.WireFormat.FieldType
+import grpc_shaded.com.google.protobuf.Descriptors._
+import grpc_shaded.com.google.protobuf.WireFormat.FieldType
 import scalapb.options.compiler.Scalapb
 import scalapb.options.compiler.Scalapb._
 
@@ -359,7 +359,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
         case "google.protobuf.FloatValue"  => Some("_root_.scala.Float")
         case "google.protobuf.StringValue" => Some("_root_.scala.Predef.String")
         case "google.protobuf.BoolValue"   => Some("_root_.scala.Boolean")
-        case "google.protobuf.BytesValue"  => Some("_root_.com.google.protobuf.ByteString")
+        case "google.protobuf.BytesValue"  => Some("_root_.grpc_shaded.com.google.protobuf.ByteString")
         case _                             => None
       })
       else None
@@ -371,7 +371,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       case FieldDescriptor.JavaType.FLOAT       => "_root_.scala.Float"
       case FieldDescriptor.JavaType.DOUBLE      => "_root_.scala.Double"
       case FieldDescriptor.JavaType.BOOLEAN     => "_root_.scala.Boolean"
-      case FieldDescriptor.JavaType.BYTE_STRING => "_root_.com.google.protobuf.ByteString"
+      case FieldDescriptor.JavaType.BYTE_STRING => "_root_.grpc_shaded.com.google.protobuf.ByteString"
       case FieldDescriptor.JavaType.STRING      => "_root_.scala.Predef.String"
       case FieldDescriptor.JavaType.MESSAGE =>
         fd.getMessageType.scalaTypeNameWithMaybeRoot(fd.getContainingType)
@@ -447,7 +447,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
 
     def oneofOptions: OneofOptions = oneof.getOptions.getExtension[OneofOptions](Scalapb.oneof)
 
-    def baseClasses = "_root_.shaded.scalapb.GeneratedOneof" +: oneofOptions.getExtendsList.asScala.toSeq
+    def baseClasses = "_root_.grpc_shaded.scalapb.GeneratedOneof" +: oneofOptions.getExtendsList.asScala.toSeq
   }
 
   private val OneofMessageSuffix = "Message"
@@ -579,12 +579,12 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
 
     def baseClasses: Seq[String] = {
       val specialMixins = message.getFullName match {
-        case "google.protobuf.Any" => Seq("_root_.shaded.scalapb.AnyMethods")
+        case "google.protobuf.Any" => Seq("_root_.grpc_shaded.scalapb.AnyMethods")
         case _                     => Seq()
       }
 
       val extendable =
-        if (message.isExtendable) Seq(s"_root_.shaded.scalapb.ExtendableMessage[$nameSymbol]") else Nil
+        if (message.isExtendable) Seq(s"_root_.grpc_shaded.scalapb.ExtendableMessage[$nameSymbol]") else Nil
 
       val anyVal = if (isValueClass) Seq("AnyVal") else Nil
 
@@ -594,31 +594,31 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       }
 
       anyVal ++ sealedOneofTrait ++ Seq(
-        "shaded.scalapb.GeneratedMessage",
-        s"shaded.scalapb.Message[$nameSymbol]",
-        s"shaded.scalapb.lenses.Updatable[$nameSymbol]"
+        "grpc_shaded.scalapb.GeneratedMessage",
+        s"grpc_shaded.scalapb.Message[$nameSymbol]",
+        s"grpc_shaded.scalapb.lenses.Updatable[$nameSymbol]"
       ) ++ extendable ++ extendsOption ++ specialMixins
     }
 
     def companionBaseClasses: Seq[String] = {
       val mixins =
         if (javaConversions)
-          Seq(s"shaded.scalapb.JavaProtoSupport[$scalaTypeName, $javaTypeName]")
+          Seq(s"grpc_shaded.scalapb.JavaProtoSupport[$scalaTypeName, $javaTypeName]")
         else Nil
 
       val specialMixins = message.getFullName match {
-        case "google.protobuf.Any" => Seq("shaded.scalapb.AnyCompanionMethods")
+        case "google.protobuf.Any" => Seq("grpc_shaded.scalapb.AnyCompanionMethods")
         case _                     => Seq()
       }
 
-      Seq(s"shaded.scalapb.GeneratedMessageCompanion[$scalaTypeName]") ++
+      Seq(s"grpc_shaded.scalapb.GeneratedMessageCompanion[$scalaTypeName]") ++
         mixins ++
         companionExtendsOption ++
         specialMixins
     }
 
     def sealedOneofBaseClasses: Seq[String] =
-      s"shaded.scalapb.GeneratedSealedOneof" +: messageOptions.getSealedOneofExtendsList.asScala.toSeq
+      s"grpc_shaded.scalapb.GeneratedSealedOneof" +: messageOptions.getSealedOneofExtendsList.asScala.toSeq
 
     def nestedTypes: Seq[Descriptor] = message.getNestedTypes.asScala.toSeq
 
@@ -728,10 +728,10 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       else s"${enum.getContainingType.scalaTypeName}.scalaDescriptor.enums(${enum.getIndex})"
 
     def baseTraitExtends: Seq[String] =
-      "_root_.shaded.scalapb.GeneratedEnum" +: scalaOptions.getExtendsList.asScala.toSeq
+      "_root_.grpc_shaded.scalapb.GeneratedEnum" +: scalaOptions.getExtendsList.asScala.toSeq
 
     def companionExtends: Seq[String] =
-      s"_root_.shaded.scalapb.GeneratedEnumCompanion[${nameSymbol}]" +: scalaOptions.getCompanionExtendsList.asScala.toSeq
+      s"_root_.grpc_shaded.scalapb.GeneratedEnumCompanion[${nameSymbol}]" +: scalaOptions.getCompanionExtendsList.asScala.toSeq
 
     def sourcePath: Seq[Int] = {
       if (enum.isTopLevel) Seq(FileDescriptorProto.ENUM_TYPE_FIELD_NUMBER, enum.getIndex)
@@ -822,7 +822,7 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
       }
 
     private def isNonFlatDependency =
-      (file.getPackage == "google.protobuf") || (file.getPackage == "shaded.scalapb")
+      (file.getPackage == "google.protobuf") || (file.getPackage == "grpc_shaded.scalapb")
 
     private def scalaPackageParts: Seq[String] = {
       val requestedPackageName: Seq[String] =

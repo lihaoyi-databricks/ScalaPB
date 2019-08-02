@@ -3,21 +3,21 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.api
+package grpc_shaded.com.google.protobuf.api
 
-object ApiProto extends _root_.shaded.scalapb.GeneratedFileObject {
-  lazy val dependencies: Seq[_root_.shaded.scalapb.GeneratedFileObject] = Seq(
-    com.google.protobuf.source_context.SourceContextProto,
-    com.google.protobuf.`type`.TypeProto
+object ApiProto extends _root_.grpc_shaded.scalapb.GeneratedFileObject {
+  lazy val dependencies: Seq[_root_.grpc_shaded.scalapb.GeneratedFileObject] = Seq(
+    grpc_shaded.com.google.protobuf.source_context.SourceContextProto,
+    grpc_shaded.com.google.protobuf.`type`.TypeProto
   )
-  lazy val messagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      com.google.protobuf.api.Api,
-      com.google.protobuf.api.Method,
-      com.google.protobuf.api.Mixin
+  lazy val messagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      grpc_shaded.com.google.protobuf.api.Api,
+      grpc_shaded.com.google.protobuf.api.Method,
+      grpc_shaded.com.google.protobuf.api.Mixin
     )
   private lazy val ProtoBytes: Array[Byte] =
-      shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
+      grpc_shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
   """Chlnb29nbGUvcHJvdG9idWYvYXBpLnByb3RvEg9nb29nbGUucHJvdG9idWYaJGdvb2dsZS9wcm90b2J1Zi9zb3VyY2VfY29ud
   GV4dC5wcm90bxoaZ29vZ2xlL3Byb3RvYnVmL3R5cGUucHJvdG8ipAMKA0FwaRIdCgRuYW1lGAEgASgJQgniPwYSBG5hbWVSBG5hb
   WUSPwoHbWV0aG9kcxgCIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RCDOI/CRIHbWV0aG9kc1IHbWV0aG9kcxI/CgdvcHRpb
@@ -35,12 +35,12 @@ object ApiProto extends _root_.shaded.scalapb.GeneratedFileObject {
   S5nb29nbGUucHJvdG9idWZCCEFwaVByb3RvUAFaK2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL3Byb3RvYnVmL2FwaTthcGmiA
   gNHUEKqAh5Hb29nbGUuUHJvdG9idWYuV2VsbEtub3duVHlwZXNiBnByb3RvMw=="""
       ).mkString)
-  lazy val scalaDescriptor: _root_.shaded.scalapb.descriptors.FileDescriptor = {
-    val scalaProto = com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
-    _root_.shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
+  lazy val scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.FileDescriptor = {
+    val scalaProto = grpc_shaded.com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
+    _root_.grpc_shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
   }
-  lazy val javaDescriptor: com.google.protobuf.Descriptors.FileDescriptor =
-    com.google.protobuf.ApiProto.getDescriptor()
+  lazy val javaDescriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor =
+    grpc_shaded.com.google.protobuf.ApiProto.getDescriptor()
   @deprecated("Use javaDescriptor instead. In a future version this will refer to scalaDescriptor.", "ScalaPB 0.5.47")
-  def descriptor: com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
+  def descriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
 }

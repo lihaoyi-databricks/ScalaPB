@@ -3,21 +3,21 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.struct
+package grpc_shaded.com.google.protobuf.struct
 
 /** `NullValue` is a singleton enumeration to represent the null value for the
   * `Value` type union.
   *
   *  The JSON representation for `NullValue` is JSON `null`.
   */
-sealed trait NullValue extends _root_.shaded.scalapb.GeneratedEnum {
+sealed trait NullValue extends _root_.grpc_shaded.scalapb.GeneratedEnum {
   type EnumType = NullValue
   def isNullValue: _root_.scala.Boolean = false
-  def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[NullValue] = com.google.protobuf.struct.NullValue
+  def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[NullValue] = grpc_shaded.com.google.protobuf.struct.NullValue
 }
 
-object NullValue extends _root_.shaded.scalapb.GeneratedEnumCompanion[NullValue] {
-  implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[NullValue] = this
+object NullValue extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[NullValue] {
+  implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[NullValue] = this
   /** Null value.
     */
   @SerialVersionUID(0L)
@@ -29,18 +29,18 @@ object NullValue extends _root_.shaded.scalapb.GeneratedEnumCompanion[NullValue]
   }
   
   @SerialVersionUID(0L)
-  final case class Unrecognized(value: _root_.scala.Int) extends NullValue with _root_.shaded.scalapb.UnrecognizedEnum
+  final case class Unrecognized(value: _root_.scala.Int) extends NullValue with _root_.grpc_shaded.scalapb.UnrecognizedEnum
   
   lazy val values = scala.collection.immutable.Seq(NULL_VALUE)
   def fromValue(value: _root_.scala.Int): NullValue = value match {
     case 0 => NULL_VALUE
     case __other => Unrecognized(__other)
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = StructProto.javaDescriptor.getEnumTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = StructProto.scalaDescriptor.enums(0)
-  def fromJavaValue(pbJavaSource: com.google.protobuf.NullValue): NullValue = fromValue(pbJavaSource.getNumber)
-  def toJavaValue(pbScalaSource: NullValue): com.google.protobuf.NullValue = {
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = StructProto.javaDescriptor.getEnumTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = StructProto.scalaDescriptor.enums(0)
+  def fromJavaValue(pbJavaSource: grpc_shaded.com.google.protobuf.NullValue): NullValue = fromValue(pbJavaSource.getNumber)
+  def toJavaValue(pbScalaSource: NullValue): grpc_shaded.com.google.protobuf.NullValue = {
     _root_.scala.Predef.require(!pbScalaSource.isUnrecognized, "Unrecognized enum values can not be converted to Java")
-    com.google.protobuf.NullValue.forNumber(pbScalaSource.value)
+    grpc_shaded.com.google.protobuf.NullValue.forNumber(pbScalaSource.value)
   }
 }

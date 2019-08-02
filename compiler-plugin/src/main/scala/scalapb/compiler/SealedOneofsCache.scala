@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
-import com.google.protobuf.Descriptors.{Descriptor, FileDescriptor}
+import grpc_shaded.com.google.protobuf.Descriptors.{Descriptor, FileDescriptor}
 
 case class SealedOneof(container: Descriptor, cases: Seq[Descriptor])
 

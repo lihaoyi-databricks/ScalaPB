@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.field_mask
+package grpc_shaded.com.google.protobuf.field_mask
 
 /** `FieldMask` represents a set of symbolic field paths, for example:
   *
@@ -211,14 +211,14 @@ package com.google.protobuf.field_mask
 @SerialVersionUID(0L)
 final case class FieldMask(
     paths: _root_.scala.Seq[_root_.scala.Predef.String] = _root_.scala.Seq.empty
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[FieldMask] with shaded.scalapb.lenses.Updatable[FieldMask] {
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[FieldMask] with grpc_shaded.scalapb.lenses.Updatable[FieldMask] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       paths.foreach { __item =>
         val __value = __item
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
       }
       __size
     }
@@ -230,13 +230,13 @@ final case class FieldMask(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       paths.foreach { __v =>
         val __m = __v
         _output__.writeString(1, __m)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.field_mask.FieldMask = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.field_mask.FieldMask = {
       val __paths = (_root_.scala.collection.immutable.Vector.newBuilder[_root_.scala.Predef.String] ++= this.paths)
       var _done__ = false
       while (!_done__) {
@@ -248,7 +248,7 @@ final case class FieldMask(
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.field_mask.FieldMask(
+      grpc_shaded.com.google.protobuf.field_mask.FieldMask(
           paths = __paths.result()
       )
     }
@@ -261,47 +261,47 @@ final case class FieldMask(
         case 1 => paths
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PRepeated(paths.iterator.map(_root_.shaded.scalapb.descriptors.PString).toVector)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(paths.iterator.map(_root_.grpc_shaded.scalapb.descriptors.PString).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.field_mask.FieldMask
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.field_mask.FieldMask
 }
 
-object FieldMask extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.field_mask.FieldMask] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.field_mask.FieldMask] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.field_mask.FieldMask = {
+object FieldMask extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.field_mask.FieldMask] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.field_mask.FieldMask] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.field_mask.FieldMask = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.field_mask.FieldMask(
+    grpc_shaded.com.google.protobuf.field_mask.FieldMask(
       __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[_root_.scala.Predef.String]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.field_mask.FieldMask] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.field_mask.FieldMask] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.field_mask.FieldMask(
+      grpc_shaded.com.google.protobuf.field_mask.FieldMask(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[_root_.scala.Predef.String]]).getOrElse(_root_.scala.Seq.empty)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = FieldMaskProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = FieldMaskProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.field_mask.FieldMask(
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = FieldMaskProto.javaDescriptor.getMessageTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = FieldMaskProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.field_mask.FieldMask(
   )
-  implicit class FieldMaskLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.field_mask.FieldMask]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.field_mask.FieldMask](_l) {
-    def paths: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.paths)((c_, f_) => c_.copy(paths = f_))
+  implicit class FieldMaskLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.field_mask.FieldMask]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.field_mask.FieldMask](_l) {
+    def paths: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.paths)((c_, f_) => c_.copy(paths = f_))
   }
   final val PATHS_FIELD_NUMBER = 1
   def of(
     paths: _root_.scala.Seq[_root_.scala.Predef.String]
-  ): _root_.com.google.protobuf.field_mask.FieldMask = _root_.com.google.protobuf.field_mask.FieldMask(
+  ): _root_.grpc_shaded.com.google.protobuf.field_mask.FieldMask = _root_.grpc_shaded.com.google.protobuf.field_mask.FieldMask(
     paths
   )
 }

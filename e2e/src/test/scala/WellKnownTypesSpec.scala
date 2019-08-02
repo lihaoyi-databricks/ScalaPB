@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import com.thesamet.proto.well_known._
 import org.scalatest._
 import org.scalatestplus.scalacheck._
@@ -28,7 +28,7 @@ class WellKnownTypesSpec extends FlatSpec with ScalaCheckDrivenPropertyChecks wi
       _.myUint64 := 17,
       _.myBool := true,
       _.myString := "foo",
-      _.myBytes := com.google.protobuf.ByteString.copyFromUtf8("foo")
+      _.myBytes := grpc_shaded.com.google.protobuf.ByteString.copyFromUtf8("foo")
     )
   }
 }

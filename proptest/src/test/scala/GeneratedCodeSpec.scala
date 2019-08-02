@@ -1,11 +1,11 @@
-package shaded
+package grpc_shaded
 import java.io.{File, PrintWriter}
 import java.nio.charset.Charset
 import java.nio.file.{Files, Paths}
 
 import SchemaGenerators.CompiledSchema
-import com.google.protobuf
-import com.google.protobuf.{Message, TextFormat => GTextFormat}
+import grpc_shaded.com.google.protobuf
+import grpc_shaded.com.google.protobuf.{Message, TextFormat => GTextFormat}
 import scalapb.{GeneratedMessage, JavaProtoSupport, TextFormat}
 import org.scalatest._
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
@@ -108,11 +108,11 @@ class GeneratedCodeSpec extends PropSpec with ScalaCheckDrivenPropertyChecks wit
                   case (jf, sf) =>
                     jf.getFullName should be(sf.fullName)
                     jf.getJavaType() match {
-                      case com.google.protobuf.Descriptors.FieldDescriptor.JavaType.MESSAGE =>
+                      case grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor.JavaType.MESSAGE =>
                         jf.getMessageType().getFullName should be(
                           sf.scalaType.asInstanceOf[ScalaType.Message].descriptor.fullName
                         )
-                      case com.google.protobuf.Descriptors.FieldDescriptor.JavaType.ENUM =>
+                      case grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor.JavaType.ENUM =>
                         jf.getEnumType().getFullName should be(
                           sf.scalaType.asInstanceOf[ScalaType.Enum].descriptor.fullName
                         )

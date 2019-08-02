@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
-import com.google.protobuf.Descriptors.{MethodDescriptor, ServiceDescriptor}
+import grpc_shaded.com.google.protobuf.Descriptors.{MethodDescriptor, ServiceDescriptor}
 import scalapb.compiler.FunctionalPrinter.PrinterEndo
 import scalapb.compiler.ProtobufGenerator.asScalaDocBlock
 
@@ -38,7 +38,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
 
   private[this] def serviceTrait: PrinterEndo = { p =>
     p.call(generateScalaDoc(service))
-      .add(s"trait ${service.name} extends _root_.shaded.scalapb.grpc.AbstractService {")
+      .add(s"trait ${service.name} extends _root_.grpc_shaded.scalapb.grpc.AbstractService {")
       .indent
       .add(s"override def serviceCompanion = ${service.name}")
       .print(service.methods) {
@@ -51,17 +51,17 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
 
   private[this] def serviceTraitCompanion: PrinterEndo = { p =>
     p.add(
-        s"object ${service.name} extends _root_.shaded.scalapb.grpc.ServiceCompanion[${service.name}] {"
+        s"object ${service.name} extends _root_.grpc_shaded.scalapb.grpc.ServiceCompanion[${service.name}] {"
       )
       .indent
       .add(
-        s"implicit def serviceCompanion: _root_.shaded.scalapb.grpc.ServiceCompanion[${service.name}] = this"
+        s"implicit def serviceCompanion: _root_.grpc_shaded.scalapb.grpc.ServiceCompanion[${service.name}] = this"
       )
       .add(
-        s"def javaDescriptor: _root_.com.google.protobuf.Descriptors.ServiceDescriptor = ${service.getFile.fileDescriptorObjectFullName}.javaDescriptor.getServices().get(${service.getIndex})"
+        s"def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.ServiceDescriptor = ${service.getFile.fileDescriptorObjectFullName}.javaDescriptor.getServices().get(${service.getIndex})"
       )
       .add(
-        s"def scalaDescriptor: _root_.shaded.scalapb.descriptors.ServiceDescriptor = ${service.scalaDescriptorSource}"
+        s"def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.ServiceDescriptor = ${service.scalaDescriptorSource}"
       )
       .outdent
       .add("}")
@@ -87,7 +87,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
   private[this] val streamObserver = "_root_.io.grpc.stub.StreamObserver"
 
   private[this] val serverCalls = "_root_.io.grpc.stub.ServerCalls"
-  private[this] val clientCalls = "_root_.shaded.scalapb.grpc.ClientCalls"
+  private[this] val clientCalls = "_root_.grpc_shaded.scalapb.grpc.ClientCalls"
 
   private[this] def clientMethodImpl(m: MethodDescriptor, blocking: Boolean) =
     PrinterEndo { p =>
@@ -143,9 +143,9 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
   private[this] def methodDescriptor(method: MethodDescriptor) = PrinterEndo { p =>
     def marshaller(t: MethodDescriptorPimp#MethodTypeWrapper) =
       if (t.customScalaType.isDefined)
-        s"_root_.shaded.scalapb.grpc.Marshaller.forTypeMappedType[${t.baseScalaType}, ${t.scalaType}]"
+        s"_root_.grpc_shaded.scalapb.grpc.Marshaller.forTypeMappedType[${t.baseScalaType}, ${t.scalaType}]"
       else
-        s"_root_.shaded.scalapb.grpc.Marshaller.forMessage[${t.scalaType}]"
+        s"_root_.grpc_shaded.scalapb.grpc.Marshaller.forMessage[${t.scalaType}]"
 
     val methodType = method.streamType match {
       case StreamType.Unary           => "UNARY"
@@ -178,7 +178,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
         .add(s"""$grpcServiceDescriptor.newBuilder("${service.getFullName}")""")
         .indent
         .add(
-          s""".setSchemaDescriptor(new _root_.shaded.scalapb.grpc.ConcreteProtoFileDescriptorSupplier(${service.getFile.fileDescriptorObjectFullName}.javaDescriptor))"""
+          s""".setSchemaDescriptor(new _root_.grpc_shaded.scalapb.grpc.ConcreteProtoFileDescriptorSupplier(${service.getFile.fileDescriptorObjectFullName}.javaDescriptor))"""
         )
         .print(service.methods) {
           case (p, method) =>
@@ -212,7 +212,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
               s"$serverCalls.UnaryMethod[${method.inputType.scalaType}, ${method.outputType.scalaType}]"
             p.addStringMargin(s"""$call(new $serverMethod {
             |  override def invoke(request: ${method.inputType.scalaType}, observer: $streamObserver[${method.outputType.scalaType}]): Unit =
-            |    $serviceImpl.${method.name}(request).onComplete(shaded.scalapb.grpc.Grpc.completeObserver(observer))(
+            |    $serviceImpl.${method.name}(request).onComplete(grpc_shaded.scalapb.grpc.Grpc.completeObserver(observer))(
             |      $executionContext)
             |}))""")
           case StreamType.ServerStreaming =>
@@ -282,7 +282,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
       .add(s"def stub(channel: $channel): ${service.stub} = new ${service.stub}(channel)")
       .newline
       .add(
-        s"def javaDescriptor: _root_.com.google.protobuf.Descriptors.ServiceDescriptor = ${service.getFile.fileDescriptorObjectFullName}.javaDescriptor.getServices().get(${service.getIndex})"
+        s"def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.ServiceDescriptor = ${service.getFile.fileDescriptorObjectFullName}.javaDescriptor.getServices().get(${service.getIndex})"
       )
       .newline
       .outdent

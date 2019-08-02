@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.source_context
+package grpc_shaded.com.google.protobuf.source_context
 
 /** `SourceContext` represents information about the source of a
   * protobuf element, like the file in which it is defined.
@@ -15,7 +15,7 @@ package com.google.protobuf.source_context
 @SerialVersionUID(0L)
 final case class SourceContext(
     fileName: _root_.scala.Predef.String = ""
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[SourceContext] with shaded.scalapb.lenses.Updatable[SourceContext] {
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[SourceContext] with grpc_shaded.scalapb.lenses.Updatable[SourceContext] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -24,7 +24,7 @@ final case class SourceContext(
       {
         val __value = fileName
         if (__value != "") {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
         }
       };
       __size
@@ -37,7 +37,7 @@ final case class SourceContext(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       {
         val __v = fileName
         if (__v != "") {
@@ -45,7 +45,7 @@ final case class SourceContext(
         }
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.source_context.SourceContext = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.source_context.SourceContext = {
       var __fileName = this.fileName
       var _done__ = false
       while (!_done__) {
@@ -57,7 +57,7 @@ final case class SourceContext(
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.source_context.SourceContext(
+      grpc_shaded.com.google.protobuf.source_context.SourceContext(
           fileName = __fileName
       )
     }
@@ -70,55 +70,55 @@ final case class SourceContext(
         }
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PString(fileName)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PString(fileName)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.source_context.SourceContext
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.source_context.SourceContext
 }
 
-object SourceContext extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.source_context.SourceContext] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.source_context.SourceContext, com.google.protobuf.SourceContext] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.source_context.SourceContext] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.source_context.SourceContext, com.google.protobuf.SourceContext] = this
-  def toJavaProto(scalaPbSource: com.google.protobuf.source_context.SourceContext): com.google.protobuf.SourceContext = {
-    val javaPbOut = com.google.protobuf.SourceContext.newBuilder
+object SourceContext extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.source_context.SourceContext] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.source_context.SourceContext, grpc_shaded.com.google.protobuf.SourceContext] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.source_context.SourceContext] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.source_context.SourceContext, grpc_shaded.com.google.protobuf.SourceContext] = this
+  def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.source_context.SourceContext): grpc_shaded.com.google.protobuf.SourceContext = {
+    val javaPbOut = grpc_shaded.com.google.protobuf.SourceContext.newBuilder
     javaPbOut.setFileName(scalaPbSource.fileName)
     javaPbOut.build
   }
-  def fromJavaProto(javaPbSource: com.google.protobuf.SourceContext): com.google.protobuf.source_context.SourceContext = com.google.protobuf.source_context.SourceContext(
+  def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.SourceContext): grpc_shaded.com.google.protobuf.source_context.SourceContext = grpc_shaded.com.google.protobuf.source_context.SourceContext(
     fileName = javaPbSource.getFileName
   )
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.source_context.SourceContext = {
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.source_context.SourceContext = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.source_context.SourceContext(
+    grpc_shaded.com.google.protobuf.source_context.SourceContext(
       __fieldsMap.getOrElse(__fields.get(0), "").asInstanceOf[_root_.scala.Predef.String]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.source_context.SourceContext] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.source_context.SourceContext] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.source_context.SourceContext(
+      grpc_shaded.com.google.protobuf.source_context.SourceContext(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Predef.String]).getOrElse("")
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = SourceContextProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = SourceContextProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.source_context.SourceContext(
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = SourceContextProto.javaDescriptor.getMessageTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = SourceContextProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.source_context.SourceContext(
   )
-  implicit class SourceContextLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.source_context.SourceContext]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.source_context.SourceContext](_l) {
-    def fileName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.fileName)((c_, f_) => c_.copy(fileName = f_))
+  implicit class SourceContextLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.source_context.SourceContext]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.source_context.SourceContext](_l) {
+    def fileName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.fileName)((c_, f_) => c_.copy(fileName = f_))
   }
   final val FILE_NAME_FIELD_NUMBER = 1
   def of(
     fileName: _root_.scala.Predef.String
-  ): _root_.com.google.protobuf.source_context.SourceContext = _root_.com.google.protobuf.source_context.SourceContext(
+  ): _root_.grpc_shaded.com.google.protobuf.source_context.SourceContext = _root_.grpc_shaded.com.google.protobuf.source_context.SourceContext(
     fileName
   )
 }

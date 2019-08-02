@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.grpc
 
-import com.google.protobuf.Descriptors
+import grpc_shaded.com.google.protobuf.Descriptors
 import io.grpc.protobuf.ProtoFileDescriptorSupplier
 
 class ConcreteProtoFileDescriptorSupplier(descriptor: Descriptors.FileDescriptor)

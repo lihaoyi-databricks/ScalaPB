@@ -3,23 +3,23 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.`type`
+package grpc_shaded.com.google.protobuf.`type`
 
-object TypeProto extends _root_.shaded.scalapb.GeneratedFileObject {
-  lazy val dependencies: Seq[_root_.shaded.scalapb.GeneratedFileObject] = Seq(
-    com.google.protobuf.any.AnyProto,
-    com.google.protobuf.source_context.SourceContextProto
+object TypeProto extends _root_.grpc_shaded.scalapb.GeneratedFileObject {
+  lazy val dependencies: Seq[_root_.grpc_shaded.scalapb.GeneratedFileObject] = Seq(
+    grpc_shaded.com.google.protobuf.any.AnyProto,
+    grpc_shaded.com.google.protobuf.source_context.SourceContextProto
   )
-  lazy val messagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      com.google.protobuf.`type`.Type,
-      com.google.protobuf.`type`.Field,
-      com.google.protobuf.`type`.Enum,
-      com.google.protobuf.`type`.EnumValue,
-      com.google.protobuf.`type`.OptionProto
+  lazy val messagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      grpc_shaded.com.google.protobuf.`type`.Type,
+      grpc_shaded.com.google.protobuf.`type`.Field,
+      grpc_shaded.com.google.protobuf.`type`.Enum,
+      grpc_shaded.com.google.protobuf.`type`.EnumValue,
+      grpc_shaded.com.google.protobuf.`type`.OptionProto
     )
   private lazy val ProtoBytes: Array[Byte] =
-      shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
+      grpc_shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
   """Chpnb29nbGUvcHJvdG9idWYvdHlwZS5wcm90bxIPZ29vZ2xlLnByb3RvYnVmGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvG
   iRnb29nbGUvcHJvdG9idWYvc291cmNlX2NvbnRleHQucHJvdG8i4QIKBFR5cGUSHQoEbmFtZRgBIAEoCUIJ4j8GEgRuYW1lUgRuY
   W1lEjsKBmZpZWxkcxgCIAMoCzIWLmdvb2dsZS5wcm90b2J1Zi5GaWVsZEIL4j8IEgZmaWVsZHNSBmZpZWxkcxIjCgZvbmVvZnMYA
@@ -51,17 +51,17 @@ object TypeProto extends _root_.shaded.scalapb.GeneratedFileObject {
   29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9wcm90b2J1Zi9wdHlwZTtwdHlwZfgBAaICA0dQQqoCHkdvb2dsZS5Qcm90b2J1Zi5XZ
   WxsS25vd25UeXBlc2IGcHJvdG8z"""
       ).mkString)
-  lazy val scalaDescriptor: _root_.shaded.scalapb.descriptors.FileDescriptor = {
-    val scalaProto = com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
-    _root_.shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
+  lazy val scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.FileDescriptor = {
+    val scalaProto = grpc_shaded.com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
+    _root_.grpc_shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
   }
-  lazy val javaDescriptor: com.google.protobuf.Descriptors.FileDescriptor = {
-    val javaProto = com.google.protobuf.DescriptorProtos.FileDescriptorProto.parseFrom(ProtoBytes)
-    com.google.protobuf.Descriptors.FileDescriptor.buildFrom(javaProto, Array(
-      com.google.protobuf.any.AnyProto.javaDescriptor,
-      com.google.protobuf.source_context.SourceContextProto.javaDescriptor
+  lazy val javaDescriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor = {
+    val javaProto = grpc_shaded.com.google.protobuf.DescriptorProtos.FileDescriptorProto.parseFrom(ProtoBytes)
+    grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor.buildFrom(javaProto, Array(
+      grpc_shaded.com.google.protobuf.any.AnyProto.javaDescriptor,
+      grpc_shaded.com.google.protobuf.source_context.SourceContextProto.javaDescriptor
     ))
   }
   @deprecated("Use javaDescriptor instead. In a future version this will refer to scalaDescriptor.", "ScalaPB 0.5.47")
-  def descriptor: com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
+  def descriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
 }

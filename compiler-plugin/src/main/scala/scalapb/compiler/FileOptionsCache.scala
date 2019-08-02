@@ -1,6 +1,6 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
-import com.google.protobuf.Descriptors.FileDescriptor
+import grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor
 import scalapb.options.compiler.Scalapb
 import scalapb.options.compiler.Scalapb.ScalaPbOptions
 import scalapb.options.compiler.Scalapb.ScalaPbOptions.OptionsScope

@@ -2,10 +2,10 @@ syntax = "proto2";
 
 package scalapb;
 
-option java_package = "shaded.scalapb.options";
+option java_package = "grpc_shadedscalapb.options";
 
 option (options) = {
-  package_name: "shaded.scalapb.options"
+  package_name: "grpc_shadedscalapb.options"
   flat_package: true
 };
 

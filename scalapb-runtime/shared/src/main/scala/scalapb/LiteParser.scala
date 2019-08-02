@@ -1,9 +1,9 @@
-package shaded
+package grpc_shaded
 package scalapb
 
 import java.io.InputStream
 
-import com.google.protobuf.{CodedOutputStream, CodedInputStream}
+import grpc_shaded.com.google.protobuf.{CodedOutputStream, CodedInputStream}
 
 object LiteParser {
   def parseFrom[A <: GeneratedMessage with Message[A]](

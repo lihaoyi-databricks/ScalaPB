@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
-import com.google.protobuf.DescriptorProtos.{FileDescriptorProto, FileOptions}
-import com.google.protobuf.Descriptors.FileDescriptor
+import grpc_shaded.com.google.protobuf.DescriptorProtos.{FileDescriptorProto, FileOptions}
+import grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor
 import org.scalatest.{FlatSpec, MustMatchers}
 import scalapb.options.compiler.Scalapb
 import scalapb.options.compiler.Scalapb.ScalaPbOptions

@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.textformat
 
-import com.google.protobuf.descriptor.FieldDescriptorProto
+import grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto
 
 import scalapb.descriptors._
 import scalapb.descriptors.{FieldDescriptor, PValue}

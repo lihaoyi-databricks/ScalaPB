@@ -1,8 +1,8 @@
-package shaded
+package grpc_shaded
 package scalapb.descriptors
 
 import utest._
-import com.google.protobuf.descriptor.FileDescriptorProto
+import grpc_shaded.com.google.protobuf.descriptor.FileDescriptorProto
 
 object FileDescriptorSpec extends TestSuite {
   val tests = Tests {

@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.wrappers
+package grpc_shaded.com.google.protobuf.wrappers
 
 /** Wrapper message for `float`.
   *
@@ -15,7 +15,7 @@ package com.google.protobuf.wrappers
 @SerialVersionUID(0L)
 final case class FloatValue(
     value: _root_.scala.Float = 0.0f
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[FloatValue] with shaded.scalapb.lenses.Updatable[FloatValue] {
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[FloatValue] with grpc_shaded.scalapb.lenses.Updatable[FloatValue] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -24,7 +24,7 @@ final case class FloatValue(
       {
         val __value = value
         if (__value != 0.0f) {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeFloatSize(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeFloatSize(1, __value)
         }
       };
       __size
@@ -37,7 +37,7 @@ final case class FloatValue(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       {
         val __v = value
         if (__v != 0.0f) {
@@ -45,7 +45,7 @@ final case class FloatValue(
         }
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.wrappers.FloatValue = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.wrappers.FloatValue = {
       var __value = this.value
       var _done__ = false
       while (!_done__) {
@@ -57,7 +57,7 @@ final case class FloatValue(
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.wrappers.FloatValue(
+      grpc_shaded.com.google.protobuf.wrappers.FloatValue(
           value = __value
       )
     }
@@ -70,47 +70,47 @@ final case class FloatValue(
         }
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PFloat(value)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PFloat(value)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.wrappers.FloatValue
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.wrappers.FloatValue
 }
 
-object FloatValue extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.wrappers.FloatValue] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.wrappers.FloatValue] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.wrappers.FloatValue = {
+object FloatValue extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.wrappers.FloatValue] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.wrappers.FloatValue] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.wrappers.FloatValue = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.wrappers.FloatValue(
+    grpc_shaded.com.google.protobuf.wrappers.FloatValue(
       __fieldsMap.getOrElse(__fields.get(0), 0.0f).asInstanceOf[_root_.scala.Float]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.wrappers.FloatValue] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.wrappers.FloatValue] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.wrappers.FloatValue(
+      grpc_shaded.com.google.protobuf.wrappers.FloatValue(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Float]).getOrElse(0.0f)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = WrappersProto.javaDescriptor.getMessageTypes.get(1)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = WrappersProto.scalaDescriptor.messages(1)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.wrappers.FloatValue(
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = WrappersProto.javaDescriptor.getMessageTypes.get(1)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = WrappersProto.scalaDescriptor.messages(1)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.wrappers.FloatValue(
   )
-  implicit class FloatValueLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.wrappers.FloatValue]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.wrappers.FloatValue](_l) {
-    def value: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Float] = field(_.value)((c_, f_) => c_.copy(value = f_))
+  implicit class FloatValueLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.wrappers.FloatValue]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.wrappers.FloatValue](_l) {
+    def value: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Float] = field(_.value)((c_, f_) => c_.copy(value = f_))
   }
   final val VALUE_FIELD_NUMBER = 1
   def of(
     value: _root_.scala.Float
-  ): _root_.com.google.protobuf.wrappers.FloatValue = _root_.com.google.protobuf.wrappers.FloatValue(
+  ): _root_.grpc_shaded.com.google.protobuf.wrappers.FloatValue = _root_.grpc_shaded.com.google.protobuf.wrappers.FloatValue(
     value
   )
 }

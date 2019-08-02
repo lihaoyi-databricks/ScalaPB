@@ -3,8 +3,8 @@
 //
 // Protofile syntax: PROTO2
 
-package com.google.protobuf.descriptor
-import _root_.shaded.scalapb.internal.compat.JavaConverters._
+package grpc_shaded.com.google.protobuf.descriptor
+import _root_.grpc_shaded.scalapb.internal.compat.JavaConverters._
 
 /** @param ctype
   *   The ctype option instructs the C++ code generator to use a different
@@ -70,46 +70,46 @@ import _root_.shaded.scalapb.internal.compat.JavaConverters._
   */
 @SerialVersionUID(0L)
 final case class FieldOptions(
-    ctype: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.CType] = _root_.scala.None,
+    ctype: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType] = _root_.scala.None,
     packed: _root_.scala.Option[_root_.scala.Boolean] = _root_.scala.None,
-    jstype: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.JSType] = _root_.scala.None,
+    jstype: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType] = _root_.scala.None,
     `lazy`: _root_.scala.Option[_root_.scala.Boolean] = _root_.scala.None,
     deprecated: _root_.scala.Option[_root_.scala.Boolean] = _root_.scala.None,
     weak: _root_.scala.Option[_root_.scala.Boolean] = _root_.scala.None,
-    uninterpretedOption: _root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption] = _root_.scala.Seq.empty,
-    unknownFields: _root_.shaded.scalapb.UnknownFieldSet = _root_.shaded.scalapb.UnknownFieldSet()
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[FieldOptions] with shaded.scalapb.lenses.Updatable[FieldOptions] with _root_.shaded.scalapb.ExtendableMessage[FieldOptions] {
+    uninterpretedOption: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption] = _root_.scala.Seq.empty,
+    unknownFields: _root_.grpc_shaded.scalapb.UnknownFieldSet = _root_.grpc_shaded.scalapb.UnknownFieldSet()
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[FieldOptions] with grpc_shaded.scalapb.lenses.Updatable[FieldOptions] with _root_.grpc_shaded.scalapb.ExtendableMessage[FieldOptions] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       if (ctype.isDefined) {
         val __value = ctype.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeEnumSize(1, __value.value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeEnumSize(1, __value.value)
       };
       if (packed.isDefined) {
         val __value = packed.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeBoolSize(2, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeBoolSize(2, __value)
       };
       if (jstype.isDefined) {
         val __value = jstype.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeEnumSize(6, __value.value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeEnumSize(6, __value.value)
       };
       if (`lazy`.isDefined) {
         val __value = `lazy`.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeBoolSize(5, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeBoolSize(5, __value)
       };
       if (deprecated.isDefined) {
         val __value = deprecated.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeBoolSize(3, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeBoolSize(3, __value)
       };
       if (weak.isDefined) {
         val __value = weak.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeBoolSize(10, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeBoolSize(10, __value)
       };
       uninterpretedOption.foreach { __item =>
         val __value = __item
-        __size += 2 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 2 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       __size += unknownFields.serializedSize
       __size
@@ -122,7 +122,7 @@ final case class FieldOptions(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       ctype.foreach { __v =>
         val __m = __v
         _output__.writeEnum(1, __m.value)
@@ -155,26 +155,26 @@ final case class FieldOptions(
       };
       unknownFields.writeTo(_output__)
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.FieldOptions = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.FieldOptions = {
       var __ctype = this.ctype
       var __packed = this.packed
       var __jstype = this.jstype
       var __lazy = this.`lazy`
       var __deprecated = this.deprecated
       var __weak = this.weak
-      val __uninterpretedOption = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.UninterpretedOption] ++= this.uninterpretedOption)
-      val _unknownFields__ = new _root_.shaded.scalapb.UnknownFieldSet.Builder(this.unknownFields)
+      val __uninterpretedOption = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption] ++= this.uninterpretedOption)
+      val _unknownFields__ = new _root_.grpc_shaded.scalapb.UnknownFieldSet.Builder(this.unknownFields)
       var _done__ = false
       while (!_done__) {
         val _tag__ = _input__.readTag()
         _tag__ match {
           case 0 => _done__ = true
           case 8 =>
-            __ctype = Option(com.google.protobuf.descriptor.FieldOptions.CType.fromValue(_input__.readEnum()))
+            __ctype = Option(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.fromValue(_input__.readEnum()))
           case 16 =>
             __packed = Option(_input__.readBool())
           case 48 =>
-            __jstype = Option(com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(_input__.readEnum()))
+            __jstype = Option(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(_input__.readEnum()))
           case 40 =>
             __lazy = Option(_input__.readBool())
           case 24 =>
@@ -182,11 +182,11 @@ final case class FieldOptions(
           case 80 =>
             __weak = Option(_input__.readBool())
           case 7994 =>
-            __uninterpretedOption += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.UninterpretedOption.defaultInstance)
+            __uninterpretedOption += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption.defaultInstance)
           case tag => _unknownFields__.parseField(tag, _input__)
         }
       }
-      com.google.protobuf.descriptor.FieldOptions(
+      grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
           ctype = __ctype,
           packed = __packed,
           jstype = __jstype,
@@ -197,15 +197,15 @@ final case class FieldOptions(
           unknownFields = _unknownFields__.result()
       )
     }
-    def getCtype: com.google.protobuf.descriptor.FieldOptions.CType = ctype.getOrElse(com.google.protobuf.descriptor.FieldOptions.CType.STRING)
+    def getCtype: grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType = ctype.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.STRING)
     def clearCtype: FieldOptions = copy(ctype = _root_.scala.None)
-    def withCtype(__v: com.google.protobuf.descriptor.FieldOptions.CType): FieldOptions = copy(ctype = Option(__v))
+    def withCtype(__v: grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType): FieldOptions = copy(ctype = Option(__v))
     def getPacked: _root_.scala.Boolean = packed.getOrElse(false)
     def clearPacked: FieldOptions = copy(packed = _root_.scala.None)
     def withPacked(__v: _root_.scala.Boolean): FieldOptions = copy(packed = Option(__v))
-    def getJstype: com.google.protobuf.descriptor.FieldOptions.JSType = jstype.getOrElse(com.google.protobuf.descriptor.FieldOptions.JSType.JS_NORMAL)
+    def getJstype: grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType = jstype.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.JS_NORMAL)
     def clearJstype: FieldOptions = copy(jstype = _root_.scala.None)
-    def withJstype(__v: com.google.protobuf.descriptor.FieldOptions.JSType): FieldOptions = copy(jstype = Option(__v))
+    def withJstype(__v: grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType): FieldOptions = copy(jstype = Option(__v))
     def getLazy: _root_.scala.Boolean = `lazy`.getOrElse(false)
     def clearLazy: FieldOptions = copy(`lazy` = _root_.scala.None)
     def withLazy(__v: _root_.scala.Boolean): FieldOptions = copy(`lazy` = Option(__v))
@@ -216,11 +216,11 @@ final case class FieldOptions(
     def clearWeak: FieldOptions = copy(weak = _root_.scala.None)
     def withWeak(__v: _root_.scala.Boolean): FieldOptions = copy(weak = Option(__v))
     def clearUninterpretedOption = copy(uninterpretedOption = _root_.scala.Seq.empty)
-    def addUninterpretedOption(__vs: com.google.protobuf.descriptor.UninterpretedOption*): FieldOptions = addAllUninterpretedOption(__vs)
-    def addAllUninterpretedOption(__vs: Iterable[com.google.protobuf.descriptor.UninterpretedOption]): FieldOptions = copy(uninterpretedOption = uninterpretedOption ++ __vs)
-    def withUninterpretedOption(__v: _root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption]): FieldOptions = copy(uninterpretedOption = __v)
-    def withUnknownFields(__v: _root_.shaded.scalapb.UnknownFieldSet) = copy(unknownFields = __v)
-    def discardUnknownFields = copy(unknownFields = _root_.shaded.scalapb.UnknownFieldSet.empty)
+    def addUninterpretedOption(__vs: grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption*): FieldOptions = addAllUninterpretedOption(__vs)
+    def addAllUninterpretedOption(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption]): FieldOptions = copy(uninterpretedOption = uninterpretedOption ++ __vs)
+    def withUninterpretedOption(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption]): FieldOptions = copy(uninterpretedOption = __v)
+    def withUnknownFields(__v: _root_.grpc_shaded.scalapb.UnknownFieldSet) = copy(unknownFields = __v)
+    def discardUnknownFields = copy(unknownFields = _root_.grpc_shaded.scalapb.UnknownFieldSet.empty)
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
         case 1 => ctype.map(_.javaValueDescriptor).orNull
@@ -232,99 +232,99 @@ final case class FieldOptions(
         case 999 => uninterpretedOption
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => ctype.map(__e => _root_.shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 2 => packed.map(_root_.shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 6 => jstype.map(__e => _root_.shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 5 => `lazy`.map(_root_.shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 3 => deprecated.map(_root_.shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 10 => weak.map(_root_.shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 999 => _root_.shaded.scalapb.descriptors.PRepeated(uninterpretedOption.iterator.map(_.toPMessage).toVector)
+        case 1 => ctype.map(__e => _root_.grpc_shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 2 => packed.map(_root_.grpc_shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 6 => jstype.map(__e => _root_.grpc_shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 5 => `lazy`.map(_root_.grpc_shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 3 => deprecated.map(_root_.grpc_shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 10 => weak.map(_root_.grpc_shaded.scalapb.descriptors.PBoolean).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 999 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(uninterpretedOption.iterator.map(_.toPMessage).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.descriptor.FieldOptions
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.descriptor.FieldOptions
 }
 
-object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.FieldOptions] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.FieldOptions, com.google.protobuf.DescriptorProtos.FieldOptions] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.FieldOptions] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.FieldOptions, com.google.protobuf.DescriptorProtos.FieldOptions] = this
-  def toJavaProto(scalaPbSource: com.google.protobuf.descriptor.FieldOptions): com.google.protobuf.DescriptorProtos.FieldOptions = {
-    val javaPbOut = com.google.protobuf.DescriptorProtos.FieldOptions.newBuilder
-    scalaPbSource.ctype.map(com.google.protobuf.descriptor.FieldOptions.CType.toJavaValue).foreach(javaPbOut.setCtype)
+object FieldOptions extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.FieldOptions] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.FieldOptions, grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.FieldOptions] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.FieldOptions, grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions] = this
+  def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.descriptor.FieldOptions): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions = {
+    val javaPbOut = grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.newBuilder
+    scalaPbSource.ctype.map(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.toJavaValue).foreach(javaPbOut.setCtype)
     scalaPbSource.packed.foreach(javaPbOut.setPacked)
-    scalaPbSource.jstype.map(com.google.protobuf.descriptor.FieldOptions.JSType.toJavaValue).foreach(javaPbOut.setJstype)
+    scalaPbSource.jstype.map(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.toJavaValue).foreach(javaPbOut.setJstype)
     scalaPbSource.`lazy`.foreach(javaPbOut.setLazy)
     scalaPbSource.deprecated.foreach(javaPbOut.setDeprecated)
     scalaPbSource.weak.foreach(javaPbOut.setWeak)
-    javaPbOut.addAllUninterpretedOption(scalaPbSource.uninterpretedOption.iterator.map(com.google.protobuf.descriptor.UninterpretedOption.toJavaProto).toIterable.asJava)
+    javaPbOut.addAllUninterpretedOption(scalaPbSource.uninterpretedOption.iterator.map(grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption.toJavaProto).toIterable.asJava)
     javaPbOut.build
   }
-  def fromJavaProto(javaPbSource: com.google.protobuf.DescriptorProtos.FieldOptions): com.google.protobuf.descriptor.FieldOptions = com.google.protobuf.descriptor.FieldOptions(
-    ctype = if (javaPbSource.hasCtype) Some(com.google.protobuf.descriptor.FieldOptions.CType.fromJavaValue(javaPbSource.getCtype)) else _root_.scala.None,
+  def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions): grpc_shaded.com.google.protobuf.descriptor.FieldOptions = grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
+    ctype = if (javaPbSource.hasCtype) Some(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.fromJavaValue(javaPbSource.getCtype)) else _root_.scala.None,
     packed = if (javaPbSource.hasPacked) Some(javaPbSource.getPacked.booleanValue) else _root_.scala.None,
-    jstype = if (javaPbSource.hasJstype) Some(com.google.protobuf.descriptor.FieldOptions.JSType.fromJavaValue(javaPbSource.getJstype)) else _root_.scala.None,
+    jstype = if (javaPbSource.hasJstype) Some(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.fromJavaValue(javaPbSource.getJstype)) else _root_.scala.None,
     `lazy` = if (javaPbSource.hasLazy) Some(javaPbSource.getLazy.booleanValue) else _root_.scala.None,
     deprecated = if (javaPbSource.hasDeprecated) Some(javaPbSource.getDeprecated.booleanValue) else _root_.scala.None,
     weak = if (javaPbSource.hasWeak) Some(javaPbSource.getWeak.booleanValue) else _root_.scala.None,
-    uninterpretedOption = javaPbSource.getUninterpretedOptionList.asScala.iterator.map(com.google.protobuf.descriptor.UninterpretedOption.fromJavaProto).toSeq
+    uninterpretedOption = javaPbSource.getUninterpretedOptionList.asScala.iterator.map(grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption.fromJavaProto).toSeq
   )
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.FieldOptions = {
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.FieldOptions = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.descriptor.FieldOptions(
-      __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => com.google.protobuf.descriptor.FieldOptions.CType.fromValue(__e.getNumber)),
+    grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
+      __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.grpc_shaded.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.fromValue(__e.getNumber)),
       __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[_root_.scala.Boolean]],
-      __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(__e.getNumber)),
+      __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.grpc_shaded.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(__e.getNumber)),
       __fieldsMap.get(__fields.get(3)).asInstanceOf[_root_.scala.Option[_root_.scala.Boolean]],
       __fieldsMap.get(__fields.get(4)).asInstanceOf[_root_.scala.Option[_root_.scala.Boolean]],
       __fieldsMap.get(__fields.get(5)).asInstanceOf[_root_.scala.Option[_root_.scala.Boolean]],
-      __fieldsMap.getOrElse(__fields.get(6), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption]]
+      __fieldsMap.getOrElse(__fields.get(6), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.FieldOptions] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.FieldOptions] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.descriptor.FieldOptions(
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => com.google.protobuf.descriptor.FieldOptions.CType.fromValue(__e.number)),
+      grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.grpc_shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType.fromValue(__e.number)),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Boolean]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).flatMap(_.as[_root_.scala.Option[_root_.shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(__e.number)),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).flatMap(_.as[_root_.scala.Option[_root_.grpc_shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType.fromValue(__e.number)),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Boolean]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Boolean]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(10).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Boolean]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(999).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption]]).getOrElse(_root_.scala.Seq.empty)
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(999).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption]]).getOrElse(_root_.scala.Seq.empty)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(12)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(12)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(12)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(12)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 999 => __out = com.google.protobuf.descriptor.UninterpretedOption
+      case 999 => __out = grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = {
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = {
     (__fieldNumber: @_root_.scala.unchecked) match {
-      case 1 => com.google.protobuf.descriptor.FieldOptions.CType
-      case 6 => com.google.protobuf.descriptor.FieldOptions.JSType
+      case 1 => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType
+      case 6 => grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType
     }
   }
-  lazy val defaultInstance = com.google.protobuf.descriptor.FieldOptions(
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
   )
-  sealed trait CType extends _root_.shaded.scalapb.GeneratedEnum {
+  sealed trait CType extends _root_.grpc_shaded.scalapb.GeneratedEnum {
     type EnumType = CType
     def isString: _root_.scala.Boolean = false
     def isCord: _root_.scala.Boolean = false
     def isStringPiece: _root_.scala.Boolean = false
-    def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[CType] = com.google.protobuf.descriptor.FieldOptions.CType
+    def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[CType] = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType
   }
   
-  object CType extends _root_.shaded.scalapb.GeneratedEnumCompanion[CType] {
-    implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[CType] = this
+  object CType extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[CType] {
+    implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[CType] = this
     /** Default mode.
       */
     @SerialVersionUID(0L)
@@ -352,7 +352,7 @@ object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.
     }
     
     @SerialVersionUID(0L)
-    final case class Unrecognized(value: _root_.scala.Int) extends CType with _root_.shaded.scalapb.UnrecognizedEnum
+    final case class Unrecognized(value: _root_.scala.Int) extends CType with _root_.grpc_shaded.scalapb.UnrecognizedEnum
     
     lazy val values = scala.collection.immutable.Seq(STRING, CORD, STRING_PIECE)
     def fromValue(value: _root_.scala.Int): CType = value match {
@@ -361,24 +361,24 @@ object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.
       case 2 => STRING_PIECE
       case __other => Unrecognized(__other)
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldOptions.javaDescriptor.getEnumTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldOptions.scalaDescriptor.enums(0)
-    def fromJavaValue(pbJavaSource: com.google.protobuf.DescriptorProtos.FieldOptions.CType): CType = fromValue(pbJavaSource.getNumber)
-    def toJavaValue(pbScalaSource: CType): com.google.protobuf.DescriptorProtos.FieldOptions.CType = {
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.javaDescriptor.getEnumTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.scalaDescriptor.enums(0)
+    def fromJavaValue(pbJavaSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.CType): CType = fromValue(pbJavaSource.getNumber)
+    def toJavaValue(pbScalaSource: CType): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.CType = {
       _root_.scala.Predef.require(!pbScalaSource.isUnrecognized, "Unrecognized enum values can not be converted to Java")
-      com.google.protobuf.DescriptorProtos.FieldOptions.CType.forNumber(pbScalaSource.value)
+      grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.CType.forNumber(pbScalaSource.value)
     }
   }
-  sealed trait JSType extends _root_.shaded.scalapb.GeneratedEnum {
+  sealed trait JSType extends _root_.grpc_shaded.scalapb.GeneratedEnum {
     type EnumType = JSType
     def isJsNormal: _root_.scala.Boolean = false
     def isJsString: _root_.scala.Boolean = false
     def isJsNumber: _root_.scala.Boolean = false
-    def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[JSType] = com.google.protobuf.descriptor.FieldOptions.JSType
+    def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[JSType] = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType
   }
   
-  object JSType extends _root_.shaded.scalapb.GeneratedEnumCompanion[JSType] {
-    implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[JSType] = this
+  object JSType extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[JSType] {
+    implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[JSType] = this
     /** Use the default type.
       */
     @SerialVersionUID(0L)
@@ -410,7 +410,7 @@ object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.
     }
     
     @SerialVersionUID(0L)
-    final case class Unrecognized(value: _root_.scala.Int) extends JSType with _root_.shaded.scalapb.UnrecognizedEnum
+    final case class Unrecognized(value: _root_.scala.Int) extends JSType with _root_.grpc_shaded.scalapb.UnrecognizedEnum
     
     lazy val values = scala.collection.immutable.Seq(JS_NORMAL, JS_STRING, JS_NUMBER)
     def fromValue(value: _root_.scala.Int): JSType = value match {
@@ -419,28 +419,28 @@ object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.
       case 2 => JS_NUMBER
       case __other => Unrecognized(__other)
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldOptions.javaDescriptor.getEnumTypes.get(1)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldOptions.scalaDescriptor.enums(1)
-    def fromJavaValue(pbJavaSource: com.google.protobuf.DescriptorProtos.FieldOptions.JSType): JSType = fromValue(pbJavaSource.getNumber)
-    def toJavaValue(pbScalaSource: JSType): com.google.protobuf.DescriptorProtos.FieldOptions.JSType = {
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.javaDescriptor.getEnumTypes.get(1)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldOptions.scalaDescriptor.enums(1)
+    def fromJavaValue(pbJavaSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.JSType): JSType = fromValue(pbJavaSource.getNumber)
+    def toJavaValue(pbScalaSource: JSType): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.JSType = {
       _root_.scala.Predef.require(!pbScalaSource.isUnrecognized, "Unrecognized enum values can not be converted to Java")
-      com.google.protobuf.DescriptorProtos.FieldOptions.JSType.forNumber(pbScalaSource.value)
+      grpc_shaded.com.google.protobuf.DescriptorProtos.FieldOptions.JSType.forNumber(pbScalaSource.value)
     }
   }
-  implicit class FieldOptionsLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldOptions]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.FieldOptions](_l) {
-    def ctype: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldOptions.CType] = field(_.getCtype)((c_, f_) => c_.copy(ctype = Option(f_)))
-    def optionalCtype: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.CType]] = field(_.ctype)((c_, f_) => c_.copy(ctype = f_))
-    def packed: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getPacked)((c_, f_) => c_.copy(packed = Option(f_)))
-    def optionalPacked: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.packed)((c_, f_) => c_.copy(packed = f_))
-    def jstype: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldOptions.JSType] = field(_.getJstype)((c_, f_) => c_.copy(jstype = Option(f_)))
-    def optionalJstype: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.JSType]] = field(_.jstype)((c_, f_) => c_.copy(jstype = f_))
-    def `lazy`: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getLazy)((c_, f_) => c_.copy(`lazy` = Option(f_)))
-    def optionalLazy: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.`lazy`)((c_, f_) => c_.copy(`lazy` = f_))
-    def deprecated: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getDeprecated)((c_, f_) => c_.copy(deprecated = Option(f_)))
-    def optionalDeprecated: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.deprecated)((c_, f_) => c_.copy(deprecated = f_))
-    def weak: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getWeak)((c_, f_) => c_.copy(weak = Option(f_)))
-    def optionalWeak: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.weak)((c_, f_) => c_.copy(weak = f_))
-    def uninterpretedOption: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption]] = field(_.uninterpretedOption)((c_, f_) => c_.copy(uninterpretedOption = f_))
+  implicit class FieldOptionsLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldOptions]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldOptions](_l) {
+    def ctype: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType] = field(_.getCtype)((c_, f_) => c_.copy(ctype = Option(f_)))
+    def optionalCtype: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType]] = field(_.ctype)((c_, f_) => c_.copy(ctype = f_))
+    def packed: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getPacked)((c_, f_) => c_.copy(packed = Option(f_)))
+    def optionalPacked: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.packed)((c_, f_) => c_.copy(packed = f_))
+    def jstype: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType] = field(_.getJstype)((c_, f_) => c_.copy(jstype = Option(f_)))
+    def optionalJstype: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType]] = field(_.jstype)((c_, f_) => c_.copy(jstype = f_))
+    def `lazy`: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getLazy)((c_, f_) => c_.copy(`lazy` = Option(f_)))
+    def optionalLazy: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.`lazy`)((c_, f_) => c_.copy(`lazy` = f_))
+    def deprecated: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getDeprecated)((c_, f_) => c_.copy(deprecated = Option(f_)))
+    def optionalDeprecated: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.deprecated)((c_, f_) => c_.copy(deprecated = f_))
+    def weak: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Boolean] = field(_.getWeak)((c_, f_) => c_.copy(weak = Option(f_)))
+    def optionalWeak: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Boolean]] = field(_.weak)((c_, f_) => c_.copy(weak = f_))
+    def uninterpretedOption: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption]] = field(_.uninterpretedOption)((c_, f_) => c_.copy(uninterpretedOption = f_))
   }
   final val CTYPE_FIELD_NUMBER = 1
   final val PACKED_FIELD_NUMBER = 2
@@ -450,15 +450,15 @@ object FieldOptions extends shaded.scalapb.GeneratedMessageCompanion[com.google.
   final val WEAK_FIELD_NUMBER = 10
   final val UNINTERPRETED_OPTION_FIELD_NUMBER = 999
   def of(
-    ctype: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.CType],
+    ctype: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.CType],
     packed: _root_.scala.Option[_root_.scala.Boolean],
-    jstype: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions.JSType],
+    jstype: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions.JSType],
     `lazy`: _root_.scala.Option[_root_.scala.Boolean],
     deprecated: _root_.scala.Option[_root_.scala.Boolean],
     weak: _root_.scala.Option[_root_.scala.Boolean],
-    uninterpretedOption: _root_.scala.Seq[com.google.protobuf.descriptor.UninterpretedOption],
-    unknownFields: _root_.shaded.scalapb.UnknownFieldSet
-  ): _root_.com.google.protobuf.descriptor.FieldOptions = _root_.com.google.protobuf.descriptor.FieldOptions(
+    uninterpretedOption: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.UninterpretedOption],
+    unknownFields: _root_.grpc_shaded.scalapb.UnknownFieldSet
+  ): _root_.grpc_shaded.com.google.protobuf.descriptor.FieldOptions = _root_.grpc_shaded.com.google.protobuf.descriptor.FieldOptions(
     ctype,
     packed,
     jstype,

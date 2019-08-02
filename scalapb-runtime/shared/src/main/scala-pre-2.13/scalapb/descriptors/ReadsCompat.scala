@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 package scalapb.descriptors
 
 import scala.language.higherKinds

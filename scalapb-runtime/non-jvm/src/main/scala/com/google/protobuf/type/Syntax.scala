@@ -3,19 +3,19 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.`type`
+package grpc_shaded.com.google.protobuf.`type`
 
 /** The syntax in which a protocol buffer element is defined.
   */
-sealed trait Syntax extends _root_.shaded.scalapb.GeneratedEnum {
+sealed trait Syntax extends _root_.grpc_shaded.scalapb.GeneratedEnum {
   type EnumType = Syntax
   def isSyntaxProto2: _root_.scala.Boolean = false
   def isSyntaxProto3: _root_.scala.Boolean = false
-  def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[Syntax] = com.google.protobuf.`type`.Syntax
+  def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Syntax] = grpc_shaded.com.google.protobuf.`type`.Syntax
 }
 
-object Syntax extends _root_.shaded.scalapb.GeneratedEnumCompanion[Syntax] {
-  implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[Syntax] = this
+object Syntax extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Syntax] {
+  implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Syntax] = this
   /** Syntax `proto2`.
     */
   @SerialVersionUID(0L)
@@ -37,7 +37,7 @@ object Syntax extends _root_.shaded.scalapb.GeneratedEnumCompanion[Syntax] {
   }
   
   @SerialVersionUID(0L)
-  final case class Unrecognized(value: _root_.scala.Int) extends Syntax with _root_.shaded.scalapb.UnrecognizedEnum
+  final case class Unrecognized(value: _root_.scala.Int) extends Syntax with _root_.grpc_shaded.scalapb.UnrecognizedEnum
   
   lazy val values = scala.collection.immutable.Seq(SYNTAX_PROTO2, SYNTAX_PROTO3)
   def fromValue(value: _root_.scala.Int): Syntax = value match {
@@ -45,6 +45,6 @@ object Syntax extends _root_.shaded.scalapb.GeneratedEnumCompanion[Syntax] {
     case 1 => SYNTAX_PROTO3
     case __other => Unrecognized(__other)
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = TypeProto.javaDescriptor.getEnumTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = TypeProto.scalaDescriptor.enums(0)
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = TypeProto.javaDescriptor.getEnumTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = TypeProto.scalaDescriptor.enums(0)
 }

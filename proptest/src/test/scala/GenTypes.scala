@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import GraphGen.State
 import Nodes.{Proto3, Proto2, ProtoSyntax}
 import org.scalacheck.{Arbitrary, Gen}

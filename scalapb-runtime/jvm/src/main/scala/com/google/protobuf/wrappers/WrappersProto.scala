@@ -3,25 +3,25 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.wrappers
+package grpc_shaded.com.google.protobuf.wrappers
 
-object WrappersProto extends _root_.shaded.scalapb.GeneratedFileObject {
-  lazy val dependencies: Seq[_root_.shaded.scalapb.GeneratedFileObject] = Seq(
+object WrappersProto extends _root_.grpc_shaded.scalapb.GeneratedFileObject {
+  lazy val dependencies: Seq[_root_.grpc_shaded.scalapb.GeneratedFileObject] = Seq(
   )
-  lazy val messagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      com.google.protobuf.wrappers.DoubleValue,
-      com.google.protobuf.wrappers.FloatValue,
-      com.google.protobuf.wrappers.Int64Value,
-      com.google.protobuf.wrappers.UInt64Value,
-      com.google.protobuf.wrappers.Int32Value,
-      com.google.protobuf.wrappers.UInt32Value,
-      com.google.protobuf.wrappers.BoolValue,
-      com.google.protobuf.wrappers.StringValue,
-      com.google.protobuf.wrappers.BytesValue
+  lazy val messagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      grpc_shaded.com.google.protobuf.wrappers.DoubleValue,
+      grpc_shaded.com.google.protobuf.wrappers.FloatValue,
+      grpc_shaded.com.google.protobuf.wrappers.Int64Value,
+      grpc_shaded.com.google.protobuf.wrappers.UInt64Value,
+      grpc_shaded.com.google.protobuf.wrappers.Int32Value,
+      grpc_shaded.com.google.protobuf.wrappers.UInt32Value,
+      grpc_shaded.com.google.protobuf.wrappers.BoolValue,
+      grpc_shaded.com.google.protobuf.wrappers.StringValue,
+      grpc_shaded.com.google.protobuf.wrappers.BytesValue
     )
   private lazy val ProtoBytes: Array[Byte] =
-      shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
+      grpc_shaded.scalapb.Encoding.fromBase64(scala.collection.immutable.Seq(
   """Ch5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8SD2dvb2dsZS5wcm90b2J1ZiIvCgtEb3VibGVWYWx1ZRIgCgV2YWx1Z
   RgBIAEoAUIK4j8HEgV2YWx1ZVIFdmFsdWUiLgoKRmxvYXRWYWx1ZRIgCgV2YWx1ZRgBIAEoAkIK4j8HEgV2YWx1ZVIFdmFsdWUiL
   goKSW50NjRWYWx1ZRIgCgV2YWx1ZRgBIAEoA0IK4j8HEgV2YWx1ZVIFdmFsdWUiLwoLVUludDY0VmFsdWUSIAoFdmFsdWUYASABK
@@ -32,12 +32,12 @@ object WrappersProto extends _root_.shaded.scalapb.GeneratedFileObject {
   AFaKmdpdGh1Yi5jb20vZ29sYW5nL3Byb3RvYnVmL3B0eXBlcy93cmFwcGVyc/gBAaICA0dQQqoCHkdvb2dsZS5Qcm90b2J1Zi5XZ
   WxsS25vd25UeXBlc2IGcHJvdG8z"""
       ).mkString)
-  lazy val scalaDescriptor: _root_.shaded.scalapb.descriptors.FileDescriptor = {
-    val scalaProto = com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
-    _root_.shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
+  lazy val scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.FileDescriptor = {
+    val scalaProto = grpc_shaded.com.google.protobuf.descriptor.FileDescriptorProto.parseFrom(ProtoBytes)
+    _root_.grpc_shaded.scalapb.descriptors.FileDescriptor.buildFrom(scalaProto, dependencies.map(_.scalaDescriptor))
   }
-  lazy val javaDescriptor: com.google.protobuf.Descriptors.FileDescriptor =
-    com.google.protobuf.WrappersProto.getDescriptor()
+  lazy val javaDescriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor =
+    grpc_shaded.com.google.protobuf.WrappersProto.getDescriptor()
   @deprecated("Use javaDescriptor instead. In a future version this will refer to scalaDescriptor.", "ScalaPB 0.5.47")
-  def descriptor: com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
+  def descriptor: grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor = javaDescriptor
 }

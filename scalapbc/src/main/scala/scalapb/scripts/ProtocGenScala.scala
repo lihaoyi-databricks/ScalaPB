@@ -1,6 +1,6 @@
-package shaded
+package grpc_shaded
 package scalapb.scripts
-import com.google.protobuf.CodedInputStream
+import grpc_shaded.com.google.protobuf.CodedInputStream
 import scalapb.ScalaPbCodeGenerator
 
 object ProtocGenScala {

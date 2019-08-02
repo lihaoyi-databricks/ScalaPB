@@ -1,9 +1,9 @@
-package shaded
+package grpc_shaded
 package scalapb.textformat
 
 import java.math.BigInteger
 
-import com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.ByteString
 import scalapb.TextFormatError
 
 import scala.collection.mutable

@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO2
 
-package com.google.protobuf.descriptor
+package grpc_shaded.com.google.protobuf.descriptor
 
 /** Describes a field within a message.
   *
@@ -38,58 +38,58 @@ package com.google.protobuf.descriptor
 final case class FieldDescriptorProto(
     name: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
     number: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None,
-    label: _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Label] = _root_.scala.None,
-    `type`: _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Type] = _root_.scala.None,
+    label: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label] = _root_.scala.None,
+    `type`: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type] = _root_.scala.None,
     typeName: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
     extendee: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
     defaultValue: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
     oneofIndex: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None,
     jsonName: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
-    options: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions] = _root_.scala.None
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[FieldDescriptorProto] with shaded.scalapb.lenses.Updatable[FieldDescriptorProto] {
+    options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions] = _root_.scala.None
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[FieldDescriptorProto] with grpc_shaded.scalapb.lenses.Updatable[FieldDescriptorProto] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       if (name.isDefined) {
         val __value = name.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
       };
       if (number.isDefined) {
         val __value = number.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(3, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(3, __value)
       };
       if (label.isDefined) {
         val __value = label.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeEnumSize(4, __value.value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeEnumSize(4, __value.value)
       };
       if (`type`.isDefined) {
         val __value = `type`.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeEnumSize(5, __value.value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeEnumSize(5, __value.value)
       };
       if (typeName.isDefined) {
         val __value = typeName.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(6, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(6, __value)
       };
       if (extendee.isDefined) {
         val __value = extendee.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(2, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(2, __value)
       };
       if (defaultValue.isDefined) {
         val __value = defaultValue.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(7, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(7, __value)
       };
       if (oneofIndex.isDefined) {
         val __value = oneofIndex.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(9, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(9, __value)
       };
       if (jsonName.isDefined) {
         val __value = jsonName.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(10, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(10, __value)
       };
       if (options.isDefined) {
         val __value = options.get
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       };
       __size
     }
@@ -101,7 +101,7 @@ final case class FieldDescriptorProto(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       name.foreach { __v =>
         val __m = __v
         _output__.writeString(1, __m)
@@ -145,7 +145,7 @@ final case class FieldDescriptorProto(
         _output__.writeString(10, __m)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.FieldDescriptorProto = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto = {
       var __name = this.name
       var __number = this.number
       var __label = this.label
@@ -166,9 +166,9 @@ final case class FieldDescriptorProto(
           case 24 =>
             __number = Option(_input__.readInt32())
           case 32 =>
-            __label = Option(com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(_input__.readEnum()))
+            __label = Option(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(_input__.readEnum()))
           case 40 =>
-            __type = Option(com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(_input__.readEnum()))
+            __type = Option(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(_input__.readEnum()))
           case 50 =>
             __typeName = Option(_input__.readString())
           case 18 =>
@@ -180,11 +180,11 @@ final case class FieldDescriptorProto(
           case 82 =>
             __jsonName = Option(_input__.readString())
           case 66 =>
-            __options = Option(_root_.shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(com.google.protobuf.descriptor.FieldOptions.defaultInstance)))
+            __options = Option(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.defaultInstance)))
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.descriptor.FieldDescriptorProto(
+      grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
           name = __name,
           number = __number,
           label = __label,
@@ -203,12 +203,12 @@ final case class FieldDescriptorProto(
     def getNumber: _root_.scala.Int = number.getOrElse(0)
     def clearNumber: FieldDescriptorProto = copy(number = _root_.scala.None)
     def withNumber(__v: _root_.scala.Int): FieldDescriptorProto = copy(number = Option(__v))
-    def getLabel: com.google.protobuf.descriptor.FieldDescriptorProto.Label = label.getOrElse(com.google.protobuf.descriptor.FieldDescriptorProto.Label.LABEL_OPTIONAL)
+    def getLabel: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label = label.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.LABEL_OPTIONAL)
     def clearLabel: FieldDescriptorProto = copy(label = _root_.scala.None)
-    def withLabel(__v: com.google.protobuf.descriptor.FieldDescriptorProto.Label): FieldDescriptorProto = copy(label = Option(__v))
-    def getType: com.google.protobuf.descriptor.FieldDescriptorProto.Type = `type`.getOrElse(com.google.protobuf.descriptor.FieldDescriptorProto.Type.TYPE_DOUBLE)
+    def withLabel(__v: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label): FieldDescriptorProto = copy(label = Option(__v))
+    def getType: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type = `type`.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.TYPE_DOUBLE)
     def clearType: FieldDescriptorProto = copy(`type` = _root_.scala.None)
-    def withType(__v: com.google.protobuf.descriptor.FieldDescriptorProto.Type): FieldDescriptorProto = copy(`type` = Option(__v))
+    def withType(__v: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type): FieldDescriptorProto = copy(`type` = Option(__v))
     def getTypeName: _root_.scala.Predef.String = typeName.getOrElse("")
     def clearTypeName: FieldDescriptorProto = copy(typeName = _root_.scala.None)
     def withTypeName(__v: _root_.scala.Predef.String): FieldDescriptorProto = copy(typeName = Option(__v))
@@ -224,9 +224,9 @@ final case class FieldDescriptorProto(
     def getJsonName: _root_.scala.Predef.String = jsonName.getOrElse("")
     def clearJsonName: FieldDescriptorProto = copy(jsonName = _root_.scala.None)
     def withJsonName(__v: _root_.scala.Predef.String): FieldDescriptorProto = copy(jsonName = Option(__v))
-    def getOptions: com.google.protobuf.descriptor.FieldOptions = options.getOrElse(com.google.protobuf.descriptor.FieldOptions.defaultInstance)
+    def getOptions: grpc_shaded.com.google.protobuf.descriptor.FieldOptions = options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.defaultInstance)
     def clearOptions: FieldDescriptorProto = copy(options = _root_.scala.None)
-    def withOptions(__v: com.google.protobuf.descriptor.FieldOptions): FieldDescriptorProto = copy(options = Option(__v))
+    def withOptions(__v: grpc_shaded.com.google.protobuf.descriptor.FieldOptions): FieldDescriptorProto = copy(options = Option(__v))
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
         case 1 => name.orNull
@@ -241,105 +241,105 @@ final case class FieldDescriptorProto(
         case 8 => options.orNull
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => name.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 3 => number.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 4 => label.map(__e => _root_.shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 5 => `type`.map(__e => _root_.shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 6 => typeName.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 2 => extendee.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 7 => defaultValue.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 9 => oneofIndex.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 10 => jsonName.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 8 => options.map(_.toPMessage).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
+        case 1 => name.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 3 => number.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 4 => label.map(__e => _root_.grpc_shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 5 => `type`.map(__e => _root_.grpc_shaded.scalapb.descriptors.PEnum(__e.scalaValueDescriptor)).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 6 => typeName.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 2 => extendee.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 7 => defaultValue.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 9 => oneofIndex.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 10 => jsonName.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 8 => options.map(_.toPMessage).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.descriptor.FieldDescriptorProto
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto
 }
 
-object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.FieldDescriptorProto] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.FieldDescriptorProto, com.google.protobuf.DescriptorProtos.FieldDescriptorProto] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.FieldDescriptorProto] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.FieldDescriptorProto, com.google.protobuf.DescriptorProtos.FieldDescriptorProto] = this
-  def toJavaProto(scalaPbSource: com.google.protobuf.descriptor.FieldDescriptorProto): com.google.protobuf.DescriptorProtos.FieldDescriptorProto = {
-    val javaPbOut = com.google.protobuf.DescriptorProtos.FieldDescriptorProto.newBuilder
+object FieldDescriptorProto extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto, grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto, grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto] = this
+  def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto = {
+    val javaPbOut = grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.newBuilder
     scalaPbSource.name.foreach(javaPbOut.setName)
     scalaPbSource.number.foreach(javaPbOut.setNumber)
-    scalaPbSource.label.map(com.google.protobuf.descriptor.FieldDescriptorProto.Label.toJavaValue).foreach(javaPbOut.setLabel)
-    scalaPbSource.`type`.map(com.google.protobuf.descriptor.FieldDescriptorProto.Type.toJavaValue).foreach(javaPbOut.setType)
+    scalaPbSource.label.map(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.toJavaValue).foreach(javaPbOut.setLabel)
+    scalaPbSource.`type`.map(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.toJavaValue).foreach(javaPbOut.setType)
     scalaPbSource.typeName.foreach(javaPbOut.setTypeName)
     scalaPbSource.extendee.foreach(javaPbOut.setExtendee)
     scalaPbSource.defaultValue.foreach(javaPbOut.setDefaultValue)
     scalaPbSource.oneofIndex.foreach(javaPbOut.setOneofIndex)
     scalaPbSource.jsonName.foreach(javaPbOut.setJsonName)
-    scalaPbSource.options.map(com.google.protobuf.descriptor.FieldOptions.toJavaProto).foreach(javaPbOut.setOptions)
+    scalaPbSource.options.map(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.toJavaProto).foreach(javaPbOut.setOptions)
     javaPbOut.build
   }
-  def fromJavaProto(javaPbSource: com.google.protobuf.DescriptorProtos.FieldDescriptorProto): com.google.protobuf.descriptor.FieldDescriptorProto = com.google.protobuf.descriptor.FieldDescriptorProto(
+  def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto): grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
     name = if (javaPbSource.hasName) Some(javaPbSource.getName) else _root_.scala.None,
     number = if (javaPbSource.hasNumber) Some(javaPbSource.getNumber.intValue) else _root_.scala.None,
-    label = if (javaPbSource.hasLabel) Some(com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromJavaValue(javaPbSource.getLabel)) else _root_.scala.None,
-    `type` = if (javaPbSource.hasType) Some(com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromJavaValue(javaPbSource.getType)) else _root_.scala.None,
+    label = if (javaPbSource.hasLabel) Some(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromJavaValue(javaPbSource.getLabel)) else _root_.scala.None,
+    `type` = if (javaPbSource.hasType) Some(grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromJavaValue(javaPbSource.getType)) else _root_.scala.None,
     typeName = if (javaPbSource.hasTypeName) Some(javaPbSource.getTypeName) else _root_.scala.None,
     extendee = if (javaPbSource.hasExtendee) Some(javaPbSource.getExtendee) else _root_.scala.None,
     defaultValue = if (javaPbSource.hasDefaultValue) Some(javaPbSource.getDefaultValue) else _root_.scala.None,
     oneofIndex = if (javaPbSource.hasOneofIndex) Some(javaPbSource.getOneofIndex.intValue) else _root_.scala.None,
     jsonName = if (javaPbSource.hasJsonName) Some(javaPbSource.getJsonName) else _root_.scala.None,
-    options = if (javaPbSource.hasOptions) Some(com.google.protobuf.descriptor.FieldOptions.fromJavaProto(javaPbSource.getOptions)) else _root_.scala.None
+    options = if (javaPbSource.hasOptions) Some(grpc_shaded.com.google.protobuf.descriptor.FieldOptions.fromJavaProto(javaPbSource.getOptions)) else _root_.scala.None
   )
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.FieldDescriptorProto = {
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.descriptor.FieldDescriptorProto(
+    grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
       __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
       __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]],
-      __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(__e.getNumber)),
-      __fieldsMap.get(__fields.get(3)).asInstanceOf[_root_.scala.Option[_root_.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(__e.getNumber)),
+      __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.grpc_shaded.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(__e.getNumber)),
+      __fieldsMap.get(__fields.get(3)).asInstanceOf[_root_.scala.Option[_root_.grpc_shaded.com.google.protobuf.Descriptors.EnumValueDescriptor]].map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(__e.getNumber)),
       __fieldsMap.get(__fields.get(4)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
       __fieldsMap.get(__fields.get(5)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
       __fieldsMap.get(__fields.get(6)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
       __fieldsMap.get(__fields.get(7)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]],
       __fieldsMap.get(__fields.get(8)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
-      __fieldsMap.get(__fields.get(9)).asInstanceOf[_root_.scala.Option[com.google.protobuf.descriptor.FieldOptions]]
+      __fieldsMap.get(__fields.get(9)).asInstanceOf[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.descriptor.FieldDescriptorProto(
+      grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(4).get).flatMap(_.as[_root_.scala.Option[_root_.shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(__e.number)),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).flatMap(_.as[_root_.scala.Option[_root_.shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(__e.number)),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(4).get).flatMap(_.as[_root_.scala.Option[_root_.grpc_shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label.fromValue(__e.number)),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).flatMap(_.as[_root_.scala.Option[_root_.grpc_shaded.scalapb.descriptors.EnumValueDescriptor]]).map(__e => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type.fromValue(__e.number)),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(7).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(9).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]]),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(10).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(8).get).flatMap(_.as[_root_.scala.Option[com.google.protobuf.descriptor.FieldOptions]])
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(8).get).flatMap(_.as[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions]])
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(4)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(4)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(4)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(4)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 8 => __out = com.google.protobuf.descriptor.FieldOptions
+      case 8 => __out = grpc_shaded.com.google.protobuf.descriptor.FieldOptions
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = {
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = {
     (__fieldNumber: @_root_.scala.unchecked) match {
-      case 4 => com.google.protobuf.descriptor.FieldDescriptorProto.Label
-      case 5 => com.google.protobuf.descriptor.FieldDescriptorProto.Type
+      case 4 => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label
+      case 5 => grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type
     }
   }
-  lazy val defaultInstance = com.google.protobuf.descriptor.FieldDescriptorProto(
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
   )
-  sealed trait Type extends _root_.shaded.scalapb.GeneratedEnum {
+  sealed trait Type extends _root_.grpc_shaded.scalapb.GeneratedEnum {
     type EnumType = Type
     def isTypeDouble: _root_.scala.Boolean = false
     def isTypeFloat: _root_.scala.Boolean = false
@@ -359,11 +359,11 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
     def isTypeSfixed64: _root_.scala.Boolean = false
     def isTypeSint32: _root_.scala.Boolean = false
     def isTypeSint64: _root_.scala.Boolean = false
-    def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[Type] = com.google.protobuf.descriptor.FieldDescriptorProto.Type
+    def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Type] = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type
   }
   
-  object Type extends _root_.shaded.scalapb.GeneratedEnumCompanion[Type] {
-    implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[Type] = this
+  object Type extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Type] {
+    implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Type] = this
     /** 0 is reserved for errors.
       * Order is weird for historical reasons.
       */
@@ -531,7 +531,7 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
     }
     
     @SerialVersionUID(0L)
-    final case class Unrecognized(value: _root_.scala.Int) extends Type with _root_.shaded.scalapb.UnrecognizedEnum
+    final case class Unrecognized(value: _root_.scala.Int) extends Type with _root_.grpc_shaded.scalapb.UnrecognizedEnum
     
     lazy val values = scala.collection.immutable.Seq(TYPE_DOUBLE, TYPE_FLOAT, TYPE_INT64, TYPE_UINT64, TYPE_INT32, TYPE_FIXED64, TYPE_FIXED32, TYPE_BOOL, TYPE_STRING, TYPE_GROUP, TYPE_MESSAGE, TYPE_BYTES, TYPE_UINT32, TYPE_ENUM, TYPE_SFIXED32, TYPE_SFIXED64, TYPE_SINT32, TYPE_SINT64)
     def fromValue(value: _root_.scala.Int): Type = value match {
@@ -555,24 +555,24 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
       case 18 => TYPE_SINT64
       case __other => Unrecognized(__other)
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldDescriptorProto.javaDescriptor.getEnumTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldDescriptorProto.scalaDescriptor.enums(0)
-    def fromJavaValue(pbJavaSource: com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type): Type = fromValue(pbJavaSource.getNumber)
-    def toJavaValue(pbScalaSource: Type): com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type = {
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.javaDescriptor.getEnumTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.scalaDescriptor.enums(0)
+    def fromJavaValue(pbJavaSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type): Type = fromValue(pbJavaSource.getNumber)
+    def toJavaValue(pbScalaSource: Type): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type = {
       _root_.scala.Predef.require(!pbScalaSource.isUnrecognized, "Unrecognized enum values can not be converted to Java")
-      com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(pbScalaSource.value)
+      grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type.forNumber(pbScalaSource.value)
     }
   }
-  sealed trait Label extends _root_.shaded.scalapb.GeneratedEnum {
+  sealed trait Label extends _root_.grpc_shaded.scalapb.GeneratedEnum {
     type EnumType = Label
     def isLabelOptional: _root_.scala.Boolean = false
     def isLabelRequired: _root_.scala.Boolean = false
     def isLabelRepeated: _root_.scala.Boolean = false
-    def companion: _root_.shaded.scalapb.GeneratedEnumCompanion[Label] = com.google.protobuf.descriptor.FieldDescriptorProto.Label
+    def companion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Label] = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label
   }
   
-  object Label extends _root_.shaded.scalapb.GeneratedEnumCompanion[Label] {
-    implicit def enumCompanion: _root_.shaded.scalapb.GeneratedEnumCompanion[Label] = this
+  object Label extends _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Label] {
+    implicit def enumCompanion: _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[Label] = this
     /** 0 is reserved for errors
       */
     @SerialVersionUID(0L)
@@ -600,7 +600,7 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
     }
     
     @SerialVersionUID(0L)
-    final case class Unrecognized(value: _root_.scala.Int) extends Label with _root_.shaded.scalapb.UnrecognizedEnum
+    final case class Unrecognized(value: _root_.scala.Int) extends Label with _root_.grpc_shaded.scalapb.UnrecognizedEnum
     
     lazy val values = scala.collection.immutable.Seq(LABEL_OPTIONAL, LABEL_REQUIRED, LABEL_REPEATED)
     def fromValue(value: _root_.scala.Int): Label = value match {
@@ -609,35 +609,35 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
       case 3 => LABEL_REPEATED
       case __other => Unrecognized(__other)
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldDescriptorProto.javaDescriptor.getEnumTypes.get(1)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.EnumDescriptor = com.google.protobuf.descriptor.FieldDescriptorProto.scalaDescriptor.enums(1)
-    def fromJavaValue(pbJavaSource: com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label): Label = fromValue(pbJavaSource.getNumber)
-    def toJavaValue(pbScalaSource: Label): com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label = {
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.javaDescriptor.getEnumTypes.get(1)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.EnumDescriptor = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.scalaDescriptor.enums(1)
+    def fromJavaValue(pbJavaSource: grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label): Label = fromValue(pbJavaSource.getNumber)
+    def toJavaValue(pbScalaSource: Label): grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label = {
       _root_.scala.Predef.require(!pbScalaSource.isUnrecognized, "Unrecognized enum values can not be converted to Java")
-      com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label.forNumber(pbScalaSource.value)
+      grpc_shaded.com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label.forNumber(pbScalaSource.value)
     }
   }
-  implicit class FieldDescriptorProtoLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldDescriptorProto]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.FieldDescriptorProto](_l) {
-    def name: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
-    def optionalName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
-    def number: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getNumber)((c_, f_) => c_.copy(number = Option(f_)))
-    def optionalNumber: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.number)((c_, f_) => c_.copy(number = f_))
-    def label: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldDescriptorProto.Label] = field(_.getLabel)((c_, f_) => c_.copy(label = Option(f_)))
-    def optionalLabel: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Label]] = field(_.label)((c_, f_) => c_.copy(label = f_))
-    def `type`: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldDescriptorProto.Type] = field(_.getType)((c_, f_) => c_.copy(`type` = Option(f_)))
-    def optionalType: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Type]] = field(_.`type`)((c_, f_) => c_.copy(`type` = f_))
-    def typeName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getTypeName)((c_, f_) => c_.copy(typeName = Option(f_)))
-    def optionalTypeName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.typeName)((c_, f_) => c_.copy(typeName = f_))
-    def extendee: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getExtendee)((c_, f_) => c_.copy(extendee = Option(f_)))
-    def optionalExtendee: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.extendee)((c_, f_) => c_.copy(extendee = f_))
-    def defaultValue: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getDefaultValue)((c_, f_) => c_.copy(defaultValue = Option(f_)))
-    def optionalDefaultValue: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.defaultValue)((c_, f_) => c_.copy(defaultValue = f_))
-    def oneofIndex: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getOneofIndex)((c_, f_) => c_.copy(oneofIndex = Option(f_)))
-    def optionalOneofIndex: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.oneofIndex)((c_, f_) => c_.copy(oneofIndex = f_))
-    def jsonName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getJsonName)((c_, f_) => c_.copy(jsonName = Option(f_)))
-    def optionalJsonName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.jsonName)((c_, f_) => c_.copy(jsonName = f_))
-    def options: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.FieldOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
-    def optionalOptions: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
+  implicit class FieldDescriptorProtoLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto](_l) {
+    def name: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
+    def optionalName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
+    def number: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getNumber)((c_, f_) => c_.copy(number = Option(f_)))
+    def optionalNumber: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.number)((c_, f_) => c_.copy(number = f_))
+    def label: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label] = field(_.getLabel)((c_, f_) => c_.copy(label = Option(f_)))
+    def optionalLabel: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label]] = field(_.label)((c_, f_) => c_.copy(label = f_))
+    def `type`: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type] = field(_.getType)((c_, f_) => c_.copy(`type` = Option(f_)))
+    def optionalType: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type]] = field(_.`type`)((c_, f_) => c_.copy(`type` = f_))
+    def typeName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getTypeName)((c_, f_) => c_.copy(typeName = Option(f_)))
+    def optionalTypeName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.typeName)((c_, f_) => c_.copy(typeName = f_))
+    def extendee: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getExtendee)((c_, f_) => c_.copy(extendee = Option(f_)))
+    def optionalExtendee: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.extendee)((c_, f_) => c_.copy(extendee = f_))
+    def defaultValue: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getDefaultValue)((c_, f_) => c_.copy(defaultValue = Option(f_)))
+    def optionalDefaultValue: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.defaultValue)((c_, f_) => c_.copy(defaultValue = f_))
+    def oneofIndex: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getOneofIndex)((c_, f_) => c_.copy(oneofIndex = Option(f_)))
+    def optionalOneofIndex: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.oneofIndex)((c_, f_) => c_.copy(oneofIndex = f_))
+    def jsonName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getJsonName)((c_, f_) => c_.copy(jsonName = Option(f_)))
+    def optionalJsonName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.jsonName)((c_, f_) => c_.copy(jsonName = f_))
+    def options: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.FieldOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
+    def optionalOptions: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
   }
   final val NAME_FIELD_NUMBER = 1
   final val NUMBER_FIELD_NUMBER = 3
@@ -652,15 +652,15 @@ object FieldDescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com
   def of(
     name: _root_.scala.Option[_root_.scala.Predef.String],
     number: _root_.scala.Option[_root_.scala.Int],
-    label: _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Label],
-    `type`: _root_.scala.Option[com.google.protobuf.descriptor.FieldDescriptorProto.Type],
+    label: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Label],
+    `type`: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.Type],
     typeName: _root_.scala.Option[_root_.scala.Predef.String],
     extendee: _root_.scala.Option[_root_.scala.Predef.String],
     defaultValue: _root_.scala.Option[_root_.scala.Predef.String],
     oneofIndex: _root_.scala.Option[_root_.scala.Int],
     jsonName: _root_.scala.Option[_root_.scala.Predef.String],
-    options: _root_.scala.Option[com.google.protobuf.descriptor.FieldOptions]
-  ): _root_.com.google.protobuf.descriptor.FieldDescriptorProto = _root_.com.google.protobuf.descriptor.FieldDescriptorProto(
+    options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.FieldOptions]
+  ): _root_.grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto = _root_.grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto(
     name,
     number,
     label,

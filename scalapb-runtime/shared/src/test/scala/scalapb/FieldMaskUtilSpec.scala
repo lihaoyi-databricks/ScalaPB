@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb
 
-import com.google.protobuf.field_mask.FieldMask
+import grpc_shaded.com.google.protobuf.field_mask.FieldMask
 import utest.{TestSuite, Tests}
 
 object FieldMaskUtilSpec extends TestSuite {

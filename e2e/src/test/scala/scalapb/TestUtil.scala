@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
 // https://developers.google.com/protocol-buffers/
@@ -31,9 +31,9 @@ package shaded
 
 package scalapb
 
-import com.google.protobuf.ByteString
-import com.google.protobuf.test.UnittestImport.{ImportEnum, ImportMessage}
-import com.google.protobuf.test.UnittestImportPublic.PublicImportMessage
+import grpc_shaded.com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.test.UnittestImport.{ImportEnum, ImportMessage}
+import grpc_shaded.com.google.protobuf.test.UnittestImportPublic.PublicImportMessage
 import protobuf_unittest.UnittestProto.{ForeignEnum, ForeignMessage, TestAllTypes}
 import protobuf_unittest.unittest
 

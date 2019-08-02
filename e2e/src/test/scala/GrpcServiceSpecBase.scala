@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import java.util.concurrent.TimeUnit
 
 import com.thesamet.pb.Service1JavaImpl

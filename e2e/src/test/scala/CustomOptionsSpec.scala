@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import scala.reflect.runtime.universe._
 import scalapb.{GeneratedExtension, JavaProtoSupport}
 import com.thesamet.proto.e2e.custom_options.GoodOrBad._
@@ -7,8 +7,8 @@ import com.thesamet.proto.e2e.custom_options._
 import com.thesamet.proto.e2e.custom_options_p3._
 import com.thesamet.proto.e2e.custom_options_use._
 import org.scalatest._
-import com.google.protobuf.ByteString
-import com.google.protobuf.descriptor.MessageOptions
+import grpc_shaded.com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.descriptor.MessageOptions
 import com.thesamet.pb.{Base1, Base2, FullName}
 
 class CustomOptionsSpec extends FlatSpec with MustMatchers with OptionValues {

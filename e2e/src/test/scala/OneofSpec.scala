@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import com.thesamet.proto.e2e.one_of._
 import org.scalatest._
 import org.scalatestplus.scalacheck._

@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import com.thesamet.proto.e2e.one_of.OneofTest
 import com.thesamet.proto.e2e.one_of.OneofTest.SubMessage
 import org.scalatest.{FlatSpec, MustMatchers}

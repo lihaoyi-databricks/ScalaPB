@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import java.net.ServerSocket
 
 import scala.util.Random

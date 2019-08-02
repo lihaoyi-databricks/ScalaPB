@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 
-import com.google.protobuf.CodedInputStream
+import grpc_shaded.com.google.protobuf.CodedInputStream
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest.Nested
 import org.scalatest._

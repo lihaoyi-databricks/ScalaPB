@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO2
 
-package com.google.protobuf.compiler.plugin
+package grpc_shaded.com.google.protobuf.compiler.plugin
 
 /** The plugin writes an encoded CodeGeneratorResponse to stdout.
   *
@@ -20,19 +20,19 @@ package com.google.protobuf.compiler.plugin
 @SerialVersionUID(0L)
 final case class CodeGeneratorResponse(
     error: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
-    file: _root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = _root_.scala.Seq.empty
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[CodeGeneratorResponse] with shaded.scalapb.lenses.Updatable[CodeGeneratorResponse] {
+    file: _root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = _root_.scala.Seq.empty
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[CodeGeneratorResponse] with grpc_shaded.scalapb.lenses.Updatable[CodeGeneratorResponse] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       if (error.isDefined) {
         val __value = error.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
       };
       file.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       __size
     }
@@ -44,7 +44,7 @@ final case class CodeGeneratorResponse(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       error.foreach { __v =>
         val __m = __v
         _output__.writeString(1, __m)
@@ -56,9 +56,9 @@ final case class CodeGeneratorResponse(
         __m.writeTo(_output__)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.compiler.plugin.CodeGeneratorResponse = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse = {
       var __error = this.error
-      val __file = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] ++= this.file)
+      val __file = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] ++= this.file)
       var _done__ = false
       while (!_done__) {
         val _tag__ = _input__.readTag()
@@ -67,11 +67,11 @@ final case class CodeGeneratorResponse(
           case 10 =>
             __error = Option(_input__.readString())
           case 122 =>
-            __file += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File.defaultInstance)
+            __file += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File.defaultInstance)
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
+      grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
           error = __error,
           file = __file.result()
       )
@@ -80,60 +80,60 @@ final case class CodeGeneratorResponse(
     def clearError: CodeGeneratorResponse = copy(error = _root_.scala.None)
     def withError(__v: _root_.scala.Predef.String): CodeGeneratorResponse = copy(error = Option(__v))
     def clearFile = copy(file = _root_.scala.Seq.empty)
-    def addFile(__vs: com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File*): CodeGeneratorResponse = addAllFile(__vs)
-    def addAllFile(__vs: Iterable[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]): CodeGeneratorResponse = copy(file = file ++ __vs)
-    def withFile(__v: _root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]): CodeGeneratorResponse = copy(file = __v)
+    def addFile(__vs: grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File*): CodeGeneratorResponse = addAllFile(__vs)
+    def addAllFile(__vs: Iterable[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]): CodeGeneratorResponse = copy(file = file ++ __vs)
+    def withFile(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]): CodeGeneratorResponse = copy(file = __v)
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
         case 1 => error.orNull
         case 15 => file
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => error.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 15 => _root_.shaded.scalapb.descriptors.PRepeated(file.iterator.map(_.toPMessage).toVector)
+        case 1 => error.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 15 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(file.iterator.map(_.toPMessage).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.compiler.plugin.CodeGeneratorResponse
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse
 }
 
-object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.compiler.plugin.CodeGeneratorResponse] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.compiler.plugin.CodeGeneratorResponse] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.compiler.plugin.CodeGeneratorResponse = {
+object CodeGeneratorResponse extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
+    grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
       __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
-      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]]
+      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.compiler.plugin.CodeGeneratorResponse] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
+      grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(15).get).map(_.as[_root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]]).getOrElse(_root_.scala.Seq.empty)
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(15).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]]).getOrElse(_root_.scala.Seq.empty)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = PluginProto.javaDescriptor.getMessageTypes.get(2)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = PluginProto.scalaDescriptor.messages(2)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = PluginProto.javaDescriptor.getMessageTypes.get(2)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = PluginProto.scalaDescriptor.messages(2)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 15 => __out = com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
+      case 15 => __out = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      _root_.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      _root_.grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
     )
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
   )
   /** Represents a single generated file.
     *
@@ -195,22 +195,22 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
       name: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
       insertionPoint: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
       content: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None
-      ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[File] with shaded.scalapb.lenses.Updatable[File] {
+      ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[File] with grpc_shaded.scalapb.lenses.Updatable[File] {
       @transient
       private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
       private[this] def __computeSerializedValue(): _root_.scala.Int = {
         var __size = 0
         if (name.isDefined) {
           val __value = name.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
         };
         if (insertionPoint.isDefined) {
           val __value = insertionPoint.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(2, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(2, __value)
         };
         if (content.isDefined) {
           val __value = content.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(15, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(15, __value)
         };
         __size
       }
@@ -222,7 +222,7 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
         }
         read
       }
-      def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+      def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
         name.foreach { __v =>
           val __m = __v
           _output__.writeString(1, __m)
@@ -236,7 +236,7 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
           _output__.writeString(15, __m)
         };
       }
-      def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = {
+      def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = {
         var __name = this.name
         var __insertionPoint = this.insertionPoint
         var __content = this.content
@@ -254,7 +254,7 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
             case tag => _input__.skipField(tag)
           }
         }
-        com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
+        grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
             name = __name,
             insertionPoint = __insertionPoint,
             content = __content
@@ -276,53 +276,53 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
           case 15 => content.orNull
         }
       }
-      def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+      def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
         _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
         (__field.number: @_root_.scala.unchecked) match {
-          case 1 => name.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 2 => insertionPoint.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 15 => content.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
+          case 1 => name.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 2 => insertionPoint.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 15 => content.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
         }
       }
-      def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-      def companion = com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
+      def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+      def companion = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File
   }
   
-  object File extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] {
-    implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = this
-    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = {
+  object File extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] {
+    implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = this
+    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = {
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
       val __fields = javaDescriptor.getFields
-      com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
+      grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
         __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
         __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
         __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]]
       )
     }
-    implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = _root_.shaded.scalapb.descriptors.Reads{
-      case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+    implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+      case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
         _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-        com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
+        grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(15).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]])
         )
       case _ => throw new RuntimeException("Expected PMessage")
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = com.google.protobuf.compiler.plugin.CodeGeneratorResponse.javaDescriptor.getNestedTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = com.google.protobuf.compiler.plugin.CodeGeneratorResponse.scalaDescriptor.nestedMessages(0)
-    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-    lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-    lazy val defaultInstance = com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.javaDescriptor.getNestedTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.scalaDescriptor.nestedMessages(0)
+    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+    lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+    lazy val defaultInstance = grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
     )
-    implicit class FileLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File](_l) {
-      def name: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
-      def optionalName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
-      def insertionPoint: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getInsertionPoint)((c_, f_) => c_.copy(insertionPoint = Option(f_)))
-      def optionalInsertionPoint: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.insertionPoint)((c_, f_) => c_.copy(insertionPoint = f_))
-      def content: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getContent)((c_, f_) => c_.copy(content = Option(f_)))
-      def optionalContent: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.content)((c_, f_) => c_.copy(content = f_))
+    implicit class FileLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File](_l) {
+      def name: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
+      def optionalName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
+      def insertionPoint: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getInsertionPoint)((c_, f_) => c_.copy(insertionPoint = Option(f_)))
+      def optionalInsertionPoint: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.insertionPoint)((c_, f_) => c_.copy(insertionPoint = f_))
+      def content: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getContent)((c_, f_) => c_.copy(content = Option(f_)))
+      def optionalContent: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.content)((c_, f_) => c_.copy(content = f_))
     }
     final val NAME_FIELD_NUMBER = 1
     final val INSERTION_POINT_FIELD_NUMBER = 2
@@ -331,24 +331,24 @@ object CodeGeneratorResponse extends shaded.scalapb.GeneratedMessageCompanion[co
       name: _root_.scala.Option[_root_.scala.Predef.String],
       insertionPoint: _root_.scala.Option[_root_.scala.Predef.String],
       content: _root_.scala.Option[_root_.scala.Predef.String]
-    ): _root_.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = _root_.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
+    ): _root_.grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File = _root_.grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File(
       name,
       insertionPoint,
       content
     )
   }
   
-  implicit class CodeGeneratorResponseLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.compiler.plugin.CodeGeneratorResponse]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.compiler.plugin.CodeGeneratorResponse](_l) {
-    def error: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getError)((c_, f_) => c_.copy(error = Option(f_)))
-    def optionalError: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.error)((c_, f_) => c_.copy(error = f_))
-    def file: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]] = field(_.file)((c_, f_) => c_.copy(file = f_))
+  implicit class CodeGeneratorResponseLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse](_l) {
+    def error: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getError)((c_, f_) => c_.copy(error = Option(f_)))
+    def optionalError: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.error)((c_, f_) => c_.copy(error = f_))
+    def file: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]] = field(_.file)((c_, f_) => c_.copy(file = f_))
   }
   final val ERROR_FIELD_NUMBER = 1
   final val FILE_FIELD_NUMBER = 15
   def of(
     error: _root_.scala.Option[_root_.scala.Predef.String],
-    file: _root_.scala.Seq[com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]
-  ): _root_.com.google.protobuf.compiler.plugin.CodeGeneratorResponse = _root_.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
+    file: _root_.scala.Seq[grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse.File]
+  ): _root_.grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse = _root_.grpc_shaded.com.google.protobuf.compiler.plugin.CodeGeneratorResponse(
     error,
     file
   )

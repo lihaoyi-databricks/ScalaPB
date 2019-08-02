@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb
 
-import com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.ByteString
 
 trait AnyMethods {
   def typeUrl: String
@@ -26,14 +26,14 @@ object AnyMethods {
 trait AnyCompanionMethods {
   def pack[A <: GeneratedMessage with Message[A]](
       generatedMessage: A
-  ): com.google.protobuf.any.Any =
+  ): grpc_shaded.com.google.protobuf.any.Any =
     pack(generatedMessage, "type.googleapis.com/")
 
   def pack[A <: GeneratedMessage with Message[A]](
       generatedMessage: A,
       urlPrefix: String
-  ): com.google.protobuf.any.Any =
-    com.google.protobuf.any.Any(
+  ): grpc_shaded.com.google.protobuf.any.Any =
+    grpc_shaded.com.google.protobuf.any.Any(
       typeUrl =
         if (urlPrefix.endsWith("/"))
           urlPrefix + generatedMessage.companion.scalaDescriptor.fullName

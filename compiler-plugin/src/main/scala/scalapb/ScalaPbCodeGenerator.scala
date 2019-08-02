@@ -1,8 +1,8 @@
-package shaded
+package grpc_shaded
 package scalapb
 
-import com.google.protobuf.{CodedInputStream, ExtensionRegistry}
-import com.google.protobuf.compiler.PluginProtos.{CodeGeneratorRequest, CodeGeneratorResponse}
+import grpc_shaded.com.google.protobuf.{CodedInputStream, ExtensionRegistry}
+import grpc_shaded.com.google.protobuf.compiler.PluginProtos.{CodeGeneratorRequest, CodeGeneratorResponse}
 import scalapb.compiler.ProtobufGenerator
 import scalapb.options.compiler.Scalapb
 import protocbridge.{Artifact, ProtocCodeGenerator}

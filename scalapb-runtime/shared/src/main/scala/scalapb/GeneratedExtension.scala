@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb
 
-import com.google.protobuf.{ByteString, CodedInputStream, InvalidProtocolBufferException}
+import grpc_shaded.com.google.protobuf.{ByteString, CodedInputStream, InvalidProtocolBufferException}
 import scalapb.lenses.{Lens, Mutation}
 
 case class GeneratedExtension[C <: ExtendableMessage[C], T](lens: Lens[C, T]) extends Lens[C, T] {

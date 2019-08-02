@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.wrappers
+package grpc_shaded.com.google.protobuf.wrappers
 
 /** Wrapper message for `int32`.
   *
@@ -15,7 +15,7 @@ package com.google.protobuf.wrappers
 @SerialVersionUID(0L)
 final case class Int32Value(
     value: _root_.scala.Int = 0
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Int32Value] with shaded.scalapb.lenses.Updatable[Int32Value] {
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[Int32Value] with grpc_shaded.scalapb.lenses.Updatable[Int32Value] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -24,7 +24,7 @@ final case class Int32Value(
       {
         val __value = value
         if (__value != 0) {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
         }
       };
       __size
@@ -37,7 +37,7 @@ final case class Int32Value(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       {
         val __v = value
         if (__v != 0) {
@@ -45,7 +45,7 @@ final case class Int32Value(
         }
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.wrappers.Int32Value = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.wrappers.Int32Value = {
       var __value = this.value
       var _done__ = false
       while (!_done__) {
@@ -57,7 +57,7 @@ final case class Int32Value(
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.wrappers.Int32Value(
+      grpc_shaded.com.google.protobuf.wrappers.Int32Value(
           value = __value
       )
     }
@@ -70,47 +70,47 @@ final case class Int32Value(
         }
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PInt(value)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PInt(value)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.wrappers.Int32Value
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.wrappers.Int32Value
 }
 
-object Int32Value extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.wrappers.Int32Value] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.wrappers.Int32Value] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.wrappers.Int32Value = {
+object Int32Value extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.wrappers.Int32Value] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.wrappers.Int32Value] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.wrappers.Int32Value = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.wrappers.Int32Value(
+    grpc_shaded.com.google.protobuf.wrappers.Int32Value(
       __fieldsMap.getOrElse(__fields.get(0), 0).asInstanceOf[_root_.scala.Int]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.wrappers.Int32Value] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.wrappers.Int32Value] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.wrappers.Int32Value(
+      grpc_shaded.com.google.protobuf.wrappers.Int32Value(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Int]).getOrElse(0)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = WrappersProto.javaDescriptor.getMessageTypes.get(4)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = WrappersProto.scalaDescriptor.messages(4)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.wrappers.Int32Value(
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = WrappersProto.javaDescriptor.getMessageTypes.get(4)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = WrappersProto.scalaDescriptor.messages(4)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.wrappers.Int32Value(
   )
-  implicit class Int32ValueLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.wrappers.Int32Value]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.wrappers.Int32Value](_l) {
-    def value: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.value)((c_, f_) => c_.copy(value = f_))
+  implicit class Int32ValueLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.wrappers.Int32Value]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.wrappers.Int32Value](_l) {
+    def value: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.value)((c_, f_) => c_.copy(value = f_))
   }
   final val VALUE_FIELD_NUMBER = 1
   def of(
     value: _root_.scala.Int
-  ): _root_.com.google.protobuf.wrappers.Int32Value = _root_.com.google.protobuf.wrappers.Int32Value(
+  ): _root_.grpc_shaded.com.google.protobuf.wrappers.Int32Value = _root_.grpc_shaded.com.google.protobuf.wrappers.Int32Value(
     value
   )
 }

@@ -3,8 +3,8 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.struct
-import _root_.shaded.scalapb.internal.compat.JavaConverters._
+package grpc_shaded.com.google.protobuf.struct
+import _root_.grpc_shaded.scalapb.internal.compat.JavaConverters._
 
 /** `Struct` represents a structured data value, consisting of fields
   * which map to dynamically typed values. In some languages, `Struct`
@@ -20,15 +20,15 @@ import _root_.shaded.scalapb.internal.compat.JavaConverters._
   */
 @SerialVersionUID(0L)
 final case class Struct(
-    fields: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, com.google.protobuf.struct.Value] = _root_.scala.collection.immutable.Map.empty
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Struct] with shaded.scalapb.lenses.Updatable[Struct] {
+    fields: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value] = _root_.scala.collection.immutable.Map.empty
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[Struct] with grpc_shaded.scalapb.lenses.Updatable[Struct] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       fields.foreach { __item =>
-        val __value = com.google.protobuf.struct.Struct._typemapper_fields.toBase(__item)
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        val __value = grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toBase(__item)
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       __size
     }
@@ -40,101 +40,101 @@ final case class Struct(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       fields.foreach { __v =>
-        val __m = com.google.protobuf.struct.Struct._typemapper_fields.toBase(__v)
+        val __m = grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toBase(__v)
         _output__.writeTag(1, 2)
         _output__.writeUInt32NoTag(__m.serializedSize)
         __m.writeTo(_output__)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.struct.Struct = {
-      val __fields = (_root_.scala.collection.immutable.Map.newBuilder[_root_.scala.Predef.String, com.google.protobuf.struct.Value] ++= this.fields)
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.struct.Struct = {
+      val __fields = (_root_.scala.collection.immutable.Map.newBuilder[_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value] ++= this.fields)
       var _done__ = false
       while (!_done__) {
         val _tag__ = _input__.readTag()
         _tag__ match {
           case 0 => _done__ = true
           case 10 =>
-            __fields += com.google.protobuf.struct.Struct._typemapper_fields.toCustom(_root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.struct.Struct.FieldsEntry.defaultInstance))
+            __fields += grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toCustom(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry.defaultInstance))
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.struct.Struct(
+      grpc_shaded.com.google.protobuf.struct.Struct(
           fields = __fields.result()
       )
     }
     def clearFields = copy(fields = _root_.scala.collection.immutable.Map.empty)
-    def addFields(__vs: (_root_.scala.Predef.String, com.google.protobuf.struct.Value)*): Struct = addAllFields(__vs)
-    def addAllFields(__vs: Iterable[(_root_.scala.Predef.String, com.google.protobuf.struct.Value)]): Struct = copy(fields = fields ++ __vs)
-    def withFields(__v: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, com.google.protobuf.struct.Value]): Struct = copy(fields = __v)
+    def addFields(__vs: (_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)*): Struct = addAllFields(__vs)
+    def addAllFields(__vs: Iterable[(_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)]): Struct = copy(fields = fields ++ __vs)
+    def withFields(__v: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value]): Struct = copy(fields = __v)
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
-        case 1 => fields.iterator.map(com.google.protobuf.struct.Struct._typemapper_fields.toBase).toSeq
+        case 1 => fields.iterator.map(grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toBase).toSeq
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PRepeated(fields.iterator.map(com.google.protobuf.struct.Struct._typemapper_fields.toBase(_).toPMessage).toVector)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(fields.iterator.map(grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toBase(_).toPMessage).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.struct.Struct
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.struct.Struct
 }
 
-object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.struct.Struct] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.struct.Struct, com.google.protobuf.Struct] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.struct.Struct] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.struct.Struct, com.google.protobuf.Struct] = this
-  def toJavaProto(scalaPbSource: com.google.protobuf.struct.Struct): com.google.protobuf.Struct = {
-    val javaPbOut = com.google.protobuf.Struct.newBuilder
+object Struct extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.struct.Struct] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.struct.Struct, grpc_shaded.com.google.protobuf.Struct] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.struct.Struct] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.struct.Struct, grpc_shaded.com.google.protobuf.Struct] = this
+  def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.struct.Struct): grpc_shaded.com.google.protobuf.Struct = {
+    val javaPbOut = grpc_shaded.com.google.protobuf.Struct.newBuilder
     javaPbOut
   .getMutableFields()
   .putAll(
     scalaPbSource.fields.iterator.map {
-      __kv => (__kv._1, com.google.protobuf.struct.Value.toJavaProto(__kv._2))
+      __kv => (__kv._1, grpc_shaded.com.google.protobuf.struct.Value.toJavaProto(__kv._2))
   }.toMap.asJava)
 
     javaPbOut.build
   }
-  def fromJavaProto(javaPbSource: com.google.protobuf.Struct): com.google.protobuf.struct.Struct = com.google.protobuf.struct.Struct(
-    fields = javaPbSource.getFieldsMap.asScala.iterator.map(__pv => (__pv._1, com.google.protobuf.struct.Value.fromJavaProto(__pv._2))).toMap
+  def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.Struct): grpc_shaded.com.google.protobuf.struct.Struct = grpc_shaded.com.google.protobuf.struct.Struct(
+    fields = javaPbSource.getFieldsMap.asScala.iterator.map(__pv => (__pv._1, grpc_shaded.com.google.protobuf.struct.Value.fromJavaProto(__pv._2))).toMap
   )
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.struct.Struct = {
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.struct.Struct = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.struct.Struct(
-      __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.struct.Struct.FieldsEntry]].iterator.map(com.google.protobuf.struct.Struct._typemapper_fields.toCustom).toMap
+    grpc_shaded.com.google.protobuf.struct.Struct(
+      __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry]].iterator.map(grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toCustom).toMap
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.struct.Struct] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.struct.Struct] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.struct.Struct(
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[com.google.protobuf.struct.Struct.FieldsEntry]]).getOrElse(_root_.scala.Seq.empty).iterator.map(com.google.protobuf.struct.Struct._typemapper_fields.toCustom).toMap
+      grpc_shaded.com.google.protobuf.struct.Struct(
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry]]).getOrElse(_root_.scala.Seq.empty).iterator.map(grpc_shaded.com.google.protobuf.struct.Struct._typemapper_fields.toCustom).toMap
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = StructProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = StructProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = StructProto.javaDescriptor.getMessageTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = StructProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 1 => __out = com.google.protobuf.struct.Struct.FieldsEntry
+      case 1 => __out = grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      _root_.com.google.protobuf.struct.Struct.FieldsEntry
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      _root_.grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry
     )
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.struct.Struct(
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.struct.Struct(
   )
   @SerialVersionUID(0L)
   final case class FieldsEntry(
       key: _root_.scala.Predef.String = "",
-      value: _root_.scala.Option[com.google.protobuf.struct.Value] = _root_.scala.None
-      ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[FieldsEntry] with shaded.scalapb.lenses.Updatable[FieldsEntry] {
+      value: _root_.scala.Option[grpc_shaded.com.google.protobuf.struct.Value] = _root_.scala.None
+      ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[FieldsEntry] with grpc_shaded.scalapb.lenses.Updatable[FieldsEntry] {
       @transient
       private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
       private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -143,12 +143,12 @@ object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protob
         {
           val __value = key
           if (__value != "") {
-            __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+            __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
           }
         };
         if (value.isDefined) {
           val __value = value.get
-          __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+          __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
         };
         __size
       }
@@ -160,7 +160,7 @@ object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protob
         }
         read
       }
-      def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+      def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
         {
           val __v = key
           if (__v != "") {
@@ -174,7 +174,7 @@ object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protob
           __m.writeTo(_output__)
         };
       }
-      def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.struct.Struct.FieldsEntry = {
+      def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry = {
         var __key = this.key
         var __value = this.value
         var _done__ = false
@@ -185,19 +185,19 @@ object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protob
             case 10 =>
               __key = _input__.readString()
             case 18 =>
-              __value = Option(_root_.shaded.scalapb.LiteParser.readMessage(_input__, __value.getOrElse(com.google.protobuf.struct.Value.defaultInstance)))
+              __value = Option(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, __value.getOrElse(grpc_shaded.com.google.protobuf.struct.Value.defaultInstance)))
             case tag => _input__.skipField(tag)
           }
         }
-        com.google.protobuf.struct.Struct.FieldsEntry(
+        grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(
             key = __key,
             value = __value
         )
       }
       def withKey(__v: _root_.scala.Predef.String): FieldsEntry = copy(key = __v)
-      def getValue: com.google.protobuf.struct.Value = value.getOrElse(com.google.protobuf.struct.Value.defaultInstance)
+      def getValue: grpc_shaded.com.google.protobuf.struct.Value = value.getOrElse(grpc_shaded.com.google.protobuf.struct.Value.defaultInstance)
       def clearValue: FieldsEntry = copy(value = _root_.scala.None)
-      def withValue(__v: com.google.protobuf.struct.Value): FieldsEntry = copy(value = Option(__v))
+      def withValue(__v: grpc_shaded.com.google.protobuf.struct.Value): FieldsEntry = copy(value = Option(__v))
       def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
         (__fieldNumber: @_root_.scala.unchecked) match {
           case 1 => {
@@ -207,76 +207,76 @@ object Struct extends shaded.scalapb.GeneratedMessageCompanion[com.google.protob
           case 2 => value.orNull
         }
       }
-      def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+      def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
         _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
         (__field.number: @_root_.scala.unchecked) match {
-          case 1 => _root_.shaded.scalapb.descriptors.PString(key)
-          case 2 => value.map(_.toPMessage).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
+          case 1 => _root_.grpc_shaded.scalapb.descriptors.PString(key)
+          case 2 => value.map(_.toPMessage).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
         }
       }
-      def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-      def companion = com.google.protobuf.struct.Struct.FieldsEntry
+      def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+      def companion = grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry
   }
   
-  object FieldsEntry extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.struct.Struct.FieldsEntry] {
-    implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.struct.Struct.FieldsEntry] = this
-    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.struct.Struct.FieldsEntry = {
+  object FieldsEntry extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry] {
+    implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry] = this
+    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry = {
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
       val __fields = javaDescriptor.getFields
-      com.google.protobuf.struct.Struct.FieldsEntry(
+      grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(
         __fieldsMap.getOrElse(__fields.get(0), "").asInstanceOf[_root_.scala.Predef.String],
-        __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[com.google.protobuf.struct.Value]]
+        __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[grpc_shaded.com.google.protobuf.struct.Value]]
       )
     }
-    implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.struct.Struct.FieldsEntry] = _root_.shaded.scalapb.descriptors.Reads{
-      case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+    implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+      case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
         _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-        com.google.protobuf.struct.Struct.FieldsEntry(
+        grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Predef.String]).getOrElse(""),
-          __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[com.google.protobuf.struct.Value]])
+          __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[grpc_shaded.com.google.protobuf.struct.Value]])
         )
       case _ => throw new RuntimeException("Expected PMessage")
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = com.google.protobuf.struct.Struct.javaDescriptor.getNestedTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = com.google.protobuf.struct.Struct.scalaDescriptor.nestedMessages(0)
-    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-      var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = grpc_shaded.com.google.protobuf.struct.Struct.javaDescriptor.getNestedTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = grpc_shaded.com.google.protobuf.struct.Struct.scalaDescriptor.nestedMessages(0)
+    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+      var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
       (__number: @_root_.scala.unchecked) match {
-        case 2 => __out = com.google.protobuf.struct.Value
+        case 2 => __out = grpc_shaded.com.google.protobuf.struct.Value
       }
       __out
     }
-    lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-    lazy val defaultInstance = com.google.protobuf.struct.Struct.FieldsEntry(
+    lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+    lazy val defaultInstance = grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(
     )
-    implicit class FieldsEntryLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.struct.Struct.FieldsEntry]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.struct.Struct.FieldsEntry](_l) {
-      def key: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.key)((c_, f_) => c_.copy(key = f_))
-      def value: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.struct.Value] = field(_.getValue)((c_, f_) => c_.copy(value = Option(f_)))
-      def optionalValue: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.struct.Value]] = field(_.value)((c_, f_) => c_.copy(value = f_))
+    implicit class FieldsEntryLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry](_l) {
+      def key: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.key)((c_, f_) => c_.copy(key = f_))
+      def value: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.struct.Value] = field(_.getValue)((c_, f_) => c_.copy(value = Option(f_)))
+      def optionalValue: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.struct.Value]] = field(_.value)((c_, f_) => c_.copy(value = f_))
     }
     final val KEY_FIELD_NUMBER = 1
     final val VALUE_FIELD_NUMBER = 2
-    implicit val keyValueMapper: _root_.shaded.scalapb.TypeMapper[com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, com.google.protobuf.struct.Value)] =
-      _root_.shaded.scalapb.TypeMapper[com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, com.google.protobuf.struct.Value)](__m => (__m.key, __m.getValue))(__p => com.google.protobuf.struct.Struct.FieldsEntry(__p._1, Some(__p._2)))
+    implicit val keyValueMapper: _root_.grpc_shaded.scalapb.TypeMapper[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)] =
+      _root_.grpc_shaded.scalapb.TypeMapper[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)](__m => (__m.key, __m.getValue))(__p => grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(__p._1, Some(__p._2)))
     def of(
       key: _root_.scala.Predef.String,
-      value: _root_.scala.Option[com.google.protobuf.struct.Value]
-    ): _root_.com.google.protobuf.struct.Struct.FieldsEntry = _root_.com.google.protobuf.struct.Struct.FieldsEntry(
+      value: _root_.scala.Option[grpc_shaded.com.google.protobuf.struct.Value]
+    ): _root_.grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry = _root_.grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry(
       key,
       value
     )
   }
   
-  implicit class StructLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.struct.Struct]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.struct.Struct](_l) {
-    def fields: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, com.google.protobuf.struct.Value]] = field(_.fields)((c_, f_) => c_.copy(fields = f_))
+  implicit class StructLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.struct.Struct]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.struct.Struct](_l) {
+    def fields: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value]] = field(_.fields)((c_, f_) => c_.copy(fields = f_))
   }
   final val FIELDS_FIELD_NUMBER = 1
   @transient
-  private val _typemapper_fields: _root_.shaded.scalapb.TypeMapper[com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, com.google.protobuf.struct.Value)] = implicitly[_root_.shaded.scalapb.TypeMapper[com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, com.google.protobuf.struct.Value)]]
+  private val _typemapper_fields: _root_.grpc_shaded.scalapb.TypeMapper[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)] = implicitly[_root_.grpc_shaded.scalapb.TypeMapper[grpc_shaded.com.google.protobuf.struct.Struct.FieldsEntry, (_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value)]]
   def of(
-    fields: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, com.google.protobuf.struct.Value]
-  ): _root_.com.google.protobuf.struct.Struct = _root_.com.google.protobuf.struct.Struct(
+    fields: _root_.scala.collection.immutable.Map[_root_.scala.Predef.String, grpc_shaded.com.google.protobuf.struct.Value]
+  ): _root_.grpc_shaded.com.google.protobuf.struct.Struct = _root_.grpc_shaded.com.google.protobuf.struct.Struct(
     fields
   )
 }

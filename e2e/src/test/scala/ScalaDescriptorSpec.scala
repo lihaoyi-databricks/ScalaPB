@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import com.thesamet.proto.e2e.one_of.OneofTest.SubMessage
 import com.thesamet.proto.e2e.one_of.{OneOfProto, OneofTest}
 import com.thesamet.proto.e2e.service.Service1Grpc.Service1

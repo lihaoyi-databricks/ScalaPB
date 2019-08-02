@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 
 import com.thesamet.proto.e2e.service.{Service1Grpc => Service1GrpcScala, _}
 

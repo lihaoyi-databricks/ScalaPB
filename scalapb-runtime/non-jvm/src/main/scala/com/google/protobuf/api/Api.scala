@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO3
 
-package com.google.protobuf.api
+package grpc_shaded.com.google.protobuf.api
 
 /** Api is a light-weight descriptor for an API Interface.
   *
@@ -53,13 +53,13 @@ package com.google.protobuf.api
 @SerialVersionUID(0L)
 final case class Api(
     name: _root_.scala.Predef.String = "",
-    methods: _root_.scala.Seq[com.google.protobuf.api.Method] = _root_.scala.Seq.empty,
-    options: _root_.scala.Seq[com.google.protobuf.`type`.OptionProto] = _root_.scala.Seq.empty,
+    methods: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method] = _root_.scala.Seq.empty,
+    options: _root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto] = _root_.scala.Seq.empty,
     version: _root_.scala.Predef.String = "",
-    sourceContext: _root_.scala.Option[com.google.protobuf.source_context.SourceContext] = _root_.scala.None,
-    mixins: _root_.scala.Seq[com.google.protobuf.api.Mixin] = _root_.scala.Seq.empty,
-    syntax: com.google.protobuf.`type`.Syntax = com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Api] with shaded.scalapb.lenses.Updatable[Api] {
+    sourceContext: _root_.scala.Option[grpc_shaded.com.google.protobuf.source_context.SourceContext] = _root_.scala.None,
+    mixins: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin] = _root_.scala.Seq.empty,
+    syntax: grpc_shaded.com.google.protobuf.`type`.Syntax = grpc_shaded.com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[Api] with grpc_shaded.scalapb.lenses.Updatable[Api] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
@@ -68,37 +68,37 @@ final case class Api(
       {
         val __value = name
         if (__value != "") {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
         }
       };
       methods.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       options.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       
       {
         val __value = version
         if (__value != "") {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(4, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(4, __value)
         }
       };
       if (sourceContext.isDefined) {
         val __value = sourceContext.get
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       };
       mixins.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       
       {
         val __value = syntax
-        if (__value != com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2) {
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeEnumSize(7, __value.value)
+        if (__value != grpc_shaded.com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2) {
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeEnumSize(7, __value.value)
         }
       };
       __size
@@ -111,7 +111,7 @@ final case class Api(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       {
         val __v = name
         if (__v != "") {
@@ -150,18 +150,18 @@ final case class Api(
       };
       {
         val __v = syntax
-        if (__v != com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2) {
+        if (__v != grpc_shaded.com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2) {
           _output__.writeEnum(7, __v.value)
         }
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.api.Api = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.api.Api = {
       var __name = this.name
-      val __methods = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.api.Method] ++= this.methods)
-      val __options = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.`type`.OptionProto] ++= this.options)
+      val __methods = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.api.Method] ++= this.methods)
+      val __options = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.`type`.OptionProto] ++= this.options)
       var __version = this.version
       var __sourceContext = this.sourceContext
-      val __mixins = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.api.Mixin] ++= this.mixins)
+      val __mixins = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.api.Mixin] ++= this.mixins)
       var __syntax = this.syntax
       var _done__ = false
       while (!_done__) {
@@ -171,21 +171,21 @@ final case class Api(
           case 10 =>
             __name = _input__.readString()
           case 18 =>
-            __methods += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.api.Method.defaultInstance)
+            __methods += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.api.Method.defaultInstance)
           case 26 =>
-            __options += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.`type`.OptionProto.defaultInstance)
+            __options += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.`type`.OptionProto.defaultInstance)
           case 34 =>
             __version = _input__.readString()
           case 42 =>
-            __sourceContext = Option(_root_.shaded.scalapb.LiteParser.readMessage(_input__, __sourceContext.getOrElse(com.google.protobuf.source_context.SourceContext.defaultInstance)))
+            __sourceContext = Option(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, __sourceContext.getOrElse(grpc_shaded.com.google.protobuf.source_context.SourceContext.defaultInstance)))
           case 50 =>
-            __mixins += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.api.Mixin.defaultInstance)
+            __mixins += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.api.Mixin.defaultInstance)
           case 56 =>
-            __syntax = com.google.protobuf.`type`.Syntax.fromValue(_input__.readEnum())
+            __syntax = grpc_shaded.com.google.protobuf.`type`.Syntax.fromValue(_input__.readEnum())
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.api.Api(
+      grpc_shaded.com.google.protobuf.api.Api(
           name = __name,
           methods = __methods.result(),
           options = __options.result(),
@@ -197,22 +197,22 @@ final case class Api(
     }
     def withName(__v: _root_.scala.Predef.String): Api = copy(name = __v)
     def clearMethods = copy(methods = _root_.scala.Seq.empty)
-    def addMethods(__vs: com.google.protobuf.api.Method*): Api = addAllMethods(__vs)
-    def addAllMethods(__vs: Iterable[com.google.protobuf.api.Method]): Api = copy(methods = methods ++ __vs)
-    def withMethods(__v: _root_.scala.Seq[com.google.protobuf.api.Method]): Api = copy(methods = __v)
+    def addMethods(__vs: grpc_shaded.com.google.protobuf.api.Method*): Api = addAllMethods(__vs)
+    def addAllMethods(__vs: Iterable[grpc_shaded.com.google.protobuf.api.Method]): Api = copy(methods = methods ++ __vs)
+    def withMethods(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method]): Api = copy(methods = __v)
     def clearOptions = copy(options = _root_.scala.Seq.empty)
-    def addOptions(__vs: com.google.protobuf.`type`.OptionProto*): Api = addAllOptions(__vs)
-    def addAllOptions(__vs: Iterable[com.google.protobuf.`type`.OptionProto]): Api = copy(options = options ++ __vs)
-    def withOptions(__v: _root_.scala.Seq[com.google.protobuf.`type`.OptionProto]): Api = copy(options = __v)
+    def addOptions(__vs: grpc_shaded.com.google.protobuf.`type`.OptionProto*): Api = addAllOptions(__vs)
+    def addAllOptions(__vs: Iterable[grpc_shaded.com.google.protobuf.`type`.OptionProto]): Api = copy(options = options ++ __vs)
+    def withOptions(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto]): Api = copy(options = __v)
     def withVersion(__v: _root_.scala.Predef.String): Api = copy(version = __v)
-    def getSourceContext: com.google.protobuf.source_context.SourceContext = sourceContext.getOrElse(com.google.protobuf.source_context.SourceContext.defaultInstance)
+    def getSourceContext: grpc_shaded.com.google.protobuf.source_context.SourceContext = sourceContext.getOrElse(grpc_shaded.com.google.protobuf.source_context.SourceContext.defaultInstance)
     def clearSourceContext: Api = copy(sourceContext = _root_.scala.None)
-    def withSourceContext(__v: com.google.protobuf.source_context.SourceContext): Api = copy(sourceContext = Option(__v))
+    def withSourceContext(__v: grpc_shaded.com.google.protobuf.source_context.SourceContext): Api = copy(sourceContext = Option(__v))
     def clearMixins = copy(mixins = _root_.scala.Seq.empty)
-    def addMixins(__vs: com.google.protobuf.api.Mixin*): Api = addAllMixins(__vs)
-    def addAllMixins(__vs: Iterable[com.google.protobuf.api.Mixin]): Api = copy(mixins = mixins ++ __vs)
-    def withMixins(__v: _root_.scala.Seq[com.google.protobuf.api.Mixin]): Api = copy(mixins = __v)
-    def withSyntax(__v: com.google.protobuf.`type`.Syntax): Api = copy(syntax = __v)
+    def addMixins(__vs: grpc_shaded.com.google.protobuf.api.Mixin*): Api = addAllMixins(__vs)
+    def addAllMixins(__vs: Iterable[grpc_shaded.com.google.protobuf.api.Mixin]): Api = copy(mixins = mixins ++ __vs)
+    def withMixins(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin]): Api = copy(mixins = __v)
+    def withSyntax(__v: grpc_shaded.com.google.protobuf.`type`.Syntax): Api = copy(syntax = __v)
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
         case 1 => {
@@ -233,80 +233,80 @@ final case class Api(
         }
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PString(name)
-        case 2 => _root_.shaded.scalapb.descriptors.PRepeated(methods.iterator.map(_.toPMessage).toVector)
-        case 3 => _root_.shaded.scalapb.descriptors.PRepeated(options.iterator.map(_.toPMessage).toVector)
-        case 4 => _root_.shaded.scalapb.descriptors.PString(version)
-        case 5 => sourceContext.map(_.toPMessage).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 6 => _root_.shaded.scalapb.descriptors.PRepeated(mixins.iterator.map(_.toPMessage).toVector)
-        case 7 => _root_.shaded.scalapb.descriptors.PEnum(syntax.scalaValueDescriptor)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PString(name)
+        case 2 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(methods.iterator.map(_.toPMessage).toVector)
+        case 3 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(options.iterator.map(_.toPMessage).toVector)
+        case 4 => _root_.grpc_shaded.scalapb.descriptors.PString(version)
+        case 5 => sourceContext.map(_.toPMessage).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 6 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(mixins.iterator.map(_.toPMessage).toVector)
+        case 7 => _root_.grpc_shaded.scalapb.descriptors.PEnum(syntax.scalaValueDescriptor)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.api.Api
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.api.Api
 }
 
-object Api extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.api.Api] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.api.Api] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.api.Api = {
+object Api extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.api.Api] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.api.Api] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.api.Api = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.api.Api(
+    grpc_shaded.com.google.protobuf.api.Api(
       __fieldsMap.getOrElse(__fields.get(0), "").asInstanceOf[_root_.scala.Predef.String],
-      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.api.Method]],
-      __fieldsMap.getOrElse(__fields.get(2), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.`type`.OptionProto]],
+      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method]],
+      __fieldsMap.getOrElse(__fields.get(2), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto]],
       __fieldsMap.getOrElse(__fields.get(3), "").asInstanceOf[_root_.scala.Predef.String],
-      __fieldsMap.get(__fields.get(4)).asInstanceOf[_root_.scala.Option[com.google.protobuf.source_context.SourceContext]],
-      __fieldsMap.getOrElse(__fields.get(5), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.api.Mixin]],
-      com.google.protobuf.`type`.Syntax.fromValue(__fieldsMap.getOrElse(__fields.get(6), com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2.javaValueDescriptor).asInstanceOf[_root_.com.google.protobuf.Descriptors.EnumValueDescriptor].getNumber)
+      __fieldsMap.get(__fields.get(4)).asInstanceOf[_root_.scala.Option[grpc_shaded.com.google.protobuf.source_context.SourceContext]],
+      __fieldsMap.getOrElse(__fields.get(5), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin]],
+      grpc_shaded.com.google.protobuf.`type`.Syntax.fromValue(__fieldsMap.getOrElse(__fields.get(6), grpc_shaded.com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2.javaValueDescriptor).asInstanceOf[_root_.grpc_shaded.com.google.protobuf.Descriptors.EnumValueDescriptor].getNumber)
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.api.Api] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.api.Api] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.api.Api(
+      grpc_shaded.com.google.protobuf.api.Api(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Predef.String]).getOrElse(""),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).map(_.as[_root_.scala.Seq[com.google.protobuf.api.Method]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).map(_.as[_root_.scala.Seq[com.google.protobuf.`type`.OptionProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto]]).getOrElse(_root_.scala.Seq.empty),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(4).get).map(_.as[_root_.scala.Predef.String]).getOrElse(""),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).flatMap(_.as[_root_.scala.Option[com.google.protobuf.source_context.SourceContext]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).map(_.as[_root_.scala.Seq[com.google.protobuf.api.Mixin]]).getOrElse(_root_.scala.Seq.empty),
-        com.google.protobuf.`type`.Syntax.fromValue(__fieldsMap.get(scalaDescriptor.findFieldByNumber(7).get).map(_.as[_root_.shaded.scalapb.descriptors.EnumValueDescriptor]).getOrElse(com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2.scalaValueDescriptor).number)
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).flatMap(_.as[_root_.scala.Option[grpc_shaded.com.google.protobuf.source_context.SourceContext]]),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin]]).getOrElse(_root_.scala.Seq.empty),
+        grpc_shaded.com.google.protobuf.`type`.Syntax.fromValue(__fieldsMap.get(scalaDescriptor.findFieldByNumber(7).get).map(_.as[_root_.grpc_shaded.scalapb.descriptors.EnumValueDescriptor]).getOrElse(grpc_shaded.com.google.protobuf.`type`.Syntax.SYNTAX_PROTO2.scalaValueDescriptor).number)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = ApiProto.javaDescriptor.getMessageTypes.get(0)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = ApiProto.scalaDescriptor.messages(0)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = ApiProto.javaDescriptor.getMessageTypes.get(0)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = ApiProto.scalaDescriptor.messages(0)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 2 => __out = com.google.protobuf.api.Method
-      case 3 => __out = com.google.protobuf.`type`.OptionProto
-      case 5 => __out = com.google.protobuf.source_context.SourceContext
-      case 6 => __out = com.google.protobuf.api.Mixin
+      case 2 => __out = grpc_shaded.com.google.protobuf.api.Method
+      case 3 => __out = grpc_shaded.com.google.protobuf.`type`.OptionProto
+      case 5 => __out = grpc_shaded.com.google.protobuf.source_context.SourceContext
+      case 6 => __out = grpc_shaded.com.google.protobuf.api.Mixin
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = {
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = {
     (__fieldNumber: @_root_.scala.unchecked) match {
-      case 7 => com.google.protobuf.`type`.Syntax
+      case 7 => grpc_shaded.com.google.protobuf.`type`.Syntax
     }
   }
-  lazy val defaultInstance = com.google.protobuf.api.Api(
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.api.Api(
   )
-  implicit class ApiLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.api.Api]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.api.Api](_l) {
-    def name: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.name)((c_, f_) => c_.copy(name = f_))
-    def methods: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.api.Method]] = field(_.methods)((c_, f_) => c_.copy(methods = f_))
-    def options: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.`type`.OptionProto]] = field(_.options)((c_, f_) => c_.copy(options = f_))
-    def version: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.version)((c_, f_) => c_.copy(version = f_))
-    def sourceContext: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.source_context.SourceContext] = field(_.getSourceContext)((c_, f_) => c_.copy(sourceContext = Option(f_)))
-    def optionalSourceContext: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.source_context.SourceContext]] = field(_.sourceContext)((c_, f_) => c_.copy(sourceContext = f_))
-    def mixins: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.api.Mixin]] = field(_.mixins)((c_, f_) => c_.copy(mixins = f_))
-    def syntax: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.`type`.Syntax] = field(_.syntax)((c_, f_) => c_.copy(syntax = f_))
+  implicit class ApiLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.api.Api]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.api.Api](_l) {
+    def name: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.name)((c_, f_) => c_.copy(name = f_))
+    def methods: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method]] = field(_.methods)((c_, f_) => c_.copy(methods = f_))
+    def options: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto]] = field(_.options)((c_, f_) => c_.copy(options = f_))
+    def version: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.version)((c_, f_) => c_.copy(version = f_))
+    def sourceContext: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.source_context.SourceContext] = field(_.getSourceContext)((c_, f_) => c_.copy(sourceContext = Option(f_)))
+    def optionalSourceContext: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.source_context.SourceContext]] = field(_.sourceContext)((c_, f_) => c_.copy(sourceContext = f_))
+    def mixins: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin]] = field(_.mixins)((c_, f_) => c_.copy(mixins = f_))
+    def syntax: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.`type`.Syntax] = field(_.syntax)((c_, f_) => c_.copy(syntax = f_))
   }
   final val NAME_FIELD_NUMBER = 1
   final val METHODS_FIELD_NUMBER = 2
@@ -317,13 +317,13 @@ object Api extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.
   final val SYNTAX_FIELD_NUMBER = 7
   def of(
     name: _root_.scala.Predef.String,
-    methods: _root_.scala.Seq[com.google.protobuf.api.Method],
-    options: _root_.scala.Seq[com.google.protobuf.`type`.OptionProto],
+    methods: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Method],
+    options: _root_.scala.Seq[grpc_shaded.com.google.protobuf.`type`.OptionProto],
     version: _root_.scala.Predef.String,
-    sourceContext: _root_.scala.Option[com.google.protobuf.source_context.SourceContext],
-    mixins: _root_.scala.Seq[com.google.protobuf.api.Mixin],
-    syntax: com.google.protobuf.`type`.Syntax
-  ): _root_.com.google.protobuf.api.Api = _root_.com.google.protobuf.api.Api(
+    sourceContext: _root_.scala.Option[grpc_shaded.com.google.protobuf.source_context.SourceContext],
+    mixins: _root_.scala.Seq[grpc_shaded.com.google.protobuf.api.Mixin],
+    syntax: grpc_shaded.com.google.protobuf.`type`.Syntax
+  ): _root_.grpc_shaded.com.google.protobuf.api.Api = _root_.grpc_shaded.com.google.protobuf.api.Api(
     name,
     methods,
     options,

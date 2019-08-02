@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 package com.thesamet.pb
 
 import scala.annotation.StaticAnnotation

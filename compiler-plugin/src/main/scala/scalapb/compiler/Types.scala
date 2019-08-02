@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
-import com.google.protobuf.Descriptors.FieldDescriptor.Type
+import grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor.Type
 
 object Types {
   val WIRETYPE_VARINT           = 0

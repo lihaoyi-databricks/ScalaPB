@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import scalapb.options.Scalapb.ScalaPbOptions
 import scalapb.compiler
 import scalapb.compiler.{StreamType, FunctionalPrinter}

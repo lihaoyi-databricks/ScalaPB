@@ -1,13 +1,13 @@
-package shaded
+package grpc_shaded
 package scalapb.compiler
 
 import java.io.{File, FileInputStream, PrintWriter}
 import java.nio.file.Files
 
 import scala.collection.JavaConverters._
-import com.google.protobuf.DescriptorProtos.FileDescriptorSet
-import com.google.protobuf.Descriptors.FileDescriptor
-import com.google.protobuf.ExtensionRegistry
+import grpc_shaded.com.google.protobuf.DescriptorProtos.FileDescriptorSet
+import grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor
+import grpc_shaded.com.google.protobuf.ExtensionRegistry
 import org.scalatest.{FlatSpec, MustMatchers}
 import scalapb.options.compiler.Scalapb
 

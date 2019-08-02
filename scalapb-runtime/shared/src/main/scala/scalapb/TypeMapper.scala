@@ -1,9 +1,9 @@
-package shaded
+package grpc_shaded
 package scalapb
 
 import scala.annotation.implicitNotFound
-import com.google.protobuf.wrappers._
-import com.google.protobuf.ByteString
+import grpc_shaded.com.google.protobuf.wrappers._
+import grpc_shaded.com.google.protobuf.ByteString
 
 @implicitNotFound(
   """No TypeMapper found for conversion between ${BaseType} and ${CustomType}.
@@ -29,21 +29,21 @@ object TypeMapper {
   }
 
   implicit val DoubleValueTypeMapper: TypeMapper[DoubleValue, Double] =
-    TypeMapper[DoubleValue, Double](_.value)(com.google.protobuf.wrappers.DoubleValue.apply(_))
+    TypeMapper[DoubleValue, Double](_.value)(grpc_shaded.com.google.protobuf.wrappers.DoubleValue.apply(_))
   implicit val FloatValueTypeMapper: TypeMapper[FloatValue, Float] =
-    TypeMapper[FloatValue, Float](_.value)(com.google.protobuf.wrappers.FloatValue.apply(_))
+    TypeMapper[FloatValue, Float](_.value)(grpc_shaded.com.google.protobuf.wrappers.FloatValue.apply(_))
   implicit val Int64ValueTypeMapper: TypeMapper[Int64Value, Long] =
-    TypeMapper[Int64Value, Long](_.value)(com.google.protobuf.wrappers.Int64Value.apply(_))
+    TypeMapper[Int64Value, Long](_.value)(grpc_shaded.com.google.protobuf.wrappers.Int64Value.apply(_))
   implicit val UInt64ValueTypeMapper: TypeMapper[UInt64Value, Long] =
-    TypeMapper[UInt64Value, Long](_.value)(com.google.protobuf.wrappers.UInt64Value.apply(_))
+    TypeMapper[UInt64Value, Long](_.value)(grpc_shaded.com.google.protobuf.wrappers.UInt64Value.apply(_))
   implicit val Int32ValueTypeMapper: TypeMapper[Int32Value, Int] =
-    TypeMapper[Int32Value, Int](_.value)(com.google.protobuf.wrappers.Int32Value.apply(_))
+    TypeMapper[Int32Value, Int](_.value)(grpc_shaded.com.google.protobuf.wrappers.Int32Value.apply(_))
   implicit val UInt32ValueTypeMapper: TypeMapper[UInt32Value, Int] =
-    TypeMapper[UInt32Value, Int](_.value)(com.google.protobuf.wrappers.UInt32Value.apply(_))
+    TypeMapper[UInt32Value, Int](_.value)(grpc_shaded.com.google.protobuf.wrappers.UInt32Value.apply(_))
   implicit val BoolValueTypeMapper: TypeMapper[BoolValue, Boolean] =
-    TypeMapper[BoolValue, Boolean](_.value)(com.google.protobuf.wrappers.BoolValue.apply(_))
+    TypeMapper[BoolValue, Boolean](_.value)(grpc_shaded.com.google.protobuf.wrappers.BoolValue.apply(_))
   implicit val StringValueTypeMapper: TypeMapper[StringValue, String] =
-    TypeMapper[StringValue, String](_.value)(com.google.protobuf.wrappers.StringValue.apply(_))
+    TypeMapper[StringValue, String](_.value)(grpc_shaded.com.google.protobuf.wrappers.StringValue.apply(_))
   implicit val BytesValueTypeMapper: TypeMapper[BytesValue, ByteString] =
-    TypeMapper[BytesValue, ByteString](_.value)(com.google.protobuf.wrappers.BytesValue.apply(_))
+    TypeMapper[BytesValue, ByteString](_.value)(grpc_shaded.com.google.protobuf.wrappers.BytesValue.apply(_))
 }

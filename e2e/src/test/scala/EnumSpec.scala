@@ -1,5 +1,5 @@
-package shaded
-import com.google.protobuf.{InvalidProtocolBufferException, UnknownFieldSet}
+package grpc_shaded
+import grpc_shaded.com.google.protobuf.{InvalidProtocolBufferException, UnknownFieldSet}
 import com.thesamet.proto.e2e.Enum
 import com.thesamet.proto.e2e.enum._
 import com.thesamet.proto.e2e.enum3._

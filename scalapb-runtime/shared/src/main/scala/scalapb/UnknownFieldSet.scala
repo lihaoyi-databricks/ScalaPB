@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb
 
-import com.google.protobuf.{
+import grpc_shaded.com.google.protobuf.{
   ByteString,
   CodedInputStream,
   CodedOutputStream,
@@ -36,7 +36,7 @@ object UnknownFieldSet {
   val empty = UnknownFieldSet()
 
   implicit class UnknownFieldSetLens[UpperPB](
-      lens: _root_.shaded.scalapb.lenses.Lens[UpperPB, UnknownFieldSet]
+      lens: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, UnknownFieldSet]
   ) {
     def apply(fieldNumber: Int): Lens[UpperPB, UnknownFieldSet.Field] =
       lens.compose(Lens[UnknownFieldSet, UnknownFieldSet.Field]({ t =>

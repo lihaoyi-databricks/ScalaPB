@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 package custom_options
 
 object Main extends App {

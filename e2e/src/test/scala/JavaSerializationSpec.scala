@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, ObjectInputStream, ObjectOutputStream}
 

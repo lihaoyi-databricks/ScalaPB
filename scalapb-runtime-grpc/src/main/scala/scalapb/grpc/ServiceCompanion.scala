@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.grpc
 
-import com.google.protobuf.Descriptors.ServiceDescriptor
+import grpc_shaded.com.google.protobuf.Descriptors.ServiceDescriptor
 
 abstract class ServiceCompanion[A <: AbstractService] {
   @deprecated(

@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 package scalapb.grpc
 import io.grpc.stub.StreamObserver
 import io.grpc.{CallOptions, Channel, MethodDescriptor}

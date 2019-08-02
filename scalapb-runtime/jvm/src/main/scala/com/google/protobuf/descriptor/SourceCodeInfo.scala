@@ -3,8 +3,8 @@
 //
 // Protofile syntax: PROTO2
 
-package com.google.protobuf.descriptor
-import _root_.shaded.scalapb.internal.compat.JavaConverters._
+package grpc_shaded.com.google.protobuf.descriptor
+import _root_.grpc_shaded.scalapb.internal.compat.JavaConverters._
 
 /** Encapsulates information about the original source file from which a
   * FileDescriptorProto was generated.
@@ -56,15 +56,15 @@ import _root_.shaded.scalapb.internal.compat.JavaConverters._
   */
 @SerialVersionUID(0L)
 final case class SourceCodeInfo(
-    location: _root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location] = _root_.scala.Seq.empty
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[SourceCodeInfo] with shaded.scalapb.lenses.Updatable[SourceCodeInfo] {
+    location: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location] = _root_.scala.Seq.empty
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[SourceCodeInfo] with grpc_shaded.scalapb.lenses.Updatable[SourceCodeInfo] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       location.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       __size
     }
@@ -76,7 +76,7 @@ final case class SourceCodeInfo(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       location.foreach { __v =>
         val __m = __v
         _output__.writeTag(1, 2)
@@ -84,81 +84,81 @@ final case class SourceCodeInfo(
         __m.writeTo(_output__)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.SourceCodeInfo = {
-      val __location = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.SourceCodeInfo.Location] ++= this.location)
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo = {
+      val __location = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location] ++= this.location)
       var _done__ = false
       while (!_done__) {
         val _tag__ = _input__.readTag()
         _tag__ match {
           case 0 => _done__ = true
           case 10 =>
-            __location += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.SourceCodeInfo.Location.defaultInstance)
+            __location += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location.defaultInstance)
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.descriptor.SourceCodeInfo(
+      grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
           location = __location.result()
       )
     }
     def clearLocation = copy(location = _root_.scala.Seq.empty)
-    def addLocation(__vs: com.google.protobuf.descriptor.SourceCodeInfo.Location*): SourceCodeInfo = addAllLocation(__vs)
-    def addAllLocation(__vs: Iterable[com.google.protobuf.descriptor.SourceCodeInfo.Location]): SourceCodeInfo = copy(location = location ++ __vs)
-    def withLocation(__v: _root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location]): SourceCodeInfo = copy(location = __v)
+    def addLocation(__vs: grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location*): SourceCodeInfo = addAllLocation(__vs)
+    def addAllLocation(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]): SourceCodeInfo = copy(location = location ++ __vs)
+    def withLocation(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]): SourceCodeInfo = copy(location = __v)
     def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
       (__fieldNumber: @_root_.scala.unchecked) match {
         case 1 => location
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => _root_.shaded.scalapb.descriptors.PRepeated(location.iterator.map(_.toPMessage).toVector)
+        case 1 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(location.iterator.map(_.toPMessage).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.descriptor.SourceCodeInfo
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo
 }
 
-object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.SourceCodeInfo] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.SourceCodeInfo, com.google.protobuf.DescriptorProtos.SourceCodeInfo] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.SourceCodeInfo] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.SourceCodeInfo, com.google.protobuf.DescriptorProtos.SourceCodeInfo] = this
-  def toJavaProto(scalaPbSource: com.google.protobuf.descriptor.SourceCodeInfo): com.google.protobuf.DescriptorProtos.SourceCodeInfo = {
-    val javaPbOut = com.google.protobuf.DescriptorProtos.SourceCodeInfo.newBuilder
-    javaPbOut.addAllLocation(scalaPbSource.location.iterator.map(com.google.protobuf.descriptor.SourceCodeInfo.Location.toJavaProto).toIterable.asJava)
+object SourceCodeInfo extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo, grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo, grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo] = this
+  def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo): grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo = {
+    val javaPbOut = grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.newBuilder
+    javaPbOut.addAllLocation(scalaPbSource.location.iterator.map(grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location.toJavaProto).toIterable.asJava)
     javaPbOut.build
   }
-  def fromJavaProto(javaPbSource: com.google.protobuf.DescriptorProtos.SourceCodeInfo): com.google.protobuf.descriptor.SourceCodeInfo = com.google.protobuf.descriptor.SourceCodeInfo(
-    location = javaPbSource.getLocationList.asScala.iterator.map(com.google.protobuf.descriptor.SourceCodeInfo.Location.fromJavaProto).toSeq
+  def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
+    location = javaPbSource.getLocationList.asScala.iterator.map(grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location.fromJavaProto).toSeq
   )
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.SourceCodeInfo = {
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.descriptor.SourceCodeInfo(
-      __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location]]
+    grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
+      __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.SourceCodeInfo] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.descriptor.SourceCodeInfo(
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location]]).getOrElse(_root_.scala.Seq.empty)
+      grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]]).getOrElse(_root_.scala.Seq.empty)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(19)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(19)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(19)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(19)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 1 => __out = com.google.protobuf.descriptor.SourceCodeInfo.Location
+      case 1 => __out = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      _root_.com.google.protobuf.descriptor.SourceCodeInfo.Location
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      _root_.grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location
     )
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.descriptor.SourceCodeInfo(
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
   )
   /** @param path
     *   Identifies which part of the FileDescriptorProto was defined at this
@@ -246,11 +246,11 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
       leadingComments: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
       trailingComments: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
       leadingDetachedComments: _root_.scala.Seq[_root_.scala.Predef.String] = _root_.scala.Seq.empty
-      ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[Location] with shaded.scalapb.lenses.Updatable[Location] {
+      ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[Location] with grpc_shaded.scalapb.lenses.Updatable[Location] {
       private[this] def pathSerializedSize = {
         if (__pathSerializedSizeField == 0) __pathSerializedSizeField = {
           var __s: _root_.scala.Int = 0
-          path.foreach(__i => __s += _root_.com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(__i))
+          path.foreach(__i => __s += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(__i))
           __s
         }
         __pathSerializedSizeField
@@ -259,7 +259,7 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
       private[this] def spanSerializedSize = {
         if (__spanSerializedSizeField == 0) __spanSerializedSizeField = {
           var __s: _root_.scala.Int = 0
-          span.foreach(__i => __s += _root_.com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(__i))
+          span.foreach(__i => __s += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(__i))
           __s
         }
         __spanSerializedSizeField
@@ -271,23 +271,23 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
         var __size = 0
         if(path.nonEmpty) {
           val __localsize = pathSerializedSize
-          __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__localsize) + __localsize
+          __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__localsize) + __localsize
         }
         if(span.nonEmpty) {
           val __localsize = spanSerializedSize
-          __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__localsize) + __localsize
+          __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__localsize) + __localsize
         }
         if (leadingComments.isDefined) {
           val __value = leadingComments.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(3, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(3, __value)
         };
         if (trailingComments.isDefined) {
           val __value = trailingComments.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(4, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(4, __value)
         };
         leadingDetachedComments.foreach { __item =>
           val __value = __item
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(6, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(6, __value)
         }
         __size
       }
@@ -299,7 +299,7 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
         }
         read
       }
-      def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+      def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
         if (path.nonEmpty) {
           _output__.writeTag(1, 2)
           _output__.writeUInt32NoTag(pathSerializedSize)
@@ -323,7 +323,7 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
           _output__.writeString(6, __m)
         };
       }
-      def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.SourceCodeInfo.Location = {
+      def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location = {
         val __path = (_root_.scala.collection.immutable.Vector.newBuilder[_root_.scala.Int] ++= this.path)
         val __span = (_root_.scala.collection.immutable.Vector.newBuilder[_root_.scala.Int] ++= this.span)
         var __leadingComments = this.leadingComments
@@ -363,7 +363,7 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
             case tag => _input__.skipField(tag)
           }
         }
-        com.google.protobuf.descriptor.SourceCodeInfo.Location(
+        grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
             path = __path.result(),
             span = __span.result(),
             leadingComments = __leadingComments,
@@ -398,24 +398,24 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
           case 6 => leadingDetachedComments
         }
       }
-      def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+      def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
         _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
         (__field.number: @_root_.scala.unchecked) match {
-          case 1 => _root_.shaded.scalapb.descriptors.PRepeated(path.iterator.map(_root_.shaded.scalapb.descriptors.PInt).toVector)
-          case 2 => _root_.shaded.scalapb.descriptors.PRepeated(span.iterator.map(_root_.shaded.scalapb.descriptors.PInt).toVector)
-          case 3 => leadingComments.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 4 => trailingComments.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 6 => _root_.shaded.scalapb.descriptors.PRepeated(leadingDetachedComments.iterator.map(_root_.shaded.scalapb.descriptors.PString).toVector)
+          case 1 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(path.iterator.map(_root_.grpc_shaded.scalapb.descriptors.PInt).toVector)
+          case 2 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(span.iterator.map(_root_.grpc_shaded.scalapb.descriptors.PInt).toVector)
+          case 3 => leadingComments.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 4 => trailingComments.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 6 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(leadingDetachedComments.iterator.map(_root_.grpc_shaded.scalapb.descriptors.PString).toVector)
         }
       }
-      def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-      def companion = com.google.protobuf.descriptor.SourceCodeInfo.Location
+      def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+      def companion = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location
   }
   
-  object Location extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.SourceCodeInfo.Location] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.SourceCodeInfo.Location, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location] {
-    implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.SourceCodeInfo.Location] with shaded.scalapb.JavaProtoSupport[com.google.protobuf.descriptor.SourceCodeInfo.Location, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location] = this
-    def toJavaProto(scalaPbSource: com.google.protobuf.descriptor.SourceCodeInfo.Location): com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location = {
-      val javaPbOut = com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.newBuilder
+  object Location extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location, grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location] {
+    implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location] with grpc_shaded.scalapb.JavaProtoSupport[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location, grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location] = this
+    def toJavaProto(scalaPbSource: grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location): grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location = {
+      val javaPbOut = grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.newBuilder
       javaPbOut.addAllPath(scalaPbSource.path.iterator.map(_root_.scala.Int.box).toIterable.asJava)
       javaPbOut.addAllSpan(scalaPbSource.span.iterator.map(_root_.scala.Int.box).toIterable.asJava)
       scalaPbSource.leadingComments.foreach(javaPbOut.setLeadingComments)
@@ -423,17 +423,17 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
       javaPbOut.addAllLeadingDetachedComments(scalaPbSource.leadingDetachedComments.asJava)
       javaPbOut.build
     }
-    def fromJavaProto(javaPbSource: com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location): com.google.protobuf.descriptor.SourceCodeInfo.Location = com.google.protobuf.descriptor.SourceCodeInfo.Location(
+    def fromJavaProto(javaPbSource: grpc_shaded.com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
       path = javaPbSource.getPathList.asScala.iterator.map(_.intValue).toSeq,
       span = javaPbSource.getSpanList.asScala.iterator.map(_.intValue).toSeq,
       leadingComments = if (javaPbSource.hasLeadingComments) Some(javaPbSource.getLeadingComments) else _root_.scala.None,
       trailingComments = if (javaPbSource.hasTrailingComments) Some(javaPbSource.getTrailingComments) else _root_.scala.None,
       leadingDetachedComments = javaPbSource.getLeadingDetachedCommentsList.asScala.iterator.map(_root_.scala.Predef.identity).toSeq
     )
-    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.SourceCodeInfo.Location = {
+    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location = {
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
       val __fields = javaDescriptor.getFields
-      com.google.protobuf.descriptor.SourceCodeInfo.Location(
+      grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
         __fieldsMap.getOrElse(__fields.get(0), Nil).asInstanceOf[_root_.scala.Seq[_root_.scala.Int]],
         __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[_root_.scala.Int]],
         __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
@@ -441,10 +441,10 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
         __fieldsMap.getOrElse(__fields.get(4), Nil).asInstanceOf[_root_.scala.Seq[_root_.scala.Predef.String]]
       )
     }
-    implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.SourceCodeInfo.Location] = _root_.shaded.scalapb.descriptors.Reads{
-      case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+    implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+      case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
         _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-        com.google.protobuf.descriptor.SourceCodeInfo.Location(
+        grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).map(_.as[_root_.scala.Seq[_root_.scala.Int]]).getOrElse(_root_.scala.Seq.empty),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).map(_.as[_root_.scala.Seq[_root_.scala.Int]]).getOrElse(_root_.scala.Seq.empty),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
@@ -453,21 +453,21 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
         )
       case _ => throw new RuntimeException("Expected PMessage")
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = com.google.protobuf.descriptor.SourceCodeInfo.javaDescriptor.getNestedTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = com.google.protobuf.descriptor.SourceCodeInfo.scalaDescriptor.nestedMessages(0)
-    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-    lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-    lazy val defaultInstance = com.google.protobuf.descriptor.SourceCodeInfo.Location(
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.javaDescriptor.getNestedTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.scalaDescriptor.nestedMessages(0)
+    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+    lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+    lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
     )
-    implicit class LocationLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.SourceCodeInfo.Location]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.SourceCodeInfo.Location](_l) {
-      def path: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Int]] = field(_.path)((c_, f_) => c_.copy(path = f_))
-      def span: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Int]] = field(_.span)((c_, f_) => c_.copy(span = f_))
-      def leadingComments: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getLeadingComments)((c_, f_) => c_.copy(leadingComments = Option(f_)))
-      def optionalLeadingComments: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.leadingComments)((c_, f_) => c_.copy(leadingComments = f_))
-      def trailingComments: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getTrailingComments)((c_, f_) => c_.copy(trailingComments = Option(f_)))
-      def optionalTrailingComments: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.trailingComments)((c_, f_) => c_.copy(trailingComments = f_))
-      def leadingDetachedComments: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.leadingDetachedComments)((c_, f_) => c_.copy(leadingDetachedComments = f_))
+    implicit class LocationLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location](_l) {
+      def path: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Int]] = field(_.path)((c_, f_) => c_.copy(path = f_))
+      def span: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Int]] = field(_.span)((c_, f_) => c_.copy(span = f_))
+      def leadingComments: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getLeadingComments)((c_, f_) => c_.copy(leadingComments = Option(f_)))
+      def optionalLeadingComments: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.leadingComments)((c_, f_) => c_.copy(leadingComments = f_))
+      def trailingComments: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getTrailingComments)((c_, f_) => c_.copy(trailingComments = Option(f_)))
+      def optionalTrailingComments: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.trailingComments)((c_, f_) => c_.copy(trailingComments = f_))
+      def leadingDetachedComments: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.leadingDetachedComments)((c_, f_) => c_.copy(leadingDetachedComments = f_))
     }
     final val PATH_FIELD_NUMBER = 1
     final val SPAN_FIELD_NUMBER = 2
@@ -480,7 +480,7 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
       leadingComments: _root_.scala.Option[_root_.scala.Predef.String],
       trailingComments: _root_.scala.Option[_root_.scala.Predef.String],
       leadingDetachedComments: _root_.scala.Seq[_root_.scala.Predef.String]
-    ): _root_.com.google.protobuf.descriptor.SourceCodeInfo.Location = _root_.com.google.protobuf.descriptor.SourceCodeInfo.Location(
+    ): _root_.grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location = _root_.grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location(
       path,
       span,
       leadingComments,
@@ -489,13 +489,13 @@ object SourceCodeInfo extends shaded.scalapb.GeneratedMessageCompanion[com.googl
     )
   }
   
-  implicit class SourceCodeInfoLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.SourceCodeInfo]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.SourceCodeInfo](_l) {
-    def location: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location]] = field(_.location)((c_, f_) => c_.copy(location = f_))
+  implicit class SourceCodeInfoLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo](_l) {
+    def location: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]] = field(_.location)((c_, f_) => c_.copy(location = f_))
   }
   final val LOCATION_FIELD_NUMBER = 1
   def of(
-    location: _root_.scala.Seq[com.google.protobuf.descriptor.SourceCodeInfo.Location]
-  ): _root_.com.google.protobuf.descriptor.SourceCodeInfo = _root_.com.google.protobuf.descriptor.SourceCodeInfo(
+    location: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo.Location]
+  ): _root_.grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo = _root_.grpc_shaded.com.google.protobuf.descriptor.SourceCodeInfo(
     location
   )
 }

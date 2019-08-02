@@ -3,7 +3,7 @@
 //
 // Protofile syntax: PROTO2
 
-package com.google.protobuf.descriptor
+package grpc_shaded.com.google.protobuf.descriptor
 
 /** Describes a message type.
   *
@@ -14,59 +14,59 @@ package com.google.protobuf.descriptor
 @SerialVersionUID(0L)
 final case class DescriptorProto(
     name: _root_.scala.Option[_root_.scala.Predef.String] = _root_.scala.None,
-    field: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.scala.Seq.empty,
-    extension: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.scala.Seq.empty,
-    nestedType: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto] = _root_.scala.Seq.empty,
-    enumType: _root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto] = _root_.scala.Seq.empty,
-    extensionRange: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = _root_.scala.Seq.empty,
-    oneofDecl: _root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto] = _root_.scala.Seq.empty,
-    options: _root_.scala.Option[com.google.protobuf.descriptor.MessageOptions] = _root_.scala.None,
-    reservedRange: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = _root_.scala.Seq.empty,
+    field: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.scala.Seq.empty,
+    extension: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] = _root_.scala.Seq.empty,
+    nestedType: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto] = _root_.scala.Seq.empty,
+    enumType: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto] = _root_.scala.Seq.empty,
+    extensionRange: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = _root_.scala.Seq.empty,
+    oneofDecl: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto] = _root_.scala.Seq.empty,
+    options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.MessageOptions] = _root_.scala.None,
+    reservedRange: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = _root_.scala.Seq.empty,
     reservedName: _root_.scala.Seq[_root_.scala.Predef.String] = _root_.scala.Seq.empty
-    ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[DescriptorProto] with shaded.scalapb.lenses.Updatable[DescriptorProto] {
+    ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[DescriptorProto] with grpc_shaded.scalapb.lenses.Updatable[DescriptorProto] {
     @transient
     private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
     private[this] def __computeSerializedValue(): _root_.scala.Int = {
       var __size = 0
       if (name.isDefined) {
         val __value = name.get
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(1, __value)
       };
       field.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       extension.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       nestedType.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       enumType.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       extensionRange.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       oneofDecl.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       if (options.isDefined) {
         val __value = options.get
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       };
       reservedRange.foreach { __item =>
         val __value = __item
-        __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+        __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
       }
       reservedName.foreach { __item =>
         val __value = __item
-        __size += _root_.com.google.protobuf.CodedOutputStream.computeStringSize(10, __value)
+        __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeStringSize(10, __value)
       }
       __size
     }
@@ -78,7 +78,7 @@ final case class DescriptorProto(
       }
       read
     }
-    def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+    def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
       name.foreach { __v =>
         val __m = __v
         _output__.writeString(1, __m)
@@ -136,16 +136,16 @@ final case class DescriptorProto(
         _output__.writeString(10, __m)
       };
     }
-    def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.DescriptorProto = {
+    def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto = {
       var __name = this.name
-      val __field = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.FieldDescriptorProto] ++= this.field)
-      val __extension = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.FieldDescriptorProto] ++= this.extension)
-      val __nestedType = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.DescriptorProto] ++= this.nestedType)
-      val __enumType = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.EnumDescriptorProto] ++= this.enumType)
-      val __extensionRange = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] ++= this.extensionRange)
-      val __oneofDecl = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.OneofDescriptorProto] ++= this.oneofDecl)
+      val __field = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] ++= this.field)
+      val __extension = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto] ++= this.extension)
+      val __nestedType = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto] ++= this.nestedType)
+      val __enumType = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto] ++= this.enumType)
+      val __extensionRange = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] ++= this.extensionRange)
+      val __oneofDecl = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto] ++= this.oneofDecl)
       var __options = this.options
-      val __reservedRange = (_root_.scala.collection.immutable.Vector.newBuilder[com.google.protobuf.descriptor.DescriptorProto.ReservedRange] ++= this.reservedRange)
+      val __reservedRange = (_root_.scala.collection.immutable.Vector.newBuilder[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange] ++= this.reservedRange)
       val __reservedName = (_root_.scala.collection.immutable.Vector.newBuilder[_root_.scala.Predef.String] ++= this.reservedName)
       var _done__ = false
       while (!_done__) {
@@ -155,27 +155,27 @@ final case class DescriptorProto(
           case 10 =>
             __name = Option(_input__.readString())
           case 18 =>
-            __field += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.FieldDescriptorProto.defaultInstance)
+            __field += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.defaultInstance)
           case 50 =>
-            __extension += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.FieldDescriptorProto.defaultInstance)
+            __extension += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto.defaultInstance)
           case 26 =>
-            __nestedType += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.DescriptorProto.defaultInstance)
+            __nestedType += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.defaultInstance)
           case 34 =>
-            __enumType += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.EnumDescriptorProto.defaultInstance)
+            __enumType += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto.defaultInstance)
           case 42 =>
-            __extensionRange += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.DescriptorProto.ExtensionRange.defaultInstance)
+            __extensionRange += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange.defaultInstance)
           case 66 =>
-            __oneofDecl += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.OneofDescriptorProto.defaultInstance)
+            __oneofDecl += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto.defaultInstance)
           case 58 =>
-            __options = Option(_root_.shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(com.google.protobuf.descriptor.MessageOptions.defaultInstance)))
+            __options = Option(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.MessageOptions.defaultInstance)))
           case 74 =>
-            __reservedRange += _root_.shaded.scalapb.LiteParser.readMessage(_input__, com.google.protobuf.descriptor.DescriptorProto.ReservedRange.defaultInstance)
+            __reservedRange += _root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange.defaultInstance)
           case 82 =>
             __reservedName += _input__.readString()
           case tag => _input__.skipField(tag)
         }
       }
-      com.google.protobuf.descriptor.DescriptorProto(
+      grpc_shaded.com.google.protobuf.descriptor.DescriptorProto(
           name = __name,
           field = __field.result(),
           extension = __extension.result(),
@@ -192,36 +192,36 @@ final case class DescriptorProto(
     def clearName: DescriptorProto = copy(name = _root_.scala.None)
     def withName(__v: _root_.scala.Predef.String): DescriptorProto = copy(name = Option(__v))
     def clearField = copy(field = _root_.scala.Seq.empty)
-    def addField(__vs: com.google.protobuf.descriptor.FieldDescriptorProto*): DescriptorProto = addAllField(__vs)
-    def addAllField(__vs: Iterable[com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(field = field ++ __vs)
-    def withField(__v: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(field = __v)
+    def addField(__vs: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto*): DescriptorProto = addAllField(__vs)
+    def addAllField(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(field = field ++ __vs)
+    def withField(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(field = __v)
     def clearExtension = copy(extension = _root_.scala.Seq.empty)
-    def addExtension(__vs: com.google.protobuf.descriptor.FieldDescriptorProto*): DescriptorProto = addAllExtension(__vs)
-    def addAllExtension(__vs: Iterable[com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(extension = extension ++ __vs)
-    def withExtension(__v: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(extension = __v)
+    def addExtension(__vs: grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto*): DescriptorProto = addAllExtension(__vs)
+    def addAllExtension(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(extension = extension ++ __vs)
+    def withExtension(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]): DescriptorProto = copy(extension = __v)
     def clearNestedType = copy(nestedType = _root_.scala.Seq.empty)
-    def addNestedType(__vs: com.google.protobuf.descriptor.DescriptorProto*): DescriptorProto = addAllNestedType(__vs)
-    def addAllNestedType(__vs: Iterable[com.google.protobuf.descriptor.DescriptorProto]): DescriptorProto = copy(nestedType = nestedType ++ __vs)
-    def withNestedType(__v: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto]): DescriptorProto = copy(nestedType = __v)
+    def addNestedType(__vs: grpc_shaded.com.google.protobuf.descriptor.DescriptorProto*): DescriptorProto = addAllNestedType(__vs)
+    def addAllNestedType(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]): DescriptorProto = copy(nestedType = nestedType ++ __vs)
+    def withNestedType(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]): DescriptorProto = copy(nestedType = __v)
     def clearEnumType = copy(enumType = _root_.scala.Seq.empty)
-    def addEnumType(__vs: com.google.protobuf.descriptor.EnumDescriptorProto*): DescriptorProto = addAllEnumType(__vs)
-    def addAllEnumType(__vs: Iterable[com.google.protobuf.descriptor.EnumDescriptorProto]): DescriptorProto = copy(enumType = enumType ++ __vs)
-    def withEnumType(__v: _root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto]): DescriptorProto = copy(enumType = __v)
+    def addEnumType(__vs: grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto*): DescriptorProto = addAllEnumType(__vs)
+    def addAllEnumType(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto]): DescriptorProto = copy(enumType = enumType ++ __vs)
+    def withEnumType(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto]): DescriptorProto = copy(enumType = __v)
     def clearExtensionRange = copy(extensionRange = _root_.scala.Seq.empty)
-    def addExtensionRange(__vs: com.google.protobuf.descriptor.DescriptorProto.ExtensionRange*): DescriptorProto = addAllExtensionRange(__vs)
-    def addAllExtensionRange(__vs: Iterable[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]): DescriptorProto = copy(extensionRange = extensionRange ++ __vs)
-    def withExtensionRange(__v: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]): DescriptorProto = copy(extensionRange = __v)
+    def addExtensionRange(__vs: grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange*): DescriptorProto = addAllExtensionRange(__vs)
+    def addAllExtensionRange(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]): DescriptorProto = copy(extensionRange = extensionRange ++ __vs)
+    def withExtensionRange(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]): DescriptorProto = copy(extensionRange = __v)
     def clearOneofDecl = copy(oneofDecl = _root_.scala.Seq.empty)
-    def addOneofDecl(__vs: com.google.protobuf.descriptor.OneofDescriptorProto*): DescriptorProto = addAllOneofDecl(__vs)
-    def addAllOneofDecl(__vs: Iterable[com.google.protobuf.descriptor.OneofDescriptorProto]): DescriptorProto = copy(oneofDecl = oneofDecl ++ __vs)
-    def withOneofDecl(__v: _root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto]): DescriptorProto = copy(oneofDecl = __v)
-    def getOptions: com.google.protobuf.descriptor.MessageOptions = options.getOrElse(com.google.protobuf.descriptor.MessageOptions.defaultInstance)
+    def addOneofDecl(__vs: grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto*): DescriptorProto = addAllOneofDecl(__vs)
+    def addAllOneofDecl(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto]): DescriptorProto = copy(oneofDecl = oneofDecl ++ __vs)
+    def withOneofDecl(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto]): DescriptorProto = copy(oneofDecl = __v)
+    def getOptions: grpc_shaded.com.google.protobuf.descriptor.MessageOptions = options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.MessageOptions.defaultInstance)
     def clearOptions: DescriptorProto = copy(options = _root_.scala.None)
-    def withOptions(__v: com.google.protobuf.descriptor.MessageOptions): DescriptorProto = copy(options = Option(__v))
+    def withOptions(__v: grpc_shaded.com.google.protobuf.descriptor.MessageOptions): DescriptorProto = copy(options = Option(__v))
     def clearReservedRange = copy(reservedRange = _root_.scala.Seq.empty)
-    def addReservedRange(__vs: com.google.protobuf.descriptor.DescriptorProto.ReservedRange*): DescriptorProto = addAllReservedRange(__vs)
-    def addAllReservedRange(__vs: Iterable[com.google.protobuf.descriptor.DescriptorProto.ReservedRange]): DescriptorProto = copy(reservedRange = reservedRange ++ __vs)
-    def withReservedRange(__v: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange]): DescriptorProto = copy(reservedRange = __v)
+    def addReservedRange(__vs: grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange*): DescriptorProto = addAllReservedRange(__vs)
+    def addAllReservedRange(__vs: Iterable[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]): DescriptorProto = copy(reservedRange = reservedRange ++ __vs)
+    def withReservedRange(__v: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]): DescriptorProto = copy(reservedRange = __v)
     def clearReservedName = copy(reservedName = _root_.scala.Seq.empty)
     def addReservedName(__vs: _root_.scala.Predef.String*): DescriptorProto = addAllReservedName(__vs)
     def addAllReservedName(__vs: Iterable[_root_.scala.Predef.String]): DescriptorProto = copy(reservedName = reservedName ++ __vs)
@@ -240,105 +240,105 @@ final case class DescriptorProto(
         case 10 => reservedName
       }
     }
-    def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+    def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
       _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
       (__field.number: @_root_.scala.unchecked) match {
-        case 1 => name.map(_root_.shaded.scalapb.descriptors.PString).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 2 => _root_.shaded.scalapb.descriptors.PRepeated(field.iterator.map(_.toPMessage).toVector)
-        case 6 => _root_.shaded.scalapb.descriptors.PRepeated(extension.iterator.map(_.toPMessage).toVector)
-        case 3 => _root_.shaded.scalapb.descriptors.PRepeated(nestedType.iterator.map(_.toPMessage).toVector)
-        case 4 => _root_.shaded.scalapb.descriptors.PRepeated(enumType.iterator.map(_.toPMessage).toVector)
-        case 5 => _root_.shaded.scalapb.descriptors.PRepeated(extensionRange.iterator.map(_.toPMessage).toVector)
-        case 8 => _root_.shaded.scalapb.descriptors.PRepeated(oneofDecl.iterator.map(_.toPMessage).toVector)
-        case 7 => options.map(_.toPMessage).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-        case 9 => _root_.shaded.scalapb.descriptors.PRepeated(reservedRange.iterator.map(_.toPMessage).toVector)
-        case 10 => _root_.shaded.scalapb.descriptors.PRepeated(reservedName.iterator.map(_root_.shaded.scalapb.descriptors.PString).toVector)
+        case 1 => name.map(_root_.grpc_shaded.scalapb.descriptors.PString).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 2 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(field.iterator.map(_.toPMessage).toVector)
+        case 6 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(extension.iterator.map(_.toPMessage).toVector)
+        case 3 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(nestedType.iterator.map(_.toPMessage).toVector)
+        case 4 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(enumType.iterator.map(_.toPMessage).toVector)
+        case 5 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(extensionRange.iterator.map(_.toPMessage).toVector)
+        case 8 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(oneofDecl.iterator.map(_.toPMessage).toVector)
+        case 7 => options.map(_.toPMessage).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+        case 9 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(reservedRange.iterator.map(_.toPMessage).toVector)
+        case 10 => _root_.grpc_shaded.scalapb.descriptors.PRepeated(reservedName.iterator.map(_root_.grpc_shaded.scalapb.descriptors.PString).toVector)
       }
     }
-    def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-    def companion = com.google.protobuf.descriptor.DescriptorProto
+    def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+    def companion = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto
 }
 
-object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto] {
-  implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto] = this
-  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.DescriptorProto = {
+object DescriptorProto extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto] {
+  implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto] = this
+  def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto = {
     _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
     val __fields = javaDescriptor.getFields
-    com.google.protobuf.descriptor.DescriptorProto(
+    grpc_shaded.com.google.protobuf.descriptor.DescriptorProto(
       __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Predef.String]],
-      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]],
-      __fieldsMap.getOrElse(__fields.get(2), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]],
-      __fieldsMap.getOrElse(__fields.get(3), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto]],
-      __fieldsMap.getOrElse(__fields.get(4), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto]],
-      __fieldsMap.getOrElse(__fields.get(5), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]],
-      __fieldsMap.getOrElse(__fields.get(6), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto]],
-      __fieldsMap.get(__fields.get(7)).asInstanceOf[_root_.scala.Option[com.google.protobuf.descriptor.MessageOptions]],
-      __fieldsMap.getOrElse(__fields.get(8), Nil).asInstanceOf[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange]],
+      __fieldsMap.getOrElse(__fields.get(1), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]],
+      __fieldsMap.getOrElse(__fields.get(2), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]],
+      __fieldsMap.getOrElse(__fields.get(3), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]],
+      __fieldsMap.getOrElse(__fields.get(4), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto]],
+      __fieldsMap.getOrElse(__fields.get(5), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]],
+      __fieldsMap.getOrElse(__fields.get(6), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto]],
+      __fieldsMap.get(__fields.get(7)).asInstanceOf[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.MessageOptions]],
+      __fieldsMap.getOrElse(__fields.get(8), Nil).asInstanceOf[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]],
       __fieldsMap.getOrElse(__fields.get(9), Nil).asInstanceOf[_root_.scala.Seq[_root_.scala.Predef.String]]
     )
   }
-  implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.DescriptorProto] = _root_.shaded.scalapb.descriptors.Reads{
-    case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+  implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+    case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-      com.google.protobuf.descriptor.DescriptorProto(
+      grpc_shaded.com.google.protobuf.descriptor.DescriptorProto(
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Predef.String]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(4).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(8).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(7).get).flatMap(_.as[_root_.scala.Option[com.google.protobuf.descriptor.MessageOptions]]),
-        __fieldsMap.get(scalaDescriptor.findFieldByNumber(9).get).map(_.as[_root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(6).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(4).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(5).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(8).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto]]).getOrElse(_root_.scala.Seq.empty),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(7).get).flatMap(_.as[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.MessageOptions]]),
+        __fieldsMap.get(scalaDescriptor.findFieldByNumber(9).get).map(_.as[_root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]]).getOrElse(_root_.scala.Seq.empty),
         __fieldsMap.get(scalaDescriptor.findFieldByNumber(10).get).map(_.as[_root_.scala.Seq[_root_.scala.Predef.String]]).getOrElse(_root_.scala.Seq.empty)
       )
     case _ => throw new RuntimeException("Expected PMessage")
   }
-  def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(2)
-  def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(2)
-  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-    var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+  def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = DescriptorProtoCompanion.javaDescriptor.getMessageTypes.get(2)
+  def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = DescriptorProtoCompanion.scalaDescriptor.messages(2)
+  def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+    var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
     (__number: @_root_.scala.unchecked) match {
-      case 2 => __out = com.google.protobuf.descriptor.FieldDescriptorProto
-      case 6 => __out = com.google.protobuf.descriptor.FieldDescriptorProto
-      case 3 => __out = com.google.protobuf.descriptor.DescriptorProto
-      case 4 => __out = com.google.protobuf.descriptor.EnumDescriptorProto
-      case 5 => __out = com.google.protobuf.descriptor.DescriptorProto.ExtensionRange
-      case 8 => __out = com.google.protobuf.descriptor.OneofDescriptorProto
-      case 7 => __out = com.google.protobuf.descriptor.MessageOptions
-      case 9 => __out = com.google.protobuf.descriptor.DescriptorProto.ReservedRange
+      case 2 => __out = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto
+      case 6 => __out = grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto
+      case 3 => __out = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto
+      case 4 => __out = grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto
+      case 5 => __out = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange
+      case 8 => __out = grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto
+      case 7 => __out = grpc_shaded.com.google.protobuf.descriptor.MessageOptions
+      case 9 => __out = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange
     }
     __out
   }
-  lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] =
-    Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]](
-      _root_.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange,
-      _root_.com.google.protobuf.descriptor.DescriptorProto.ReservedRange
+  lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] =
+    Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]](
+      _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange,
+      _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange
     )
-  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-  lazy val defaultInstance = com.google.protobuf.descriptor.DescriptorProto(
+  def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+  lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto(
   )
   @SerialVersionUID(0L)
   final case class ExtensionRange(
       start: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None,
       end: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None,
-      options: _root_.scala.Option[com.google.protobuf.descriptor.ExtensionRangeOptions] = _root_.scala.None
-      ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[ExtensionRange] with shaded.scalapb.lenses.Updatable[ExtensionRange] {
+      options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions] = _root_.scala.None
+      ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[ExtensionRange] with grpc_shaded.scalapb.lenses.Updatable[ExtensionRange] {
       @transient
       private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
       private[this] def __computeSerializedValue(): _root_.scala.Int = {
         var __size = 0
         if (start.isDefined) {
           val __value = start.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
         };
         if (end.isDefined) {
           val __value = end.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(2, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(2, __value)
         };
         if (options.isDefined) {
           val __value = options.get
-          __size += 1 + _root_.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
+          __size += 1 + _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeUInt32SizeNoTag(__value.serializedSize) + __value.serializedSize
         };
         __size
       }
@@ -350,7 +350,7 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
         }
         read
       }
-      def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+      def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
         start.foreach { __v =>
           val __m = __v
           _output__.writeInt32(1, __m)
@@ -366,7 +366,7 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
           __m.writeTo(_output__)
         };
       }
-      def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = {
+      def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = {
         var __start = this.start
         var __end = this.end
         var __options = this.options
@@ -380,11 +380,11 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
             case 16 =>
               __end = Option(_input__.readInt32())
             case 26 =>
-              __options = Option(_root_.shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(com.google.protobuf.descriptor.ExtensionRangeOptions.defaultInstance)))
+              __options = Option(_root_.grpc_shaded.scalapb.LiteParser.readMessage(_input__, __options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions.defaultInstance)))
             case tag => _input__.skipField(tag)
           }
         }
-        com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
+        grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
             start = __start,
             end = __end,
             options = __options
@@ -396,9 +396,9 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
       def getEnd: _root_.scala.Int = end.getOrElse(0)
       def clearEnd: ExtensionRange = copy(end = _root_.scala.None)
       def withEnd(__v: _root_.scala.Int): ExtensionRange = copy(end = Option(__v))
-      def getOptions: com.google.protobuf.descriptor.ExtensionRangeOptions = options.getOrElse(com.google.protobuf.descriptor.ExtensionRangeOptions.defaultInstance)
+      def getOptions: grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions = options.getOrElse(grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions.defaultInstance)
       def clearOptions: ExtensionRange = copy(options = _root_.scala.None)
-      def withOptions(__v: com.google.protobuf.descriptor.ExtensionRangeOptions): ExtensionRange = copy(options = Option(__v))
+      def withOptions(__v: grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions): ExtensionRange = copy(options = Option(__v))
       def getFieldByNumber(__fieldNumber: _root_.scala.Int): _root_.scala.Any = {
         (__fieldNumber: @_root_.scala.unchecked) match {
           case 1 => start.orNull
@@ -406,59 +406,59 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
           case 3 => options.orNull
         }
       }
-      def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+      def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
         _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
         (__field.number: @_root_.scala.unchecked) match {
-          case 1 => start.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 2 => end.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 3 => options.map(_.toPMessage).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
+          case 1 => start.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 2 => end.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 3 => options.map(_.toPMessage).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
         }
       }
-      def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-      def companion = com.google.protobuf.descriptor.DescriptorProto.ExtensionRange
+      def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+      def companion = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange
   }
   
-  object ExtensionRange extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] {
-    implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = this
-    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = {
+  object ExtensionRange extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] {
+    implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = this
+    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = {
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
       val __fields = javaDescriptor.getFields
-      com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
+      grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
         __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]],
         __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]],
-        __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[com.google.protobuf.descriptor.ExtensionRangeOptions]]
+        __fieldsMap.get(__fields.get(2)).asInstanceOf[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions]]
       )
     }
-    implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = _root_.shaded.scalapb.descriptors.Reads{
-      case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+    implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+      case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
         _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-        com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
+        grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]]),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]]),
-          __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).flatMap(_.as[_root_.scala.Option[com.google.protobuf.descriptor.ExtensionRangeOptions]])
+          __fieldsMap.get(scalaDescriptor.findFieldByNumber(3).get).flatMap(_.as[_root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions]])
         )
       case _ => throw new RuntimeException("Expected PMessage")
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = com.google.protobuf.descriptor.DescriptorProto.javaDescriptor.getNestedTypes.get(0)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = com.google.protobuf.descriptor.DescriptorProto.scalaDescriptor.nestedMessages(0)
-    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = {
-      var __out: _root_.shaded.scalapb.GeneratedMessageCompanion[_] = null
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.javaDescriptor.getNestedTypes.get(0)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.scalaDescriptor.nestedMessages(0)
+    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = {
+      var __out: _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = null
       (__number: @_root_.scala.unchecked) match {
-        case 3 => __out = com.google.protobuf.descriptor.ExtensionRangeOptions
+        case 3 => __out = grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions
       }
       __out
     }
-    lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-    lazy val defaultInstance = com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
+    lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+    lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
     )
-    implicit class ExtensionRangeLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.DescriptorProto.ExtensionRange](_l) {
-      def start: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getStart)((c_, f_) => c_.copy(start = Option(f_)))
-      def optionalStart: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.start)((c_, f_) => c_.copy(start = f_))
-      def end: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getEnd)((c_, f_) => c_.copy(end = Option(f_)))
-      def optionalEnd: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.end)((c_, f_) => c_.copy(end = f_))
-      def options: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.ExtensionRangeOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
-      def optionalOptions: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.ExtensionRangeOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
+    implicit class ExtensionRangeLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange](_l) {
+      def start: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getStart)((c_, f_) => c_.copy(start = Option(f_)))
+      def optionalStart: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.start)((c_, f_) => c_.copy(start = f_))
+      def end: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getEnd)((c_, f_) => c_.copy(end = Option(f_)))
+      def optionalEnd: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.end)((c_, f_) => c_.copy(end = f_))
+      def options: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
+      def optionalOptions: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
     }
     final val START_FIELD_NUMBER = 1
     final val END_FIELD_NUMBER = 2
@@ -466,8 +466,8 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
     def of(
       start: _root_.scala.Option[_root_.scala.Int],
       end: _root_.scala.Option[_root_.scala.Int],
-      options: _root_.scala.Option[com.google.protobuf.descriptor.ExtensionRangeOptions]
-    ): _root_.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = _root_.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
+      options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.ExtensionRangeOptions]
+    ): _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange = _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange(
       start,
       end,
       options
@@ -487,18 +487,18 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
   final case class ReservedRange(
       start: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None,
       end: _root_.scala.Option[_root_.scala.Int] = _root_.scala.None
-      ) extends shaded.scalapb.GeneratedMessage with shaded.scalapb.Message[ReservedRange] with shaded.scalapb.lenses.Updatable[ReservedRange] {
+      ) extends grpc_shaded.scalapb.GeneratedMessage with grpc_shaded.scalapb.Message[ReservedRange] with grpc_shaded.scalapb.lenses.Updatable[ReservedRange] {
       @transient
       private[this] var __serializedSizeCachedValue: _root_.scala.Int = 0
       private[this] def __computeSerializedValue(): _root_.scala.Int = {
         var __size = 0
         if (start.isDefined) {
           val __value = start.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(1, __value)
         };
         if (end.isDefined) {
           val __value = end.get
-          __size += _root_.com.google.protobuf.CodedOutputStream.computeInt32Size(2, __value)
+          __size += _root_.grpc_shaded.com.google.protobuf.CodedOutputStream.computeInt32Size(2, __value)
         };
         __size
       }
@@ -510,7 +510,7 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
         }
         read
       }
-      def writeTo(`_output__`: _root_.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
+      def writeTo(`_output__`: _root_.grpc_shaded.com.google.protobuf.CodedOutputStream): _root_.scala.Unit = {
         start.foreach { __v =>
           val __m = __v
           _output__.writeInt32(1, __m)
@@ -520,7 +520,7 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
           _output__.writeInt32(2, __m)
         };
       }
-      def mergeFrom(`_input__`: _root_.com.google.protobuf.CodedInputStream): com.google.protobuf.descriptor.DescriptorProto.ReservedRange = {
+      def mergeFrom(`_input__`: _root_.grpc_shaded.com.google.protobuf.CodedInputStream): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange = {
         var __start = this.start
         var __end = this.end
         var _done__ = false
@@ -535,7 +535,7 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
             case tag => _input__.skipField(tag)
           }
         }
-        com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
+        grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
             start = __start,
             end = __end
         )
@@ -552,73 +552,73 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
           case 2 => end.orNull
         }
       }
-      def getField(__field: _root_.shaded.scalapb.descriptors.FieldDescriptor): _root_.shaded.scalapb.descriptors.PValue = {
+      def getField(__field: _root_.grpc_shaded.scalapb.descriptors.FieldDescriptor): _root_.grpc_shaded.scalapb.descriptors.PValue = {
         _root_.scala.Predef.require(__field.containingMessage eq companion.scalaDescriptor)
         (__field.number: @_root_.scala.unchecked) match {
-          case 1 => start.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
-          case 2 => end.map(_root_.shaded.scalapb.descriptors.PInt).getOrElse(_root_.shaded.scalapb.descriptors.PEmpty)
+          case 1 => start.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
+          case 2 => end.map(_root_.grpc_shaded.scalapb.descriptors.PInt).getOrElse(_root_.grpc_shaded.scalapb.descriptors.PEmpty)
         }
       }
-      def toProtoString: _root_.scala.Predef.String = _root_.shaded.scalapb.TextFormat.printToUnicodeString(this)
-      def companion = com.google.protobuf.descriptor.DescriptorProto.ReservedRange
+      def toProtoString: _root_.scala.Predef.String = _root_.grpc_shaded.scalapb.TextFormat.printToUnicodeString(this)
+      def companion = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange
   }
   
-  object ReservedRange extends shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto.ReservedRange] {
-    implicit def messageCompanion: shaded.scalapb.GeneratedMessageCompanion[com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = this
-    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): com.google.protobuf.descriptor.DescriptorProto.ReservedRange = {
+  object ReservedRange extends grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange] {
+    implicit def messageCompanion: grpc_shaded.scalapb.GeneratedMessageCompanion[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = this
+    def fromFieldsMap(__fieldsMap: scala.collection.immutable.Map[_root_.grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor, _root_.scala.Any]): grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange = {
       _root_.scala.Predef.require(__fieldsMap.keys.forall(_.getContainingType() == javaDescriptor), "FieldDescriptor does not match message type.")
       val __fields = javaDescriptor.getFields
-      com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
+      grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
         __fieldsMap.get(__fields.get(0)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]],
         __fieldsMap.get(__fields.get(1)).asInstanceOf[_root_.scala.Option[_root_.scala.Int]]
       )
     }
-    implicit def messageReads: _root_.shaded.scalapb.descriptors.Reads[com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = _root_.shaded.scalapb.descriptors.Reads{
-      case _root_.shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
+    implicit def messageReads: _root_.grpc_shaded.scalapb.descriptors.Reads[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange] = _root_.grpc_shaded.scalapb.descriptors.Reads{
+      case _root_.grpc_shaded.scalapb.descriptors.PMessage(__fieldsMap) =>
         _root_.scala.Predef.require(__fieldsMap.keys.forall(_.containingMessage == scalaDescriptor), "FieldDescriptor does not match message type.")
-        com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
+        grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(1).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]]),
           __fieldsMap.get(scalaDescriptor.findFieldByNumber(2).get).flatMap(_.as[_root_.scala.Option[_root_.scala.Int]])
         )
       case _ => throw new RuntimeException("Expected PMessage")
     }
-    def javaDescriptor: _root_.com.google.protobuf.Descriptors.Descriptor = com.google.protobuf.descriptor.DescriptorProto.javaDescriptor.getNestedTypes.get(1)
-    def scalaDescriptor: _root_.shaded.scalapb.descriptors.Descriptor = com.google.protobuf.descriptor.DescriptorProto.scalaDescriptor.nestedMessages(1)
-    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
-    lazy val nestedMessagesCompanions: Seq[_root_.shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.shaded.scalapb.GeneratedMessage]] = Seq.empty
-    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
-    lazy val defaultInstance = com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
+    def javaDescriptor: _root_.grpc_shaded.com.google.protobuf.Descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.javaDescriptor.getNestedTypes.get(1)
+    def scalaDescriptor: _root_.grpc_shaded.scalapb.descriptors.Descriptor = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.scalaDescriptor.nestedMessages(1)
+    def messageCompanionForFieldNumber(__number: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_] = throw new MatchError(__number)
+    lazy val nestedMessagesCompanions: Seq[_root_.grpc_shaded.scalapb.GeneratedMessageCompanion[_ <: _root_.grpc_shaded.scalapb.GeneratedMessage]] = Seq.empty
+    def enumCompanionForFieldNumber(__fieldNumber: _root_.scala.Int): _root_.grpc_shaded.scalapb.GeneratedEnumCompanion[_] = throw new MatchError(__fieldNumber)
+    lazy val defaultInstance = grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
     )
-    implicit class ReservedRangeLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.DescriptorProto.ReservedRange]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.DescriptorProto.ReservedRange](_l) {
-      def start: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getStart)((c_, f_) => c_.copy(start = Option(f_)))
-      def optionalStart: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.start)((c_, f_) => c_.copy(start = f_))
-      def end: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getEnd)((c_, f_) => c_.copy(end = Option(f_)))
-      def optionalEnd: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.end)((c_, f_) => c_.copy(end = f_))
+    implicit class ReservedRangeLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange](_l) {
+      def start: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getStart)((c_, f_) => c_.copy(start = Option(f_)))
+      def optionalStart: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.start)((c_, f_) => c_.copy(start = f_))
+      def end: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Int] = field(_.getEnd)((c_, f_) => c_.copy(end = Option(f_)))
+      def optionalEnd: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Int]] = field(_.end)((c_, f_) => c_.copy(end = f_))
     }
     final val START_FIELD_NUMBER = 1
     final val END_FIELD_NUMBER = 2
     def of(
       start: _root_.scala.Option[_root_.scala.Int],
       end: _root_.scala.Option[_root_.scala.Int]
-    ): _root_.com.google.protobuf.descriptor.DescriptorProto.ReservedRange = _root_.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
+    ): _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange = _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange(
       start,
       end
     )
   }
   
-  implicit class DescriptorProtoLens[UpperPB](_l: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.DescriptorProto]) extends _root_.shaded.scalapb.lenses.ObjectLens[UpperPB, com.google.protobuf.descriptor.DescriptorProto](_l) {
-    def name: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
-    def optionalName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
-    def field: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]] = field(_.field)((c_, f_) => c_.copy(field = f_))
-    def extension: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto]] = field(_.extension)((c_, f_) => c_.copy(extension = f_))
-    def nestedType: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto]] = field(_.nestedType)((c_, f_) => c_.copy(nestedType = f_))
-    def enumType: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto]] = field(_.enumType)((c_, f_) => c_.copy(enumType = f_))
-    def extensionRange: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]] = field(_.extensionRange)((c_, f_) => c_.copy(extensionRange = f_))
-    def oneofDecl: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto]] = field(_.oneofDecl)((c_, f_) => c_.copy(oneofDecl = f_))
-    def options: _root_.shaded.scalapb.lenses.Lens[UpperPB, com.google.protobuf.descriptor.MessageOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
-    def optionalOptions: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[com.google.protobuf.descriptor.MessageOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
-    def reservedRange: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange]] = field(_.reservedRange)((c_, f_) => c_.copy(reservedRange = f_))
-    def reservedName: _root_.shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.reservedName)((c_, f_) => c_.copy(reservedName = f_))
+  implicit class DescriptorProtoLens[UpperPB](_l: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]) extends _root_.grpc_shaded.scalapb.lenses.ObjectLens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.DescriptorProto](_l) {
+    def name: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Predef.String] = field(_.getName)((c_, f_) => c_.copy(name = Option(f_)))
+    def optionalName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[_root_.scala.Predef.String]] = field(_.name)((c_, f_) => c_.copy(name = f_))
+    def field: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]] = field(_.field)((c_, f_) => c_.copy(field = f_))
+    def extension: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto]] = field(_.extension)((c_, f_) => c_.copy(extension = f_))
+    def nestedType: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto]] = field(_.nestedType)((c_, f_) => c_.copy(nestedType = f_))
+    def enumType: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto]] = field(_.enumType)((c_, f_) => c_.copy(enumType = f_))
+    def extensionRange: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange]] = field(_.extensionRange)((c_, f_) => c_.copy(extensionRange = f_))
+    def oneofDecl: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto]] = field(_.oneofDecl)((c_, f_) => c_.copy(oneofDecl = f_))
+    def options: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, grpc_shaded.com.google.protobuf.descriptor.MessageOptions] = field(_.getOptions)((c_, f_) => c_.copy(options = Option(f_)))
+    def optionalOptions: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.MessageOptions]] = field(_.options)((c_, f_) => c_.copy(options = f_))
+    def reservedRange: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange]] = field(_.reservedRange)((c_, f_) => c_.copy(reservedRange = f_))
+    def reservedName: _root_.grpc_shaded.scalapb.lenses.Lens[UpperPB, _root_.scala.Seq[_root_.scala.Predef.String]] = field(_.reservedName)((c_, f_) => c_.copy(reservedName = f_))
   }
   final val NAME_FIELD_NUMBER = 1
   final val FIELD_FIELD_NUMBER = 2
@@ -632,16 +632,16 @@ object DescriptorProto extends shaded.scalapb.GeneratedMessageCompanion[com.goog
   final val RESERVED_NAME_FIELD_NUMBER = 10
   def of(
     name: _root_.scala.Option[_root_.scala.Predef.String],
-    field: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto],
-    extension: _root_.scala.Seq[com.google.protobuf.descriptor.FieldDescriptorProto],
-    nestedType: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto],
-    enumType: _root_.scala.Seq[com.google.protobuf.descriptor.EnumDescriptorProto],
-    extensionRange: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ExtensionRange],
-    oneofDecl: _root_.scala.Seq[com.google.protobuf.descriptor.OneofDescriptorProto],
-    options: _root_.scala.Option[com.google.protobuf.descriptor.MessageOptions],
-    reservedRange: _root_.scala.Seq[com.google.protobuf.descriptor.DescriptorProto.ReservedRange],
+    field: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto],
+    extension: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.FieldDescriptorProto],
+    nestedType: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto],
+    enumType: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.EnumDescriptorProto],
+    extensionRange: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ExtensionRange],
+    oneofDecl: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.OneofDescriptorProto],
+    options: _root_.scala.Option[grpc_shaded.com.google.protobuf.descriptor.MessageOptions],
+    reservedRange: _root_.scala.Seq[grpc_shaded.com.google.protobuf.descriptor.DescriptorProto.ReservedRange],
     reservedName: _root_.scala.Seq[_root_.scala.Predef.String]
-  ): _root_.com.google.protobuf.descriptor.DescriptorProto = _root_.com.google.protobuf.descriptor.DescriptorProto(
+  ): _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto = _root_.grpc_shaded.com.google.protobuf.descriptor.DescriptorProto(
     name,
     field,
     extension,

@@ -1,17 +1,17 @@
-package shaded
+package grpc_shaded
 import java.io.{File, PrintWriter}
 import java.net.{URL, URLClassLoader}
 import java.nio.file.Files
 import javax.tools.ToolProvider
 
-import com.google.protobuf.Message.Builder
+import grpc_shaded.com.google.protobuf.Message.Builder
 import scalapb.compiler._
 import org.scalacheck.Gen
 import scalapb._
 import protocbridge.ProtocBridge
 
 import scala.reflect.ClassTag
-import _root_.shaded.scalapb.ScalaPbCodeGenerator
+import _root_.grpc_shaded.scalapb.ScalaPbCodeGenerator
 
 object SchemaGenerators {
 
@@ -158,7 +158,7 @@ object SchemaGenerators {
 
   private def runProtoc(args: String*) =
     ProtocBridge.runWithGenerators(
-      args => com.github.os72.protocjar.Protoc.runProtoc("-v370" +: args.toArray),
+      args => _root_.com.github.os72.protocjar.Protoc.runProtoc("-v370" +: args.toArray),
       Seq("scala" -> ScalaPbCodeGenerator),
       args
     )
@@ -192,7 +192,7 @@ object SchemaGenerators {
   def compileJavaInDir(rootDir: File): Unit = {
     println("Compiling Java sources.")
     val protobufJar = Seq(
-      jarForClass[com.google.protobuf.Message].getPath,
+      jarForClass[grpc_shaded.com.google.protobuf.Message].getPath,
       jarForClass[scalapb.options.Scalapb].getPath
     )
 
@@ -224,7 +224,7 @@ object SchemaGenerators {
       jarForClass[scalapb.GeneratedMessage].getPath,
       jarForClass[scalapb.options.Scalapb].getPath,
       jarForClass[scalapb.grpc.Grpc.type].getPath,
-      jarForClass[com.google.protobuf.Message].getPath,
+      jarForClass[grpc_shaded.com.google.protobuf.Message].getPath,
       jarForClass[io.grpc.Channel].getPath,
       jarForClass[io.grpc.stub.AbstractStub[_]].getPath,
       jarForClass[io.grpc.protobuf.ProtoFileDescriptorSupplier].getPath,
@@ -271,13 +271,13 @@ object SchemaGenerators {
       builder
     }
 
-    def javaParse(m: MessageNode, bytes: Array[Byte]): com.google.protobuf.Message = {
+    def javaParse(m: MessageNode, bytes: Array[Byte]): grpc_shaded.com.google.protobuf.Message = {
       val className = rootNode.javaClassName(m)
       val cls       = Class.forName(className, true, classLoader)
       cls
         .getMethod("parseFrom", classOf[Array[Byte]])
         .invoke(null, bytes)
-        .asInstanceOf[com.google.protobuf.Message]
+        .asInstanceOf[grpc_shaded.com.google.protobuf.Message]
     }
 
     def scalaObject(m: MessageNode): CompanionWithJavaSupport[_ <: GeneratedMessage] = {

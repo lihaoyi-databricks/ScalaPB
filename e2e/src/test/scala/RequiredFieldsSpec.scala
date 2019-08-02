@@ -1,6 +1,6 @@
-package shaded
-import com.google.protobuf.Descriptors.FieldDescriptor
-import com.google.protobuf.InvalidProtocolBufferException
+package grpc_shaded
+import grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor
+import grpc_shaded.com.google.protobuf.InvalidProtocolBufferException
 import com.thesamet.proto.e2e.reqs.OptionalFields
 import com.thesamet.proto.e2e.reqs.RequiredFields
 import org.scalatest._

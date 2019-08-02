@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import org.scalatest._
 import protobuf_unittest.unittest.TestExtremeDefaultValues
 

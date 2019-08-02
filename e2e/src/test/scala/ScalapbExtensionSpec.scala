@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 import foo.issue320.{Foo, Issue320Proto}
 import org.scalatest.{Matchers, WordSpec}
 

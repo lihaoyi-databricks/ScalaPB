@@ -1,7 +1,7 @@
-package shaded
+package grpc_shaded
 package scalapb.descriptors
 
-import com.google.protobuf.descriptor._
+import grpc_shaded.com.google.protobuf.descriptor._
 
 import annotation.tailrec
 

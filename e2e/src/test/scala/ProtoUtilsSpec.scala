@@ -1,4 +1,4 @@
-package shaded
+package grpc_shaded
 
 import scalapb.grpc.ProtoUtils
 import com.thesamet.proto.well_known._
