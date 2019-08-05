@@ -25,7 +25,7 @@ class ProtoValidationSpec extends FlatSpec with MustMatchers {
     val outFile = new File(tmpDir, "descriptor.out")
 
     require(
-      com.github.os72.protocjar.Protoc.runProtoc(
+      _root_.com.github.os72.protocjar.Protoc.runProtoc(
         Array(
           "-I",
           tmpDir.toString + ":protobuf:third_party",
