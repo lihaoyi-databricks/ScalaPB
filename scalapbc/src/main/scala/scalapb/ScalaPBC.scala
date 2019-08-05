@@ -56,10 +56,10 @@ object ScalaPBC {
         case Some(path) =>
           val executable = new File(path)
           a =>
-            com.github.os72.protocjar.Protoc
+            _root_.com.github.os72.protocjar.Protoc
               .runProtoc(executable.getAbsolutePath, config.version +: a.toArray)
         case None =>
-          a => com.github.os72.protocjar.Protoc.runProtoc(config.version +: a.toArray)
+          a => _root_.com.github.os72.protocjar.Protoc.runProtoc(config.version +: a.toArray)
       },
       namedGenerators = config.namedGenerators,
       params = config.args

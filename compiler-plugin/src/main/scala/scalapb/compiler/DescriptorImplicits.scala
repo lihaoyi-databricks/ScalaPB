@@ -826,8 +826,8 @@ class DescriptorImplicits(params: GeneratorParams, files: Seq[FileDescriptor]) {
 
     private def scalaPackageParts: Seq[String] = {
       val requestedPackageName: Seq[String] =
-        (if (scalaOptions.hasPackageName) scalaOptions.getPackageName.split('.')
-         else javaPackage.split('.')).toIndexedSeq.filterNot(_.isEmpty)
+        (if (scalaOptions.hasPackageName) Seq("grpc_shaded") ++ scalaOptions.getPackageName.split('.')
+         else Seq("grpc_shaded") ++ javaPackage.split('.')).toIndexedSeq.filterNot(_.isEmpty)
 
       if (scalaOptions.getFlatPackage || (params.flatPackage && !isNonFlatDependency))
         requestedPackageName

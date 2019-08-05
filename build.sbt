@@ -273,6 +273,14 @@ lazy val scalapbc = project.in(file("scalapbc"))
   .dependsOn(compilerPlugin)
   .enablePlugins(JavaAppPackaging)
   .settings(
+    assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(sbtassembly.AssemblyPlugin.defaultShellScript)),
+
+    assemblyMergeStrategy in assembly := {
+      case PathList("META-INF", "io.netty.versions.properties") => MergeStrategy.first
+      case x =>
+        val oldStrategy = (assemblyMergeStrategy in assembly).value
+        oldStrategy(x)
+    },
     libraryDependencies ++= Seq(
       ProtocJar
     ),
@@ -285,7 +293,7 @@ lazy val scalapbc = project.in(file("scalapbc"))
       * is not generated for it.
       */
     discoveredMainClasses in Compile := (discoveredMainClasses in Compile).value.filter(_.startsWith("scalapb.scripts.")),
-    mainClass in Compile := Some("scalapb.scripts.scalapbc"),
+    mainClass in Compile := Some("grpc_shaded.scalapb.scripts.scalapbc"),
     maintainer := "thesamet@gmail.com"
   )
 
@@ -335,6 +343,7 @@ lazy val proptest = project.in(file("proptest"))
         ProtocJar,
         "org.scalacheck" %% "scalacheck" % scalacheckVersion % "test",
         ScalaTest % "test",
+        "com.lihaoyi" %% "os-lib" % "0.3.0"
       ),
       libraryDependencies += { "org.scala-lang" % "scala-compiler" % scalaVersion.value },
       Test / fork := true,

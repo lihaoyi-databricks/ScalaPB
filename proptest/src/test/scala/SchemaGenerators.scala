@@ -197,6 +197,15 @@ object SchemaGenerators {
     )
 
     val compiler = ToolProvider.getSystemJavaCompiler()
+    for(p <- os.walk(os.Path(rootDir, os.pwd)) if p.ext == "java"){
+      os.write.over(
+        p,
+        os.read(p)
+          .replace("com.google.protobuf.", "grpc_shaded.com.google.protobuf.")
+          .replace("scalapb.options.Scalapb.", "grpc_shaded.scalapb.options.Scalapb.")
+      )
+    }
+
     getFileTree(rootDir)
       .filter(f => f.isFile && f.getName.endsWith(".java"))
       .foreach { file =>
@@ -218,7 +227,7 @@ object SchemaGenerators {
   }
 
   def compileScalaInDir(rootDir: File): Unit = {
-    print("Compiling Scala sources. ")
+    print("Compiling Scala sources. " + rootDir)
     val classPath = Seq(
       jarForClass[annotation.Annotation].getPath,
       jarForClass[scalapb.GeneratedMessage].getPath,
@@ -246,7 +255,6 @@ object SchemaGenerators {
         Seq("-Ybreak-cycles")
       else Seq.empty
 
-    println("XXXX " + maybeBreakCycles + " XXXX")
     s.processArgumentString(
       s"""-cp "${classPath.mkString(":")}" ${maybeBreakCycles.mkString(" ")} -d "$rootDir""""
     )
@@ -285,7 +293,7 @@ object SchemaGenerators {
       val u         = scala.reflect.runtime.universe
       val mirror    = u.runtimeMirror(classLoader)
       mirror
-        .reflectModule(mirror.staticModule(className))
+        .reflectModule(mirror.staticModule("grpc_shaded." + className))
         .instance
         .asInstanceOf[CompanionWithJavaSupport[_ <: GeneratedMessage]]
     }
