@@ -1,3 +1,2 @@
 
 rule com.google.** grpc_shaded.@0
-rule io.grpc.** grpc_shaded.@0
