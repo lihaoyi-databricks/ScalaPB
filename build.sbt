@@ -343,7 +343,7 @@ lazy val proptest = project.in(file("proptest"))
         ProtocJar,
         "org.scalacheck" %% "scalacheck" % scalacheckVersion % "test",
         ScalaTest % "test",
-        "com.lihaoyi" %% "os-lib" % "0.3.0"
+        "com.lihaoyi" %% "os-lib" % "0.2.9"
       ),
       libraryDependencies += { "org.scala-lang" % "scala-compiler" % scalaVersion.value },
       Test / fork := true,

@@ -2,9 +2,9 @@ package grpc_shaded
 package scalapb
 
 import com.google.common.base.CaseFormat
-import org.scalacheck.Gen
-import org.scalatest.PropSpec
-import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import _root_.org.scalacheck.Gen
+import _root_.org.scalatest.PropSpec
+import _root_.org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 class FieldMaskUtilPropSpec extends PropSpec with ScalaCheckDrivenPropertyChecks {
 

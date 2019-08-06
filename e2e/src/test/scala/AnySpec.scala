@@ -1,7 +1,7 @@
 package grpc_shaded
 import com.thesamet.proto.any._
 import grpc_shaded.com.google.protobuf.any.Any
-import org.scalatest._
+import _root_.org.scalatest._
 import com.thesamet.proto.e2e.enum.EnumTest
 import com.thesamet.proto.e2e.enum.Color
 

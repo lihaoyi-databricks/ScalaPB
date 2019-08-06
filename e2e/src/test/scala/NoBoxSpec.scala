@@ -2,7 +2,7 @@ package grpc_shaded
 import com.thesamet.proto.e2e.NoBox
 import com.thesamet.proto.e2e.no_box.Car
 import com.thesamet.proto.e2e.no_box.Tyre
-import org.scalatest._
+import _root_.org.scalatest._
 
 class NoBoxSpec extends FlatSpec with MustMatchers {
   val car = Car(tyre1 = Tyre(size = 10), tyre2 = Some(Tyre(size = 20)))

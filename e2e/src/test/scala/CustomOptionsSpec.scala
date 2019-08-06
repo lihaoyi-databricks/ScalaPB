@@ -6,7 +6,7 @@ import com.thesamet.proto.e2e.custom_options_p3.GoodOrBadP3._
 import com.thesamet.proto.e2e.custom_options._
 import com.thesamet.proto.e2e.custom_options_p3._
 import com.thesamet.proto.e2e.custom_options_use._
-import org.scalatest._
+import _root_.org.scalatest._
 import grpc_shaded.com.google.protobuf.ByteString
 import grpc_shaded.com.google.protobuf.descriptor.MessageOptions
 import com.thesamet.pb.{Base1, Base2, FullName}

@@ -1,7 +1,7 @@
 package grpc_shaded
 import com.thesamet.proto.well_known._
-import org.scalatest._
-import org.scalatestplus.scalacheck._
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck._
 
 class WellKnownTypesSpec extends FlatSpec with ScalaCheckDrivenPropertyChecks with MustMatchers {
   "new TestWrapper" should "have Nones" in {

@@ -7,9 +7,9 @@ import SchemaGenerators.CompiledSchema
 import grpc_shaded.com.google.protobuf
 import grpc_shaded.com.google.protobuf.{Message, TextFormat => GTextFormat}
 import scalapb.{GeneratedMessage, JavaProtoSupport, TextFormat}
-import org.scalatest._
-import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
-import org.scalatest.tagobjects.Slow
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import _root_.org.scalatest.tagobjects.Slow
 import scalapb.descriptors.ScalaType
 
 import scala.language.existentials

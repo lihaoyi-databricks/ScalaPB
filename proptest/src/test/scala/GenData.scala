@@ -1,13 +1,13 @@
 package grpc_shaded
 import scalapb.compiler.FunctionalPrinter
-import org.scalacheck.Gen
+import _root_.org.scalacheck.Gen
 import scala.collection.JavaConverters._
 
 object GenData {
 
   import GenTypes._
   import Nodes._
-  import org.scalacheck.Gen._
+  import _root_.org.scalacheck.Gen._
 
   sealed trait ProtoValue
   case class PrimitiveValue(value: String) extends ProtoValue

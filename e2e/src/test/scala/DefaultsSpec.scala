@@ -1,6 +1,6 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.defaults._
-import org.scalatest._
+import _root_.org.scalatest._
 
 class DefaultsSpec extends FlatSpec with MustMatchers {
   val d = DefaultsTest()

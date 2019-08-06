@@ -1,7 +1,7 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.comments.CommentedServiceGrpc.CommentedService
 import com.thesamet.proto.e2e.comments._
-import org.scalatest._
+import _root_.org.scalatest._
 
 class CommentsSpec extends FlatSpec with MustMatchers {
   "comments proto" should "have comments enabled" in {

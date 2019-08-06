@@ -33,9 +33,9 @@ package scalapb
 
 import grpc_shaded.com.google.protobuf.ByteString
 import scalapb.textformat._
-import org.scalatest.matchers.{MatchResult, Matcher}
-import org.scalatest.{TryValues, MustMatchers, FlatSpec}
-import org.scalatestplus.scalacheck._
+import _root_.org.scalatest.matchers.{MatchResult, Matcher}
+import _root_.org.scalatest.{TryValues, MustMatchers, FlatSpec}
+import _root_.org.scalatestplus.scalacheck._
 import protobuf_unittest.unittest.{TestAllTypes, TestOneof2}
 import scala.io.Source
 import scala.util._

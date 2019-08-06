@@ -1,6 +1,6 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.issue102.{ProtoPacked, ProtoUnpacked}
-import org.scalatest._
+import _root_.org.scalatest._
 
 class Issue102Spec extends FunSpec {
 

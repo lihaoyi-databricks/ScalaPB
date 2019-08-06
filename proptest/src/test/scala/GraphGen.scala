@@ -3,11 +3,11 @@ import GenUtils._
 import GenTypes.{FieldOptions, ProtoType}
 import scalapb.options.Scalapb.ScalaPbOptions
 import scalapb.compiler.{NameUtils, StreamType}
-import org.scalacheck.{Arbitrary, Gen}
+import _root_.org.scalacheck.{Arbitrary, Gen}
 
 object GraphGen {
   import Nodes._
-  import org.scalacheck.Gen._
+  import _root_.org.scalacheck.Gen._
 
   trait StatefulGenerator[S] {
     def nextMessageId: (S, StatefulGenerator[S])

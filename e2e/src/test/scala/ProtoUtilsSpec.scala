@@ -2,7 +2,7 @@ package grpc_shaded
 
 import scalapb.grpc.ProtoUtils
 import com.thesamet.proto.well_known._
-import org.scalatest.{FlatSpec, MustMatchers}
+import _root_.org.scalatest.{FlatSpec, MustMatchers}
 
 
 class ProtoUtilsSpec extends FlatSpec with MustMatchers{

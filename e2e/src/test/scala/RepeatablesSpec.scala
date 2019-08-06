@@ -4,9 +4,9 @@ import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 import grpc_shaded.com.google.protobuf.CodedInputStream
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest.Nested
-import org.scalatest._
-import org.scalatestplus.scalacheck._
-import org.scalacheck.{Arbitrary, Gen}
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck._
+import _root_.org.scalacheck.{Arbitrary, Gen}
 
 class RepeatablesSpec extends FlatSpec with ScalaCheckDrivenPropertyChecks with MustMatchers {
 

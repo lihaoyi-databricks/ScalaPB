@@ -5,9 +5,9 @@ import java.io.{ByteArrayInputStream, ByteArrayOutputStream, ObjectInputStream, 
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest.Nested
 import scalapb.GeneratedMessage
-import org.scalacheck.{Arbitrary, Gen}
-import org.scalatest._
-import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import _root_.org.scalacheck.{Arbitrary, Gen}
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 class JavaSerializationSpec extends FlatSpec with ScalaCheckDrivenPropertyChecks with MustMatchers {
 

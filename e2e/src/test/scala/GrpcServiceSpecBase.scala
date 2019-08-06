@@ -8,7 +8,7 @@ import io.grpc.netty.{NegotiationType, NettyChannelBuilder, NettyServerBuilder}
 import io.grpc.protobuf.services.ProtoReflectionService
 import io.grpc.stub.StreamObserver
 import io.grpc.{ManagedChannel, Server}
-import org.scalatest.{FunSpec, MustMatchers}
+import _root_.org.scalatest.{FunSpec, MustMatchers}
 
 import scala.concurrent.{ExecutionContext, Future, Promise}
 import scala.util.Random

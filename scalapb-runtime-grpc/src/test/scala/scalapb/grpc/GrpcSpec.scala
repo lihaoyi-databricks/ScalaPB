@@ -3,9 +3,9 @@ package scalapb.grpc
 
 import io.grpc.StatusException
 import io.grpc.stub.StreamObserver
-import org.mockito.{ArgumentMatchers, Mockito}
-import org.scalatest.FlatSpec
-import org.scalatestplus.mockito.MockitoSugar
+import _root_.org.mockito.{ArgumentMatchers, Mockito}
+import _root_.org.scalatest.FlatSpec
+import _root_.org.scalatestplus.mockito.MockitoSugar
 
 import scala.util.{Failure, Success}
 

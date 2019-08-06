@@ -1,5 +1,5 @@
 package grpc_shaded
-import org.scalatest._
+import _root_.org.scalatest._
 import protobuf_unittest.unittest.TestExtremeDefaultValues
 
 class UnittestProtoSpec extends FlatSpec with MustMatchers {

@@ -1,6 +1,6 @@
 package grpc_shaded
 import foo.issue320.{Foo, Issue320Proto}
-import org.scalatest.{Matchers, WordSpec}
+import _root_.org.scalatest.{Matchers, WordSpec}
 
 class ScalapbExtensionSpec extends WordSpec with Matchers {
   "Foo.toByteArray" must {

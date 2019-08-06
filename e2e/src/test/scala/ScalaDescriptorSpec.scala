@@ -3,7 +3,7 @@ import com.thesamet.proto.e2e.one_of.OneofTest.SubMessage
 import com.thesamet.proto.e2e.one_of.{OneOfProto, OneofTest}
 import com.thesamet.proto.e2e.service.Service1Grpc.Service1
 import scalapb.descriptors._
-import org.scalatest._
+import _root_.org.scalatest._
 
 class ScalaDescriptorSpec extends FlatSpec with MustMatchers with LoneElement with OptionValues {
   "scalaDescriptor" must "contain all messages" in {

@@ -3,9 +3,9 @@ import com.thesamet.proto.e2e.maps.{CustomMaps, MapsTest}
 import com.thesamet.proto.e2e.maps2.{MapsTest2, CustomMaps2}
 import com.thesamet.proto.e2e.repeatables.RepeatablesTest.Nested
 import com.thesamet.pb.{PersonId, Years}
-import org.scalacheck.{Arbitrary, Gen}
-import org.scalatest._
-import org.scalatestplus.scalacheck._
+import _root_.org.scalacheck.{Arbitrary, Gen}
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck._
 
 class MapsSpec extends FlatSpec with ScalaCheckDrivenPropertyChecks with MustMatchers with OptionValues {
 

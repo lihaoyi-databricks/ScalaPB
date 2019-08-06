@@ -1,2 +1,6 @@
 
-rule com.google.** grpc_shaded.@0
+rule com.** grpc_shaded.@0
+rule sourcecode.** grpc_shaded.@0
+rule fastparse.** grpc_shaded.@0
+rule io.** grpc_shaded.@0
+rule org.** grpc_shaded.@0

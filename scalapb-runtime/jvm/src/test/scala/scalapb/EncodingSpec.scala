@@ -1,9 +1,9 @@
 package grpc_shaded
 package scalapb
 
-import org.scalatest._
-import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
-import org.apache.commons.codec.binary.Base64
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import _root_.org.apache.commons.codec.binary.Base64
 
 class EncodingSpec extends PropSpec with ScalaCheckDrivenPropertyChecks with Matchers {
   property("fromBase64 is the inverse of toBase64") {

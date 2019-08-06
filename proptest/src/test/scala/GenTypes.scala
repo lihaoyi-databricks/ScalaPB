@@ -1,7 +1,7 @@
 package grpc_shaded
 import GraphGen.State
 import Nodes.{Proto3, Proto2, ProtoSyntax}
-import org.scalacheck.{Arbitrary, Gen}
+import _root_.org.scalacheck.{Arbitrary, Gen}
 
 /**
   * Created by thesamet on 9/28/14.

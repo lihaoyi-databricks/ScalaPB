@@ -3,7 +3,7 @@ import grpc_shaded.com.google.protobuf.Descriptors.FieldDescriptor
 import grpc_shaded.com.google.protobuf.InvalidProtocolBufferException
 import com.thesamet.proto.e2e.reqs.OptionalFields
 import com.thesamet.proto.e2e.reqs.RequiredFields
-import org.scalatest._
+import _root_.org.scalatest._
 
 import scala.collection.JavaConverters._
 

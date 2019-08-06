@@ -80,13 +80,13 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
       .add("}")
   }
 
-  private[this] val channel     = "_root_.io.grpc.Channel"
-  private[this] val callOptions = "_root_.io.grpc.CallOptions"
+  private[this] val channel     = "_root_.grpc_shaded.io.grpc.Channel"
+  private[this] val callOptions = "_root_.grpc_shaded.io.grpc.CallOptions"
 
-  private[this] val abstractStub   = "_root_.io.grpc.stub.AbstractStub"
-  private[this] val streamObserver = "_root_.io.grpc.stub.StreamObserver"
+  private[this] val abstractStub   = "_root_.grpc_shaded.io.grpc.stub.AbstractStub"
+  private[this] val streamObserver = "_root_.grpc_shaded.io.grpc.stub.StreamObserver"
 
-  private[this] val serverCalls = "_root_.io.grpc.stub.ServerCalls"
+  private[this] val serverCalls = "_root_.grpc_shaded.io.grpc.stub.ServerCalls"
   private[this] val clientCalls = "_root_.grpc_shaded.scalapb.grpc.ClientCalls"
 
   private[this] def clientMethodImpl(m: MethodDescriptor, blocking: Boolean) =
@@ -154,7 +154,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
       case StreamType.Bidirectional   => "BIDI_STREAMING"
     }
 
-    val grpcMethodDescriptor = "_root_.io.grpc.MethodDescriptor"
+    val grpcMethodDescriptor = "_root_.grpc_shaded.io.grpc.MethodDescriptor"
 
     p.addStringMargin(
       s"""${method.deprecatedAnnotation}val ${method.descriptorName}: $grpcMethodDescriptor[${method.inputType.scalaType}, ${method.outputType.scalaType}] =
@@ -171,7 +171,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
 
   private[this] def serviceDescriptor(service: ServiceDescriptor) = {
 
-    val grpcServiceDescriptor = "_root_.io.grpc.ServiceDescriptor"
+    val grpcServiceDescriptor = "_root_.grpc_shaded.io.grpc.ServiceDescriptor"
 
     PrinterEndo(
       _.add(s"val ${service.descriptorName}: $grpcServiceDescriptor =").indent
@@ -240,7 +240,7 @@ final class GrpcServicePrinter(service: ServiceDescriptor, implicits: Descriptor
   private[this] val bindService = {
     val executionContext = "executionContext"
     val methods          = service.methods.map(addMethodImplementation)
-    val serverServiceDef = "_root_.io.grpc.ServerServiceDefinition"
+    val serverServiceDef = "_root_.grpc_shaded.io.grpc.ServerServiceDefinition"
 
     PrinterEndo(
       _.add(

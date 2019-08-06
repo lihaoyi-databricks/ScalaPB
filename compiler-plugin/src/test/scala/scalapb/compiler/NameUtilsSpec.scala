@@ -1,7 +1,7 @@
 package grpc_shaded
 package scalapb.compiler
 
-import org.scalatest.{FlatSpec, MustMatchers}
+import _root_.org.scalatest.{FlatSpec, MustMatchers}
 
 class NameUtilsSpec extends FlatSpec with MustMatchers {
   "snakeCaseToCamelCase" should "work for normal names" in {

@@ -1,7 +1,7 @@
 package grpc_shaded
 package scalapb.scoped
 
-import org.scalatest._
+import _root_.org.scalatest._
 
 class PackageOptionsSpec extends FlatSpec with MustMatchers {
   "package options" should "affect files in that package" in {

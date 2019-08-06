@@ -1,6 +1,6 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.extensions._
-import org.scalatest._
+import _root_.org.scalatest._
 
 class ExtensionsSpec extends FlatSpec with MustMatchers with OptionValues {
   "BaseMessage.parseFrom" should "parse unknown fields" in {

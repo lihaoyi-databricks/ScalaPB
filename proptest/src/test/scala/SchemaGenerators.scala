@@ -6,7 +6,7 @@ import javax.tools.ToolProvider
 
 import grpc_shaded.com.google.protobuf.Message.Builder
 import scalapb.compiler._
-import org.scalacheck.Gen
+import _root_.org.scalacheck.Gen
 import scalapb._
 import protocbridge.ProtocBridge
 

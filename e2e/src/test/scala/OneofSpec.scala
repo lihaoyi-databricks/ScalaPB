@@ -1,8 +1,8 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.one_of._
-import org.scalatest._
-import org.scalatestplus.scalacheck._
-import org.scalacheck.Gen
+import _root_.org.scalatest._
+import _root_.org.scalatestplus.scalacheck._
+import _root_.org.scalacheck.Gen
 import collection.JavaConverters._
 import Matchers._
 

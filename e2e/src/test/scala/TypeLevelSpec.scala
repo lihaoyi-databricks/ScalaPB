@@ -1,6 +1,6 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.type_level.UsesMessageLevelType
-import org.scalatest.{FlatSpec, MustMatchers}
+import _root_.org.scalatest.{FlatSpec, MustMatchers}
 import com.thesamet.pb.{Point2D, Dir2D}
 
 class TypeLevelSpec extends FlatSpec with MustMatchers {

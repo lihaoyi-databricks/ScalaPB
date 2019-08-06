@@ -1,6 +1,6 @@
 package grpc_shaded
 import foo.barbaz.issue356._
-import org.scalatest._
+import _root_.org.scalatest._
 
 class NullValuesSpec extends FlatSpec with MustMatchers {
   val container = FooContainer()

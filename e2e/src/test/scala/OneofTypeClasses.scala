@@ -1,7 +1,7 @@
 package grpc_shaded
 import com.thesamet.proto.e2e.one_of.OneofTest
 import com.thesamet.proto.e2e.one_of.OneofTest.SubMessage
-import org.scalatest.{FlatSpec, MustMatchers}
+import _root_.org.scalatest.{FlatSpec, MustMatchers}
 
 class OneofTypeClasses extends FlatSpec with MustMatchers {
   trait TC[T] {

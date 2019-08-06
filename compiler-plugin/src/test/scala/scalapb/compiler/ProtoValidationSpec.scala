@@ -8,7 +8,7 @@ import scala.collection.JavaConverters._
 import grpc_shaded.com.google.protobuf.DescriptorProtos.FileDescriptorSet
 import grpc_shaded.com.google.protobuf.Descriptors.FileDescriptor
 import grpc_shaded.com.google.protobuf.ExtensionRegistry
-import org.scalatest.{FlatSpec, MustMatchers}
+import _root_.org.scalatest.{FlatSpec, MustMatchers}
 import scalapb.options.compiler.Scalapb
 
 class ProtoValidationSpec extends FlatSpec with MustMatchers {
